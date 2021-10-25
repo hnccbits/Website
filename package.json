@@ -3,7 +3,12 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "style:all": "yarn run style:lint && npm run style:prettier",
+    "style:lint": "eslint '**/*.{js,jsx,ts,tsx}'",
+    "style:prettier": "prettier --check '**/*.{js,jsx,ts,tsx}'",
+    "make-pretty": "prettier --write '**/*.{js,jsx,ts,tsx}'",
+    "prepare": "husky install"
   },
   "dependencies": {
     "next": "latest",
@@ -11,8 +16,22 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.15.8",
     "autoprefixer": "^10.2.6",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "eslint": "^8.1.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-babel-module": "^5.3.1",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.26.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^7.0.4",
     "postcss": "^8.3.5",
-    "tailwindcss": "^2.2.4"
+    "prettier": "^2.4.1",
+    "tailwindcss": "^2.2.4",
+    "typescript": "^4.4.4"
   }
 }

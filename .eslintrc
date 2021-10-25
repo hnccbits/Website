@@ -1,0 +1,42 @@
+{
+  "root": true,
+  "extends": [
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "airbnb",
+    "airbnb/hooks",
+    "plugin:prettier/recommended"
+  ],
+
+  "rules": {
+    "react/no-danger": "off",
+    "react/react-in-jsx-scope": "off",
+    "no-console": "error",
+    "prettier/prettier": "off",
+    "react/jsx-filename-extension": "off",
+    "import/no-extraneous-dependencies": "off",
+    "react/jsx-props-no-spreading": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx"]
+      },
+      "babel-module": {
+        "extensions": [".js", ".jsx"],
+        "alias": {
+          "@/components": "./components",
+          "@/styles": "./styles"
+        }
+      }
+    }
+  },
+  "env": {
+    "node": true,
+    "browser": true,
+    "amd": true
+  }
+}
