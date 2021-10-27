@@ -1,0 +1,86 @@
+.video {
+  @apply relative;
+}
+
+.designVideoContainer {
+  position: relative;
+  opacity: 0;
+  transition: all 400ms ease-in-out;
+  height: 92vh;
+  overflow: hidden;
+}
+
+.designVideoContainer::before {
+  content: '';
+  z-index: 1;
+  opacity: 0.45;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: linear-gradient(#00ccff, #d400d4);
+}
+
+.content {
+  @apply z-20 absolute w-full left-1/2 flex justify-center items-center flex-wrap md:justify-center md:w-full xs:justify-start;
+  transform: translate(-50%, -70%);
+  top: 40%;
+}
+.content > h1 {
+  @apply mx-4 text-7xl z-30 md:text-5xl font-extrabold relative;
+}
+
+.content > h1 > span {
+  position: absolute;
+  top: 4.5rem;
+  left: 0%;
+  width: 10%;
+  background: #00ccff;
+  height: 3px;
+  opacity: 0.4;
+  transition: all 400ms ease-in-out;
+}
+
+.content > h1:hover > span {
+  width: 100%;
+  opacity: 1;
+}
+
+.mobileVideo {
+  display: none;
+  position: absolute;
+  bottom: -10%;
+  left: 0;
+  right: 0;
+}
+
+.mobileVideo::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#00ccff, #d400d4);
+  opacity: 0.65;
+}
+
+@media (max-width: 1024px) {
+  .designVideoContainer {
+    height: 66vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .designVideoContainer {
+    height: 50vh;
+  }
+}
+
+@media (max-width: 425px) {
+  .designVideoContainer {
+    visibility: hidden;
+  }
+  .mobileVideo {
+    display: block;
+  }
+}

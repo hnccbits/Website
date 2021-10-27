@@ -1,10 +1,12 @@
+/* eslint-disable jsx-a11y/media-has-caption */
 // import Head from 'next/head';
 import Screen from '../components/screen/Screen';
+import Video from '../components/video/Video';
 
 export default function Home() {
   return (
     <Screen>
-      <h1>HnCC</h1>
+      <Video />
     </Screen>
   );
 }

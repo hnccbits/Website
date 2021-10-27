@@ -1,5 +1,5 @@
 .socialsBar {
-  @apply flex flex-col justify-between items-center fixed bottom-0 left-0 px-4 py-5 sm:hidden;
+  @apply z-50 flex flex-col justify-between items-center fixed bottom-0 left-0 px-4 py-5 sm:hidden;
   min-height: 15%;
 }
 

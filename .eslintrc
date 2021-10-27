@@ -17,7 +17,16 @@
     "import/no-extraneous-dependencies": "off",
     "react/jsx-props-no-spreading": "off",
     "react/prop-types": "off",
-    "jsx-a11y/anchor-is-valid": "off"
+    "jsx-a11y/anchor-is-valid": "off",
+    "jsx-a11y/media-has-caption": [
+      2,
+      {
+        "audio": ["Audio"],
+        "video": ["Video"],
+        "track": ["Track"]
+      }
+    ],
+    "jsx-a11y/mouse-events-have-key-events": "off"
   },
   "settings": {
     "react": {

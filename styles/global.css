@@ -13,7 +13,7 @@
   font-family: 'Overpass', sans-serif;
 }
 body {
-  background-color: black;
+  background-color: #181e23;
 }
 
 a {
@@ -47,4 +47,5 @@ a {
 
 .fade-up {
   opacity: 0;
+  visibility: hidden;
 }
