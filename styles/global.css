@@ -1,0 +1,50 @@
+/* ./styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: 'Overpass', sans-serif;
+}
+body {
+  background-color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container-70 {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.flex-2 {
+  flex: 0.5;
+}
+.flex-4 {
+  flex: 0.25;
+}
+
+@media (max-width: 450px) {
+  .container-70 {
+    width: 85%;
+    margin: 0 auto;
+  }
+}
+
+.no-shadow {
+  box-shadow: none;
+}
+
+/* for navbar transition */
+
+.fade-up {
+  opacity: 0;
+}

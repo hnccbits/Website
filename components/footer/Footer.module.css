@@ -1,0 +1,14 @@
+.footer {
+  @apply relative h-screen pt-24 pb-8 sm:h-auto sm:pt-16;
+}
+
+.copyrightBottom {
+  @apply absolute bottom-16 flex flex-wrap justify-between
+         items-center w-full sm:relative sm:bottom-auto
+         sm:mt-9;
+}
+
+.linksContainer {
+  @apply mt-32 flex justify-between items-stretch flex-wrap
+         sm:flex-col sm:mt-8;
+}
