@@ -7,9 +7,9 @@ import BottomGlitter from '../components/StyledText/BottomGlitter';
 const Teams = () => {
   return (
     <Screen>
-      <section className="mt-16 mb-12">
+      <section className="mt-16 mb-12 container-70">
         <div className="my-16 w-full text-center">
-          <BottomGlitter text="Our Team" />
+          <BottomGlitter text="our Team" />
           <h3 className="text-lg mt-8">
             The strength of the team is each individual member. The strength of
             each member is the team.
@@ -17,7 +17,7 @@ const Teams = () => {
           </h3>
         </div>
 
-        <h2 className={Styles.postHead}>Post Bearers</h2>
+        <h2 className={Styles.postHead}>post Bearers</h2>
         <div className={Styles.cardContainer}>
           {TeamData2k19.slice(0, 8).map((item, index) => {
             return (
@@ -34,7 +34,7 @@ const Teams = () => {
           </div>
         </div>
 
-        <h2 className={Styles.postHead}>Technical Head</h2>
+        <h2 className={Styles.postHead}>technical Head</h2>
         <div className={`${Styles.cardContainer}`}>
           {TeamData2k19.slice(8, 14).map((item, index) => {
             return (
@@ -54,7 +54,7 @@ const Teams = () => {
           </div>
         </div>
 
-        <h2 className={Styles.postHead}>Event Manager</h2>
+        <h2 className={Styles.postHead}>event Manager</h2>
         <div className={`${Styles.cardContainer}`}>
           {TeamData2k19.slice(14, 19).map((item, index) => {
             return (

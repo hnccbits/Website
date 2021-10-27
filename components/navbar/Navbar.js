@@ -15,8 +15,10 @@ const Navbar = () => {
       const scroll = window.scrollY;
       if (scroll > height + 60) {
         navList.classList.add('fade-up');
+        navbar.style.borderBottom = '1px solid rgba(255, 255, 255, 0.2)';
       } else {
         navList.classList.remove('fade-up');
+        navbar.style.border = 'none';
       }
     });
 
