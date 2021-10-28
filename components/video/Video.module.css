@@ -31,19 +31,23 @@
   @apply my-8 mx-4 text-7xl z-30 md:text-5xl font-extrabold relative sm:my-4;
 }
 
-.content > h1 > span {
+.content > h1::after {
+  content: '';
   position: absolute;
   top: 100%;
   left: 0%;
-  width: 10%;
+  width: 100%;
   background: #00ccff;
   height: 3px;
   opacity: 0.4;
-  transition: all 400ms ease-in-out;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 500ms ease;
 }
 
-.content > h1:hover > span {
-  width: 100%;
+.content > h1:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
   opacity: 1;
 }
 
