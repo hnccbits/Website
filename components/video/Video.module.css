@@ -28,12 +28,12 @@
   top: 40%;
 }
 .content > h1 {
-  @apply mx-4 text-7xl z-30 md:text-5xl font-extrabold relative;
+  @apply my-8 mx-4 text-7xl z-30 md:text-5xl font-extrabold relative sm:my-4;
 }
 
 .content > h1 > span {
   position: absolute;
-  top: 4.5rem;
+  top: 100%;
   left: 0%;
   width: 10%;
   background: #00ccff;
