@@ -17,12 +17,11 @@ const Video = () => {
     return (
       <h1
         onMouseEnter={() => VideoPlay(src)}
-        onMouseOver={() => VideoPlay(src)}
-        onMouseOut={VideoPause}
+        onMouseLeave={VideoPause}
         onTouchStart={() => VideoPlay(src)}
       >
         {text}
-        <span />
+        {/* <span /> */}
       </h1>
     );
   };
