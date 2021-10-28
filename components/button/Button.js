@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import Styles from './Button.module.css';
 
-const Button = ({ className, children, ...otherProps }) => {
+const Button = ({ className, color, children, ...otherProps }) => {
   const ref = useRef();
   const handleRipple = (e) => {
     const x = e.clientX - ref.current.offsetLeft;
@@ -13,10 +13,10 @@ const Button = ({ className, children, ...otherProps }) => {
     <div
       ref={ref}
       onMouseEnter={(e) => handleRipple(e)}
-      className={`${Styles.rippleButton} ${className}`}
+      className={` ${className} ${Styles.rippleButton}`}
       {...otherProps}
     >
-      <span>{children}</span>
+      {children}
     </div>
   );
 };

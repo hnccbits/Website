@@ -21,7 +21,6 @@ const Video = () => {
         onTouchStart={() => VideoPlay(src)}
       >
         {text}
-        {/* <span /> */}
       </h1>
     );
   };

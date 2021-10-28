@@ -20,7 +20,7 @@
 }
 
 .navbarList > .navLink {
-  @apply font-bold text-lg uppercase xl:mx-5;
+  @apply font-semibold text-base uppercase xl:mx-5;
   transition: all 300ms ease-in-out;
   width: fit-content;
 }
