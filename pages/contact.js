@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import { useRouter } from 'next/router';
 import emailjs from 'emailjs-com';
-import Button, { NavButton } from '../components/button/Button';
+import Button from '../components/button/Button';
 import StyledInput from '../components/input/StyledInput';
 import Screen from '../components/screen/Screen';
 
@@ -138,7 +138,7 @@ const ThankYou = ({ show }) => {
         </span>
       </p>
       <div className="mt-16">
-        <NavButton
+        <Button
           onClick={() => router.push('/')}
           style={{ border: 'none' }}
           className="bg-primary-light text-primary hover:text-primary-light"
@@ -152,7 +152,7 @@ const ThankYou = ({ show }) => {
           >
             Back to home
           </span>
-        </NavButton>
+        </Button>
       </div>
     </div>
   );

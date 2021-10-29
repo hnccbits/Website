@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Styles from './Navbar.module.css';
 import Logo from '../../assets/hncc-logo.png';
-import { NavButton } from '../button/Button';
+import Button from '../button/Button';
 
 const SpanStyle = {
   zIndex: 1,
@@ -63,13 +63,13 @@ const Navbar = () => {
         <Link href="/contact">
           <a className={Styles.navLink}>Contact Us</a>
         </Link>
-        <NavButton
+        <Button
           style={{ border: 'none' }}
           className="bg-primary-light text-primary hover:text-primary-light"
           onClick={() => alert('We are currently not inducting')}
         >
           <span style={SpanStyle}>Join Us</span>
-        </NavButton>
+        </Button>
       </div>
       <HiMenuAlt4 size={32} className={Styles.humburgerMenu} />
     </section>
