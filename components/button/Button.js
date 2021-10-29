@@ -8,8 +8,8 @@ const Button = ({ className, color, children, ...otherProps }) => {
     ref.current.style.setProperty('--y', `50%`);
   }, []);
   const handleRipple = (e) => {
-    const x = e.clientX - ref.current.offsetLeft;
-    const y = e.pageY - ref.current.offsetTop;
+    const x = e.pageX - ref.current.getBoundingClientRect().left;
+    const y = e.pageY - ref.current.getBoundingClientRect().top;
     ref.current.style.setProperty('--x', `${x}px`);
     ref.current.style.setProperty('--y', `${y}px`);
   };
@@ -32,8 +32,9 @@ export const NavButton = ({ className, color, children, ...otherProps }) => {
     ref.current.style.setProperty('--y', `50%`);
   }, []);
   const handleRipple = (e) => {
-    const x = e.clientX - ref.current.offsetLeft;
-    const y = e.clientY - ref.current.offsetTop;
+    const x = e.clientX - ref.current.getBoundingClientRect().left;
+    const y = e.clientY - ref.current.getBoundingClientRect().top;
+
     ref.current.style.setProperty('--x', `${x}px`);
     ref.current.style.setProperty('--y', `${y}px`);
   };

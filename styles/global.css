@@ -11,6 +11,7 @@
   box-sizing: border-box;
   color: #fff;
   font-family: 'Overpass', sans-serif;
+  scroll-behavior: smooth;
 }
 body {
   background-color: #181e23;

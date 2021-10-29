@@ -11,9 +11,14 @@
 }
 
 .input {
-  @apply text-2xl py-2 px-2 outline-none border-none;
+  @apply text-xl py-2 px-2 outline-none border-none;
   background-color: transparent;
   border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.input:invalid .label {
+  top: 0;
+  @apply text-2xl;
 }
 
 .transform {

@@ -1,13 +1,7 @@
 import { useRef, useState } from 'react';
 import Styles from './styled-input.module.css';
 
-const StyledInput = ({
-  label,
-  filled = false,
-  name = '',
-  className = '',
-  ...otherProps
-}) => {
+const StyledInput = ({ label, name = '', className = '', ...otherProps }) => {
   const ref = useRef();
   const [transform, setTransform] = useState(false);
   return (
@@ -20,8 +14,9 @@ const StyledInput = ({
         {label}
       </label>
       <input
+        autoComplete="new-password"
         onFocus={() => setTransform(true)}
-        onBlur={() => filled && setTransform(false)}
+        onBlur={(e) => e.target.value === '' && setTransform(false)}
         className={`${Styles.input} ${className}`}
         name={name}
         {...otherProps}
