@@ -1,11 +1,11 @@
 import Image from 'next/image';
-import Style from './Team.module.css';
 import {
   FaFacebookSquare,
   FaLinkedin,
   FaInstagram,
   FaGithubSquare,
 } from 'react-icons/fa';
+import Style from './Team.module.css';
 
 const TeamCard = ({ name, title, socials, imageSrc }) => {
   return (
@@ -25,35 +25,35 @@ const TeamCard = ({ name, title, socials, imageSrc }) => {
         <h4>{title}</h4>
       </div>
       <div className="z-10 text-left w-full">
-        {socials?.fb && (
+        {socials.fb && (
           <div className="flex mt-1">
             <FaFacebookSquare size={24} />
-            <a href={socials?.fb} className="ml-2">
-              {socials?.fb}
+            <a href={socials.fb} className="ml-2">
+              {socials.fb}
             </a>
           </div>
         )}
-        {socials?.linkedin && (
+        {socials.linkedin && (
           <div className="flex mt-1">
             <FaLinkedin size={24} />
-            <a href={socials?.linkedin} className="ml-2">
-              {socials?.linkedin}
+            <a href={socials.linkedin} className="ml-2">
+              {socials.linkedin}
             </a>
           </div>
         )}
-        {socials?.insta && (
+        {socials.insta && (
           <div className="flex mt-1">
             <FaInstagram size={24} />
-            <a href={socials?.insta} className="ml-2">
-              {socials?.insta}
+            <a href={socials.insta} className="ml-2">
+              {socials.insta}
             </a>
           </div>
         )}
-        {socials?.gb && (
+        {socials.gb && (
           <div className="flex mt-1">
             <FaGithubSquare size={24} />
-            <a href={socials?.gb} className="ml-2">
-              {socials?.gb}
+            <a href={socials.gb} className="ml-2">
+              {socials.gb}
             </a>
           </div>
         )}
