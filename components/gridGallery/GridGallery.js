@@ -22,7 +22,7 @@ export default GridGallery;
 
 const GridImage = ({ src, title }) => {
   return (
-    <div className={`${Styles.galleryContainer} ${Styles.w3} ${Styles.h2}`}>
+    <div className={`${Styles.w3} ${Styles.h2}`}>
       <div className={`${Styles.galleryItem}`}>
         <div className={Styles.image}>
           <Image layout="fill" src={src} alt="nature" />
