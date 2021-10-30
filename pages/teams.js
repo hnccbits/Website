@@ -26,6 +26,7 @@ const Teams = () => {
                 name={item.name}
                 title={item.title}
                 imageSrc={item.imageSrc}
+                socials={item.socials}
               />
             );
           })}
@@ -43,6 +44,7 @@ const Teams = () => {
                 name={item.name}
                 title={item.title}
                 imageSrc={item.imageSrc}
+                socials={item.socials}
               />
             );
           })}
@@ -63,6 +65,7 @@ const Teams = () => {
                 name={item.name}
                 title={item.title}
                 imageSrc={item.imageSrc}
+                socials={item.socials}
               />
             );
           })}
