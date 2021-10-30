@@ -1,18 +1,20 @@
 .card {
-  @apply p-4 relative my-4 mx-6 flex flex-col justify-center items-center w-64 overflow-hidden;
+  @apply p-4 relative flex flex-col justify-center items-center overflow-hidden;
   border-radius: 20px;
   min-height: 350px;
   background: rgb(0, 204, 255);
   background: linear-gradient(
     45deg,
     rgba(0, 204, 255, 0.44861694677871145) 0%,
-    rgba(212, 0, 212, 0.4514180672268907) 100%
+    rgba(152, 232, 252, 0.4) 100%
   );
   transition: all 300ms ease-in-out;
 }
 
 .cardContainer {
-  @apply flex flex-wrap justify-between items-center md:justify-center sm:justify-center;
+  @apply grid;
+  grid-gap: 2em;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
 .cardContainer .card:hover {
   transform: scale(1.065);
@@ -22,7 +24,7 @@
 .card::before {
   @apply absolute w-32;
   content: '';
-  background: linear-gradient(#00ccff, #d400d4);
+  background: linear-gradient(#00ccff, #98e8fc);
   animation: animate 4s linear infinite;
   height: 140%;
   opacity: 0;
@@ -41,7 +43,7 @@
 }
 
 .postHead {
-  @apply text-5xl mb-14 pl-8 mt-16 font-extrabold md:text-center md:pl-0 sm:mt-12;
+  @apply text-5xl mb-14 mt-16 font-extrabold md:text-center md:pl-0 sm:mt-12;
 }
 
 @keyframes animate {
