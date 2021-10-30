@@ -9,7 +9,7 @@ const Teams = () => {
     <Screen>
       <section className="mt-16 mb-12 container-70">
         <div className="my-16 w-full text-center">
-          <BottomGlitter text="our Team" />
+          <BottomGlitter text="Our Team" />
           <h3 className="text-lg mt-8">
             The strength of the team is each individual member. The strength of
             each member is the team.
@@ -46,12 +46,6 @@ const Teams = () => {
               />
             );
           })}
-          <div className="invisible 2xl:hidden">
-            <TeamCard name="" title="" imageSrc="/teams/person.png" />
-          </div>
-          <div className="invisible 2xl:hidden">
-            <TeamCard name="" title="" imageSrc="/teams/person.png" />
-          </div>
         </div>
 
         <h2 className={Styles.postHead}>event Manager</h2>

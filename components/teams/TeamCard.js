@@ -4,7 +4,7 @@ import Style from './Team.module.css';
 const TeamCard = ({ name, title, socials, imageSrc }) => {
   return (
     <div className={Style.card}>
-      <div className="z-10 w-full text-center h-2/3 mb-18 mt-4">
+      <div className="z-10 w-full text-center h-2/3 mb-18 mt-4 overflow-hidden rounded-lg">
         <Image
           className="z-10 rounded-lg"
           height="100%"
