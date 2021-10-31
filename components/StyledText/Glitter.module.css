@@ -8,7 +8,7 @@
 }
 
 .headingText {
-  @apply text-7xl text-primary-light font-semibold leading-none sm:text-6xl;
+  @apply text-7xl text-primary-light font-semibold leading-none sm:text-6xl xs:text-5xl;
 }
 
 .heading > span {

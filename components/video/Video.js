@@ -80,7 +80,13 @@ const Video = () => {
         <Heading src="code" text="Code." />
       </div>
       <div className={Styles.mobileVideo}>
-        <video controls={false} autoPlay loop src="/video/develop.mp4">
+        <video
+          muted="muted"
+          controls={false}
+          autoPlay
+          loop
+          src="/video/develop.mp4"
+        >
           <track kind="captions" />
         </video>
       </div>

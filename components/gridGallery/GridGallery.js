@@ -10,8 +10,10 @@ const GridGallery = () => {
         <BottomGlitter text="glimpes" />
       </div>
       <div className={Styles.container}>
-        {GalleryImages.map((item) => {
-          return <GridImage src={item.src} title={item.title} />;
+        {GalleryImages.map((item, index) => {
+          return (
+            <GridImage key={String(index)} src={item.src} title={item.title} />
+          );
         })}
       </div>
     </section>

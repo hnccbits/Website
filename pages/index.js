@@ -2,6 +2,7 @@
 // import Head from 'next/head';
 import GridGallery from '../components/gridGallery/GridGallery';
 import Screen from '../components/screen/Screen';
+import Sponsors from '../components/sponsors/Sponsors';
 import Video from '../components/video/Video';
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
     <Screen>
       <Video />
       <GridGallery />
+      <Sponsors />
     </Screen>
   );
 }

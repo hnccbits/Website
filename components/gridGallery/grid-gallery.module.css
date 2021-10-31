@@ -120,7 +120,7 @@
     width: 100vw;
     height: 35vh;
   }
-  .galleryItem .text {
+  .galleryItem:hover .text {
     @apply text-base;
   }
 }
