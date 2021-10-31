@@ -1,6 +1,5 @@
 .card {
-  @apply p-4 relative flex flex-col justify-center items-center overflow-hidden;
-  border-radius: 20px;
+  @apply p-4 relative flex flex-col justify-center items-center overflow-hidden rounded-2xl;
   min-height: 350px;
   background: rgb(0, 204, 255);
   background: linear-gradient(
@@ -12,13 +11,12 @@
 }
 
 .cardContainer {
-  @apply grid;
-  grid-gap: 2em;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  @apply grid gap-16;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
+
 .cardContainer .card:hover {
-  transform: scale(1.065);
-  opacity: 1;
+  @apply scale-[1.06] opacity-100;
 }
 
 .card::before {
@@ -35,9 +33,8 @@
 }
 
 .card::after {
-  @apply absolute;
+  @apply absolute rounded-2xl;
   content: '';
-  border-radius: 16px;
   inset: 4px;
   background-color: #000;
 }

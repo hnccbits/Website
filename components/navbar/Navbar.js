@@ -10,7 +10,7 @@ import Button from '../button/Button';
 const SpanStyle = {
   zIndex: 1,
   color: 'inherit',
-  transition: 'all 400ms ease-in-out',
+  transition: 'all 300ms ease-in-out',
 };
 
 const Navbar = () => {

@@ -32,44 +32,45 @@ const Video = () => {
         <video
           src="/video/design.mp4"
           autoPlay
-          muted="muted"
+          muted
           loop
           controls={false}
           id="video"
-          className={video === 'design' ? 'top-0 left-0 z-40' : 'z-0 -top-full'}
-          style={{
-            width: video === 'design' ? '100vw' : '0vw',
-          }}
+          className={
+            video === 'design'
+              ? 'top-0 left-0 z-40 w-screen'
+              : 'z-0 -top-full w-0'
+          }
         >
           <track kind="captions" />
         </video>
         <video
           src="/video/develop.mp4"
           autoPlay
-          muted="muted"
+          muted
           loop
           controls={false}
           id="video"
           className={
-            video === 'develop' ? 'top-0 left-0 z-40' : 'z-0 -top-full'
+            video === 'develop'
+              ? 'top-0 left-0 z-40 w-screen'
+              : 'z-0 -top-full w-0'
           }
-          style={{
-            width: video === 'develop' ? '100vw' : '0vw',
-          }}
         >
           <track kind="captions" />
         </video>
         <video
           src="/video/code.mp4"
           autoPlay
-          muted="muted"
+          muted
           loop
           controls={false}
           id="video"
-          className={video === 'code' ? 'top-0 left-0 z-40' : 'z-0 -top-full'}
-          style={{
-            width: video === 'code' ? '100vw' : '0vw',
-          }}
+          className={
+            video === 'code'
+              ? 'top-0 left-0 z-40 w-screen'
+              : 'z-0 -top-full w-0'
+          }
         >
           <track kind="captions" />
         </video>
@@ -80,13 +81,7 @@ const Video = () => {
         <Heading src="code" text="Code." />
       </div>
       <div className={Styles.mobileVideo}>
-        <video
-          muted="muted"
-          controls={false}
-          autoPlay
-          loop
-          src="/video/develop.mp4"
-        >
+        <video muted controls={false} autoPlay loop src="/video/develop.mp4">
           <track kind="captions" />
         </video>
       </div>
