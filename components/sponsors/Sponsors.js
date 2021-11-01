@@ -10,15 +10,9 @@ const Sponsors = () => {
       <div className={Styles.sponsorsContainer}>
         {SponsorsData.map((src, index) => {
           return (
-            <div className={Styles.images}>
+            <div className={Styles.images} key={String(index)}>
               <div className="z-20">
-                <img
-                  width="100%"
-                  height="100%"
-                  src={src}
-                  key={String(index)}
-                  alt="Sponsors"
-                />
+                <img width="100%" height="100%" src={src} alt="Sponsors" />
               </div>
             </div>
           );
@@ -30,15 +24,9 @@ const Sponsors = () => {
         <div className={Styles.associationContainer}>
           {AssociationsData.map((src, index) => {
             return (
-              <div className={Styles.images}>
+              <div className={Styles.images} key={String(index)}>
                 <div className="z-20">
-                  <img
-                    width="100%"
-                    height="100%"
-                    src={src}
-                    key={String(index)}
-                    alt="Sponsors"
-                  />
+                  <img width="100%" height="100%" src={src} alt="Sponsors" />
                 </div>
               </div>
             );

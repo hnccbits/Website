@@ -1,113 +1,53 @@
 .gallerySection {
   /* height: 100vh;
   overflow: scroll; */
-  @apply my-16 py-16;
+  @apply my-16 py-16 w-3/4 mx-auto;
+  @apply lg:w-4/5;
 }
 .gallerySection::-webkit-scrollbar {
   display: none;
 }
 .container {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-auto-rows: 100px 300px;
-  grid-gap: 10px;
-  grid-auto-flow: dense;
+  @apply grid grid-cols-2 auto-rows-[320px] gap-3;
+  @apply xl:auto-rows-[250px];
 }
 
 .galleryItem {
-  width: 100%;
-  height: 100%;
-  position: relative;
+  @apply w-full h-full relative;
 }
 
 .galleryItem .image {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+  @apply w-full h-full overflow-hidden relative;
 }
 
 .galleryItem .image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 50% 50%;
-  cursor: pointer;
+  @apply w-full object-cover object-center cursor-pointer;
   transition: 0.5s ease-in-out;
 }
 .galleryItem:hover .image img {
-  transform: scale(1.5);
+  @apply scale-125;
 }
 
 .galleryItem .text {
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  font-size: 0;
-  pointer-events: none;
-  z-index: 4;
-  width: 0;
-  height: 0;
+  transform: translate(-50%, -50%) scale(0);
   transition: 0.3s ease-in-out;
   background-color: rgba(0, 0, 0, 0.45);
   -webkit-backdrop-filter: blur(5px) saturate(1.8);
   backdrop-filter: blur(5px) saturate(1.8);
+  @apply opacity-0 absolute top-1/2 left-1/2 text-[#fff] z-[4] w-full p-5 text-2xl pointer-events-none;
 }
 
 .galleryItem:hover .text {
-  opacity: 1;
-  animation: move-down 0.3s linear;
-  padding: 1em;
-  width: 100%;
-  font-size: 25px;
-  height: auto;
+  transform: translate(-50%, -50%) scale(1);
+  @apply opacity-100;
 }
 
-.w1 {
-  grid-column: span 1;
-}
-.w2 {
-  grid-column: span 2;
-}
-.w3 {
-  grid-column: span 3;
-}
-.w4 {
-  grid-column: span 4;
-}
-.w5 {
-  grid-column: span 5;
-}
-.w6 {
-  grid-column: span 6;
-}
-
-.h1 {
-  grid-row: span 1;
-}
-.h2 {
-  grid-row: span 2;
-}
-.h3 {
-  grid-row: span 3;
-}
-.h4 {
-  grid-row: span 4;
-}
-.h5 {
-  grid-row: span 5;
-}
-.h6 {
-  grid-row: span 6;
-}
-
-@media screen and (max-width: 500px) {
+@media screen(sm) {
   .gallerySection {
     height: 100%;
     margin-bottom: 0;
   }
+
   .container {
     display: flex;
     flex-direction: row;
@@ -116,23 +56,13 @@
     align-items: center;
     overflow: scroll;
   }
+
   .galleryItem {
     width: 100vw;
     height: 35vh;
   }
+
   .galleryItem:hover .text {
     @apply text-base;
-  }
-}
-
-@keyframes move-down {
-  0% {
-    top: 10%;
-  }
-  50% {
-    top: 35%;
-  }
-  100% {
-    top: 50%;
   }
 }

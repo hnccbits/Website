@@ -1,10 +1,6 @@
 .rippleButton {
-  @apply text-lg inline-block;
+  @apply text-lg inline-block overflow-hidden relative rounded-full px-10 py-[13px];
   border: 1px solid hsla(0, 0%, 100%, 0.4);
-  border-radius: 30px;
-  padding: 17px 45px 15px 42px;
-  position: relative;
-  overflow: hidden;
 }
 
 .rippleButton::before {

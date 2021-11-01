@@ -5,9 +5,9 @@ import Styles from './grid-gallery.module.css';
 
 const GridGallery = () => {
   return (
-    <section className={`${Styles.gallerySection} container-70`}>
+    <section className={Styles.gallerySection}>
       <div className="mt-2 mb-16">
-        <BottomGlitter text="glimpes" />
+        <BottomGlitter text="Glimpses" />
       </div>
       <div className={Styles.container}>
         {GalleryImages.map((item, index) => {
