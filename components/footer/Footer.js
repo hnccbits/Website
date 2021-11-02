@@ -5,7 +5,7 @@ import Styles from './Footer.module.css';
 const Footer = () => {
   return (
     <footer className={`${Styles.footer} container-70`}>
-      <div className="py-12">
+      <div className="py-12 mt-20 sm:mt-4 md:mt-12">
         <h4 className="text-2xl mb-10 pl-3">Contacts</h4>
         <BottomGlitter text="Get In Touch" />
       </div>

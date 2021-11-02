@@ -3,12 +3,14 @@
 import GridGallery from '../components/gridGallery/GridGallery';
 import Screen from '../components/screen/Screen';
 import Sponsors from '../components/sponsors/Sponsors';
+import TechStack from '../components/techStack/TechStack';
 import Video from '../components/video/Video';
 
 export default function Home() {
   return (
     <Screen>
       <Video />
+      <TechStack />
       <GridGallery />
       <Sponsors />
     </Screen>
