@@ -58,7 +58,7 @@
 
 .content > h2 {
   @apply text-4xl font-bold mb-6 sm:text-2xl;
-  word-break: break-all;
+  word-break: normal;
 }
 
 .content > p {
