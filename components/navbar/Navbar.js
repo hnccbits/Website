@@ -19,6 +19,7 @@ const Navbar = () => {
     document.addEventListener('scroll', () => {
       const navList = document.getElementById('navList');
       const navbar = document.getElementById('navbar');
+      const title = document.getElementById('hnccTitle');
       const height = navbar.offsetHeight;
 
       const currentScrollPos = window.pageYOffset;
@@ -31,9 +32,11 @@ const Navbar = () => {
 
       if (prevScroll < currentScrollPos) {
         navList.classList.add('fade-up');
+        title.classList.add('fade-up');
         navbar.style.borderBottom = '1px solid rgba(255, 255, 255, 0.2)';
       } else {
         navList.classList.remove('fade-up');
+        title.classList.remove('fade-up');
       }
 
       prevScroll = currentScrollPos;
@@ -45,8 +48,11 @@ const Navbar = () => {
     <section id="navbar" className={`${Styles.navbar}`}>
       <div className={`${Styles.navBrand}`}>
         <Link href="/">
-          <a>
+          <a className="flex items-center">
             <Image src={Logo} alt="HnCC" height="60px" width="60px" />
+            <h2 id="hnccTitle" className={Styles.navTitle}>
+              Hackathon and Coding Club
+            </h2>
           </a>
         </Link>
       </div>
@@ -54,9 +60,9 @@ const Navbar = () => {
         <Link href="/about">
           <a className={Styles.navLink}>About Us</a>
         </Link>
-        <Link href="/event">
+        {/* <Link href="/event">
           <a className={Styles.navLink}>Events</a>
-        </Link>
+        </Link> */}
         <Link href="/teams">
           <a className={Styles.navLink}>Team</a>
         </Link>

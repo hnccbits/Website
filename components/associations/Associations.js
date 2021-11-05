@@ -81,10 +81,12 @@ const Content = ({ id = '', className = '', children }) => {
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      if (window.innerHeight + 100 > ref.current.getBoundingClientRect().y) {
-        ref.current.classList.add('active');
-      } else {
-        ref.current.classList.remove('active');
+      if (ref.current) {
+        if (window.innerHeight + 100 > ref.current.getBoundingClientRect().y) {
+          ref.current.classList.add('active');
+        } else {
+          ref.current.classList.remove('active');
+        }
       }
     });
 

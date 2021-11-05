@@ -20,10 +20,12 @@ const Design = () => {
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      if (window.innerHeight + 100 > ref.current.getBoundingClientRect().y) {
-        ref.current.classList.add('active');
-      } else {
-        ref.current.classList.remove('active');
+      if (ref.current) {
+        if (window.innerHeight + 100 > ref.current.getBoundingClientRect().y) {
+          ref.current.classList.add('active');
+        } else {
+          ref.current.classList.remove('active');
+        }
       }
     });
 
@@ -85,10 +87,12 @@ const Development = () => {
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      if (window.innerHeight + 100 > ref.current.getBoundingClientRect().y) {
-        ref.current.classList.add('active');
-      } else {
-        ref.current.classList.remove('active');
+      if (ref.current) {
+        if (window.innerHeight + 100 > ref.current.getBoundingClientRect().y) {
+          ref.current.classList.add('active');
+        } else {
+          ref.current.classList.remove('active');
+        }
       }
     });
 
@@ -150,10 +154,12 @@ const Code = () => {
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      if (window.innerHeight + 100 > ref.current.getBoundingClientRect().y) {
-        ref.current.classList.add('active');
-      } else {
-        ref.current.classList.remove('active');
+      if (ref.current) {
+        if (window.innerHeight + 100 > ref.current.getBoundingClientRect().y) {
+          ref.current.classList.add('active');
+        } else {
+          ref.current.classList.remove('active');
+        }
       }
     });
 
