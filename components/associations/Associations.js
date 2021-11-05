@@ -1,10 +1,14 @@
 import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Styles from './association.module.css';
+import BottomGlitter from '../StyledText/BottomGlitter';
 
 const Associations = () => {
   return (
     <section className="container-70">
+      <div className="my-12 mb-16 sm:my-6 sm:mb-10">
+        <BottomGlitter text="Our Associations" />
+      </div>
       <div className={Styles.associationContainer}>
         <div className={Styles.associationMenuContainer}>
           <div className={Styles.associationMenu}>

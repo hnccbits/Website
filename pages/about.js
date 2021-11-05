@@ -31,7 +31,7 @@ const About = () => {
           <h4 className="pl-12">Prof. In-Charge, Information Technology</h4>
         </div>
         <div className="mt-12 mb-6 sm:mt-8 sm:mb-4">
-          <BottomGlitter text="about HnCC" />
+          <BottomGlitter text="About HnCC" />
           <div className="mt-6">
             <p className="text-xl">
               Hackathon and Coding Club (HnCC) is the official coding and
@@ -43,7 +43,7 @@ const About = () => {
           </div>
         </div>
         <div className="mt-20 mb-6 sm:mt-8 sm:mb-4">
-          <BottomGlitter text="our Activites" />
+          <BottomGlitter text="Our Activites" />
           <div className="mt-6">
             <p className="text-xl">
               We organize a national level hackathon, Hackatron every year. The

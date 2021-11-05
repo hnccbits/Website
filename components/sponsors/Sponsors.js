@@ -21,7 +21,7 @@ const Sponsors = () => {
   }, []);
   return (
     <section ref={ref} className="container-70 my-16 py-16 fadeonscroll-h">
-      <BottomGlitter text="our Sponsors" />
+      <BottomGlitter text="Our Sponsors" />
       <div className={Styles.sponsorsContainer}>
         {SponsorsData.map((src, index) => {
           return (
