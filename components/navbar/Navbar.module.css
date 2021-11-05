@@ -9,7 +9,12 @@
 }
 
 .navBrand {
-  flex: 0.2;
+  flex: 0.35;
+}
+
+.navTitle {
+  transition: all 400ms ease-in-out;
+  @apply 2lg:hidden ml-6 text-xl;
 }
 
 .navbarList {

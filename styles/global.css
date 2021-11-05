@@ -40,6 +40,16 @@ a {
   transition: all 2s;
 }
 
+.fadeonscroll-h {
+  transform: translateX(-100%);
+  transform-origin: 50% 100%;
+  opacity: 0;
+  transition: all 2s;
+}
+.fadeonscroll-h.active {
+  transform: none;
+  opacity: 1;
+}
 .fadeonscroll.active {
   transform: none;
   opacity: 1;
