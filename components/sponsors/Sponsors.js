@@ -20,7 +20,7 @@ const Sponsors = () => {
     return () => window.removeEventListener('scroll', null);
   }, []);
   return (
-    <section ref={ref} className="container-70 my-16 py-16 fadeonscroll-h">
+    <section ref={ref} className="container-70 my-16 py-16 fadeonscroll">
       <BottomGlitter text="Our Sponsors" />
       <div className={Styles.sponsorsContainer}>
         {SponsorsData.map((src, index) => {
