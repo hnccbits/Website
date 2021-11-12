@@ -2,6 +2,7 @@
 // import Head from 'next/head';
 import Associations from '../components/associations/Associations';
 import GridGallery from '../components/gridGallery/GridGallery';
+import HomeAbout from '../components/homeAbout/HomeAbout';
 import Screen from '../components/screen/Screen';
 import Sponsors from '../components/sponsors/Sponsors';
 import TechStack from '../components/techStack/TechStack';
@@ -11,6 +12,7 @@ export default function Home() {
   return (
     <Screen>
       <Video />
+      <HomeAbout />
       <TechStack />
       <GridGallery />
       <Sponsors />
