@@ -1,3 +1,4 @@
+import Events from '../components/event/Events';
 import Screen from '../components/screen/Screen';
 import BottomGlitter from '../components/StyledText/BottomGlitter';
 
@@ -33,7 +34,7 @@ const About = () => {
         <div className="mt-12 mb-6 sm:mt-8 sm:mb-4">
           <BottomGlitter text="About HnCC" />
           <div className="mt-6">
-            <p className="text-xl">
+            <p className="text-lg">
               Hackathon and Coding Club (HnCC) is the official coding and
               development club of BIT Sindri. It was started with an initial
               motto to inculcate and improve collaborative coding culture in
@@ -45,23 +46,23 @@ const About = () => {
         <div className="mt-20 mb-6 sm:mt-8 sm:mb-4">
           <BottomGlitter text="Our Activites" />
           <div className="mt-6">
-            <p className="text-xl">
+            <p className="text-lg">
               We organize a national level hackathon, Hackatron every year. The
               first version of this hackathon was held in 16th-17th November
-              2019.Checkout more at{' '}
+              2019. Checkout more at{' '}
               <a
                 className="text-blue"
                 href="https://www.hackatron.hnccbits.com"
               >
                 hackatron.hnccbits.com
               </a>
-              <br /> <br />
+              <br />
               Organize sessions related to various technology stacks such as
-              Development, Open Source etc. <br /> <br /> Host competitions
-              related to coding and other tech domains throughout the year and
-              Techfest, BIT Sindri <br /> <br />
+              Development, Open Source etc. <br /> Host competitions related to
+              coding and other tech domains throughout the year and Techfest,
+              BIT Sindri <br />
               Develop real world projects and solve real world problems.Checkout
-              our GitHub account at GitHub <br /> <br /> We manage the official
+              our GitHub account at GitHub <br /> We manage the official
               CodeChef Chapter of BIT Sindri, Dhanbad. See more about our coding
               culture at our official site{' '}
               <a className="text-blue" href="https://www.contest.hnccbits.com">
@@ -70,6 +71,8 @@ const About = () => {
             </p>
           </div>
         </div>
+
+        <Events />
       </section>
     </Screen>
   );
