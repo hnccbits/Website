@@ -17,7 +17,7 @@ const Teams = () => {
           </h3>
         </div>
 
-        <h2 className={Styles.postHead}>post Bearers</h2>
+        <h2 className={Styles.postHead}>Post Bearers</h2>
         <div className={Styles.cardContainer}>
           {TeamData2k19.slice(0, 8).map((item, index) => {
             return (
@@ -26,15 +26,13 @@ const Teams = () => {
                 name={item.name}
                 title={item.title}
                 imageSrc={item.imageSrc}
+                socials={item.socials}
               />
             );
           })}
-          <div className="invisible 2lg:hidden m2xl:hidden">
-            <TeamCard name="" title="" imageSrc="/teams/person.png" />
-          </div>
         </div>
 
-        <h2 className={Styles.postHead}>technical Head</h2>
+        <h2 className={Styles.postHead}>Technical Head</h2>
         <div className={`${Styles.cardContainer}`}>
           {TeamData2k19.slice(8, 14).map((item, index) => {
             return (
@@ -43,12 +41,13 @@ const Teams = () => {
                 name={item.name}
                 title={item.title}
                 imageSrc={item.imageSrc}
+                socials={item.socials}
               />
             );
           })}
         </div>
 
-        <h2 className={Styles.postHead}>event Manager</h2>
+        <h2 className={Styles.postHead}>Event Manager</h2>
         <div className={`${Styles.cardContainer}`}>
           {TeamData2k19.slice(14, 19).map((item, index) => {
             return (
@@ -57,6 +56,7 @@ const Teams = () => {
                 name={item.name}
                 title={item.title}
                 imageSrc={item.imageSrc}
+                socials={item.socials}
               />
             );
           })}
