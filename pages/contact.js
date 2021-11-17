@@ -5,6 +5,12 @@ import Button from '../components/button/Button';
 import StyledInput from '../components/input/StyledInput';
 import Screen from '../components/screen/Screen';
 
+/**
+ * ContactUS
+ * Contact Us Page of the website
+ * @returns {JSX.Element}
+ * It contains a form for the user to send message via email.
+ */
 const ContactUs = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');

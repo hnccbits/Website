@@ -2,6 +2,16 @@ import Link from 'next/link';
 import BottomGlitter from '../StyledText/BottomGlitter';
 import Styles from './Footer.module.css';
 
+/**
+ * Footer
+ * @return {JSX.Element} Footer of the webpage
+ * @description
+ * - It contains three sections:
+ *    - Contact
+ *    - Other Pages
+ *    - Get Help
+ */
+
 const Footer = () => {
   return (
     <footer className={`${Styles.footer} container-70`}>

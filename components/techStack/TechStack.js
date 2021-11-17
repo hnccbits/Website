@@ -1,6 +1,10 @@
 import { useEffect, useRef } from 'react';
 import Styles from './tech-stack.module.css';
 
+/**
+ * TechStack
+ * @returns {JSX.Element} 
+ */
 const TechStack = () => {
   return (
     <section className={`${Styles.techStack}`}>

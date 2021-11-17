@@ -3,6 +3,11 @@ import GalleryImages from '../../lib/data/GalleryData';
 import BottomGlitter from '../StyledText/BottomGlitter';
 import Styles from './grid-gallery.module.css';
 
+/**
+ * Grid Gallery
+ * @returns {JSX.Element}
+ * - It conains the archive images of all the club's major events
+ */
 const GridGallery = () => {
   return (
     <section className={Styles.gallerySection}>
@@ -22,6 +27,13 @@ const GridGallery = () => {
 
 export default GridGallery;
 
+/**
+ * Grid Image
+ * @param {Object} details
+ * - The object { src: String, title: String } contains src that is the source of the image and the title of the image
+ * @returns {JSX.Element}
+ * - It contains the individual event's image
+ */
 const GridImage = ({ src, title }) => {
   return (
     <div className={`${Styles.w3} ${Styles.h2}`}>

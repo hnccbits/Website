@@ -8,7 +8,8 @@
     "style:lint": "eslint '**/*.{js,jsx,ts,tsx}'",
     "style:prettier": "prettier --check '**/*.{js,jsx,ts,tsx}'",
     "make-pretty": "prettier --write '**/*.{js,jsx,ts,tsx}'",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "doc": "jsdoc -c jsdoc.json"
   },
   "dependencies": {
     "emailjs-com": "^3.2.0",
@@ -31,6 +32,7 @@
     "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^7.0.4",
+    "jsdoc": "^3.6.7",
     "postcss": "^8.3.5",
     "prettier": "^2.4.1",
     "tailwindcss": "^2.2.4",

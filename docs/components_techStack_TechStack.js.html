@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: components/techStack/TechStack.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: components/techStack/TechStack.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import { useEffect, useRef } from 'react';
+import Styles from './tech-stack.module.css';
+
+/**
+ * TechStack
+ * @returns {JSX.Element} 
+ */
+const TechStack = () => {
+  return (
+    &lt;section className={`${Styles.techStack}`}>
+      &lt;div className="container-70">
+        &lt;Design />
+        &lt;Development />
+        &lt;Code />
+      &lt;/div>
+    &lt;/section>
+  );
+};
+
+export default TechStack;
+
+const Design = () => {
+  const ref = useRef();
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      if (window.innerHeight + 100 > ref.current.getBoundingClientRect().y) {
+        ref.current.classList.add('active');
+      } else {
+        ref.current.classList.remove('active');
+      }
+    });
+
+    return () => window.removeEventListener('scroll', null);
+  }, []);
+
+  return (
+    &lt;div ref={ref} className={`${Styles.row} mt-40 fadeonscroll`}>
+      &lt;div className={`${Styles.col} ${Styles.col40}`}>
+        &lt;h2 className={Styles.header}>Design.&lt;/h2>
+      &lt;/div>
+      &lt;div className={`${Styles.col} ${Styles.col60}`}>
+        &lt;div className={Styles.headDescription}>
+          Establishing the right visual connection with your customers and users
+          by creating eye-catching and memorable designs as well as meaningful
+          user experience.
+        &lt;/div>
+        &lt;div className={Styles.contentContainer}>
+          &lt;div className={Styles.content}>
+            &lt;h2>Websites and Platform&lt;/h2>
+            &lt;p>
+              We design projects of different complexity and size. No matter if
+              it is a simple single-page website or a complex admin panel with
+              numerous dashboards - we make it visually pleasing, consistent,
+              and user-friendly.
+            &lt;/p>
+          &lt;/div>
+          &lt;div className={Styles.content}>
+            &lt;h2>Mobile Applications&lt;/h2>
+            &lt;p>
+              We don’t simply design beautiful interfaces but craft them in
+              accordance with each platforms’ guidelines to make the use of our
+              app intuitive.
+            &lt;/p>
+          &lt;/div>
+          &lt;div className={Styles.content}>
+            &lt;h2>Branding&lt;/h2>
+            &lt;p>
+              We identify our brand by developing a logo, identity, , any
+              mockups, and souvenir projects.
+            &lt;/p>
+          &lt;/div>
+          &lt;div className={Styles.content}>
+            &lt;h2>Design Concept&lt;/h2>
+            &lt;p>
+              We’ll make a design concept for a site or mobile application to
+              attract our audience and make our awesome project even more
+              awesome.
+            &lt;/p>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+  );
+};
+
+const Development = () => {
+  const ref = useRef();
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      if (window.innerHeight + 100 > ref.current.getBoundingClientRect().y) {
+        ref.current.classList.add('active');
+      } else {
+        ref.current.classList.remove('active');
+      }
+    });
+
+    return () => window.removeEventListener('scroll', null);
+  }, []);
+
+  return (
+    &lt;div ref={ref} className={`${Styles.row} mt-40 fadeonscroll sm:mt-4`}>
+      &lt;div className={`${Styles.col} ${Styles.col40}`}>
+        &lt;h2 className={Styles.header}>Develop.&lt;/h2>
+      &lt;/div>
+      &lt;div className={`${Styles.col} ${Styles.col60}`}>
+        &lt;div className={Styles.headDescription}>
+          Implementing our project with scalable architecture design, modern
+          technology, and with the industry level workflow system.
+        &lt;/div>
+        &lt;div className={Styles.contentContainer}>
+          &lt;div className={Styles.content}>
+            &lt;h2>Website&lt;/h2>
+            &lt;p>
+              We create web projects tailored exclusively with industry scales,
+              be it a landing page, a complex web app to automate our processes
+              or a high-load platform with sound backend architecture.
+            &lt;/p>
+          &lt;/div>
+          &lt;div className={Styles.content}>
+            &lt;h2>Native/Hybrid Apps&lt;/h2>
+            &lt;p>
+              We build custom Android mobile apps using Java(Kotlin) and
+              multiple cross platform (IoS and Andorid) mobile apps using React
+              Native and Flutter.
+            &lt;/p>
+          &lt;/div>
+          &lt;div className={Styles.content}>
+            &lt;h2>A.I./M.L.&lt;/h2>
+            &lt;p>
+              We focus on developing and strengthening systems thinking,
+              problem-solving, analysis, design, research, teamwork and
+              readiness for lifelong learning in areas of Artificial
+              Intelligence, Machine Learning, and Deep-Learning.
+            &lt;/p>
+          &lt;/div>
+          &lt;div className={Styles.content}>
+            &lt;h2>Open Source&lt;/h2>
+            &lt;p>
+              Our mission is to create an environment where the benefits of open
+              development enable students to collaborate and explore beyond the
+              classroom.
+            &lt;/p>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+  );
+};
+
+const Code = () => {
+  const ref = useRef();
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      if (window.innerHeight + 100 > ref.current.getBoundingClientRect().y) {
+        ref.current.classList.add('active');
+      } else {
+        ref.current.classList.remove('active');
+      }
+    });
+
+    return () => window.removeEventListener('scroll', null);
+  }, []);
+  return (
+    &lt;div ref={ref} className={`${Styles.row} mt-40 fadeonscroll sm:mt-4`}>
+      &lt;div className={`${Styles.col} ${Styles.col40}`}>
+        &lt;h2 className={Styles.header}>Code.&lt;/h2>
+      &lt;/div>
+      &lt;div className={`${Styles.col} ${Styles.col60}`}>
+        &lt;div className={Styles.headDescription}>
+          Being Coding Club of a technical institution, we do pretty much
+          everything and anything related to coding. Coding events, Workshops,
+          Hackathons (48 hours non stop coding), contests are just to name a
+          few. We believe in coding our problems away.
+        &lt;/div>
+        &lt;div className={Styles.contentContainer}>
+          &lt;div className={Styles.content}>
+            &lt;h2>Competitve Coding&lt;/h2>
+            &lt;p>
+              Competitive programming is a mind sport usually held over the
+              Internet or a local network, involving participants trying to
+              program according to provided specifications. Contestants are
+              referred to as sport programmers.
+            &lt;/p>
+          &lt;/div>
+          &lt;div className={Styles.content}>
+            &lt;h2>DSA&lt;/h2>
+            &lt;p>
+              Data structure and Algorithm (DSA) is applied in all disciplines
+              of software development. DSA is the building block of the software
+              development process. It is one of the most important section for
+              placments.
+            &lt;/p>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+  );
+};
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">HnCC Website Developers Docs</a></h2><h3>Global</h3><ul><li><a href="global.html#About">About</a></li><li><a href="global.html#AssociationsData">AssociationsData</a></li><li><a href="global.html#BottomGlitter">BottomGlitter</a></li><li><a href="global.html#Button">Button</a></li><li><a href="global.html#ContactUs">ContactUs</a></li><li><a href="global.html#Footer">Footer</a></li><li><a href="global.html#GalleryImages">GalleryImages</a></li><li><a href="global.html#GridGallery">GridGallery</a></li><li><a href="global.html#GridImage">GridImage</a></li><li><a href="global.html#ICON_SIZE">ICON_SIZE</a></li><li><a href="global.html#Navbar">Navbar</a></li><li><a href="global.html#Screen">Screen</a></li><li><a href="global.html#SocialsBar">SocialsBar</a></li><li><a href="global.html#SpanStyle">SpanStyle</a></li><li><a href="global.html#Sponsors">Sponsors</a></li><li><a href="global.html#SponsorsData">SponsorsData</a></li><li><a href="global.html#StyledInput">StyledInput</a></li><li><a href="global.html#TeamCard">TeamCard</a></li><li><a href="global.html#TeamData2k19">TeamData2k19</a></li><li><a href="global.html#Teams">Teams</a></li><li><a href="global.html#TechStack">TechStack</a></li><li><a href="global.html#Video">Video</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Wed Nov 17 2021 17:20:41 GMT+0530 (India Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "source": {
+    "include": ["components", "lib", "pages"],
+    "includePattern": ".js$",
+    "excludePattern": "(node_modules/|docs|public|styles|assets)"
+  },
+  "plugins": ["plugins/markdown"],
+  "templates": {
+    "cleverLinks": true,
+    "monospaceLinks": true
+  },
+  "opts": {
+    "recurse": true,
+    "destination": "./docs/",
+    "template": "template"
+  }
+}

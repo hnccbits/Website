@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: pages/contact.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: pages/contact.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import { useRef, useState } from 'react';
+import { useRouter } from 'next/router';
+import emailjs from 'emailjs-com';
+import Button from '../components/button/Button';
+import StyledInput from '../components/input/StyledInput';
+import Screen from '../components/screen/Screen';
+
+/**
+ * ContactUS
+ * Contact Us Page of the website
+ * @returns {JSX.Element}
+ * It contains a form for the user to send message via email.
+ */
+const ContactUs = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [show, setShow] = useState(false);
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_SERVICE_ID,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID,
+        form.current,
+        process.env.NEXT_PUBLIC_USER_ID
+      )
+      .finally(() => {
+        setShow(true);
+        setName('');
+        setEmail('');
+        setMessage('');
+        window.scrollTo(0, 0);
+      });
+  };
+
+  return (
+    &lt;Screen>
+      &lt;section className="container-70 overflow-hidden">
+        &lt;ThankYou show={show} />
+        &lt;div className={`${show ? 'invisible hidden' : 'visible'} z-10`}>
+          &lt;div className="mt-28 mb-12 pt-10 pb-8 sm:mt-20 sm:mb-10">
+            &lt;h1 className="text-7xl sm:text-5xl">
+              Interested?
+              &lt;br />
+              Let&amp;apos;s talk!
+            &lt;/h1>
+            &lt;p className="mt-20 w-2/5 text-lg xl:w-3/5 sm:w-3/4 sm:text-base">
+              Just fill this simple form in and we will contact you promptly.
+              Hate forms? Drop us a line at{' '}
+              &lt;span>
+                &lt;a className="text-blue" href="mailto:hnccbits@gmail.com">
+                  hnccbits@gmail.com
+                &lt;/a>
+              &lt;/span>
+            &lt;/p>
+          &lt;/div>
+          &lt;div className="mt-16">
+            &lt;form ref={form} onSubmit={sendEmail}>
+              &lt;div className="flex justify-between items-center flex-wrap xl:flex-col xl:justify-start xl:items-start">
+                &lt;StyledInput
+                  id="nameInput"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  name="name"
+                  label="Your name"
+                  required
+                  className="w-3/5"
+                />
+                &lt;StyledInput
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  name="email"
+                  type="email"
+                  label="Your email"
+                  required
+                  className="w-3/5"
+                />
+              &lt;/div>
+              &lt;StyledInput
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                name="message"
+                label="Your message"
+                required
+                className="w-4/5"
+              />
+              &lt;button type="submit" className="mt-16">
+                &lt;Button
+                  style={{ border: 'none' }}
+                  className="bg-primary-light text-primary hover:text-primary-light"
+                >
+                  &lt;span
+                    style={{
+                      color: 'inherit',
+                      transition: 'all 300ms ease-in-out',
+                    }}
+                    className="z-10"
+                  >
+                    Submit
+                  &lt;/span>
+                &lt;/Button>
+              &lt;/button>
+            &lt;/form>
+          &lt;/div>
+        &lt;/div>
+      &lt;/section>
+    &lt;/Screen>
+  );
+};
+
+export default ContactUs;
+
+const ThankYou = ({ show }) => {
+  const router = useRouter();
+
+  return (
+    &lt;div
+      style={{ transition: 'all 400ms ease-in-out' }}
+      className={`mt-28 mb-12 pt-10 pb-8 sm:mt-20 sm:mb-10 absolute ${
+        show ? 'visible relative' : 'invisible'
+      }`}
+    >
+      &lt;h1 className="text-7xl sm:text-5xl">
+        Thank You!
+        &lt;br />
+        We&amp;apos;ll be in touch shortly.
+      &lt;/h1>
+      &lt;p className="mt-20 w-3/5 text-lg xl:w-3/5 sm:w-3/4 sm:text-base">
+        Feel free to explore some interesting topics on our{' '}
+        &lt;span>
+          &lt;a className="text-blue" href="https://blog.hnccbits.com/">
+            blog
+          &lt;/a>
+        &lt;/span>{' '}
+        and roam around the{' '}
+        &lt;span>
+          &lt;a className="text-blue" href="/">
+            website
+          &lt;/a>
+        &lt;/span>
+      &lt;/p>
+      &lt;div className="mt-16">
+        &lt;Button
+          onClick={() => router.push('/')}
+          style={{ border: 'none' }}
+          className="bg-primary-light text-primary hover:text-primary-light"
+        >
+          &lt;span
+            style={{
+              color: 'inherit',
+              transition: 'all 300ms ease-in-out',
+            }}
+            className="z-10"
+          >
+            Back to home
+          &lt;/span>
+        &lt;/Button>
+      &lt;/div>
+    &lt;/div>
+  );
+};
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">HnCC Website Developers Docs</a></h2><h3>Global</h3><ul><li><a href="global.html#About">About</a></li><li><a href="global.html#AssociationsData">AssociationsData</a></li><li><a href="global.html#BottomGlitter">BottomGlitter</a></li><li><a href="global.html#Button">Button</a></li><li><a href="global.html#ContactUs">ContactUs</a></li><li><a href="global.html#Footer">Footer</a></li><li><a href="global.html#GalleryImages">GalleryImages</a></li><li><a href="global.html#GridGallery">GridGallery</a></li><li><a href="global.html#GridImage">GridImage</a></li><li><a href="global.html#ICON_SIZE">ICON_SIZE</a></li><li><a href="global.html#Navbar">Navbar</a></li><li><a href="global.html#Screen">Screen</a></li><li><a href="global.html#SocialsBar">SocialsBar</a></li><li><a href="global.html#SpanStyle">SpanStyle</a></li><li><a href="global.html#Sponsors">Sponsors</a></li><li><a href="global.html#SponsorsData">SponsorsData</a></li><li><a href="global.html#StyledInput">StyledInput</a></li><li><a href="global.html#TeamCard">TeamCard</a></li><li><a href="global.html#TeamData2k19">TeamData2k19</a></li><li><a href="global.html#Teams">Teams</a></li><li><a href="global.html#TechStack">TechStack</a></li><li><a href="global.html#Video">Video</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Wed Nov 17 2021 17:20:41 GMT+0530 (India Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

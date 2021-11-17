@@ -3,6 +3,11 @@ import SponsorsData from '../../lib/data/SponsorsData';
 import BottomGlitter from '../StyledText/BottomGlitter';
 import Styles from './sponsors.module.css';
 
+/**
+ * Sponsors
+ * @returns {JSX.Element}
+ * Returns the sponsors logos in an row
+ */
 const Sponsors = () => {
   return (
     <section className="container-70 my-16 py-16">

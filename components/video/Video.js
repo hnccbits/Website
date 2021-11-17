@@ -1,6 +1,13 @@
 import { useState } from 'react';
 import Styles from './Video.module.css';
 
+/**
+ * Video Header
+ * @returns {JSX.Element} It returns the background of header section in Home Page which contains the video, which are played on hover
+ * @description
+ * It contains 3 videos of Design, Develop and Code segment.
+ */
+
 const Video = () => {
   const [video, setVideo] = useState('design');
   const VideoPlay = (src) => {

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: components/footer/Footer.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: components/footer/Footer.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import Link from 'next/link';
+import BottomGlitter from '../StyledText/BottomGlitter';
+import Styles from './Footer.module.css';
+
+/**
+ * Footer
+ * @return {JSX.Element} Footer of the webpage
+ * @description
+ * - It contains three sections:
+ *    - Contact
+ *    - Other Pages
+ *    - Get Help
+ */
+
+const Footer = () => {
+  return (
+    &lt;footer className={`${Styles.footer} container-70`}>
+      &lt;div className="py-12 mt-20 sm:mt-4 md:mt-12">
+        &lt;h4 className="text-2xl mb-10 pl-3">Contacts&lt;/h4>
+        &lt;BottomGlitter text="Get In Touch" />
+      &lt;/div>
+
+      &lt;div className={Styles.linksContainer}>
+        &lt;div className="flex-2 md:flex-1">
+          &lt;div className="mb-3 flex flex-col">
+            &lt;h3 className="text-2xl">Write&lt;/h3>
+            &lt;h4 className="text-lg font-extralight">
+              &lt;a href="mailto:hnccbits@gmail.com">hnccbits@gmail.com&lt;/a>
+            &lt;/h4>
+          &lt;/div>
+          &lt;div className="my-3 flex flex-col">
+            &lt;h3 className="text-2xl">Meet&lt;/h3>
+            &lt;h4 className="text-lg font-extralight">
+              BIT, Sindri &lt;br />
+              Dhanbad-823123 &lt;br />
+              Jharkhand, India
+            &lt;/h4>
+          &lt;/div>
+        &lt;/div>
+        &lt;div className="flex-4 md:flex-1 md:mx-4 sm:mx-0 sm:mt-8">
+          &lt;h3 className="text-2xl">Other Pages&lt;/h3>
+          &lt;Link href="/event">
+            &lt;a className="pl-1 block text-lg my-1 font-extralight">Events&lt;/a>
+          &lt;/Link>
+          &lt;a
+            href="www.google.com"
+            className="pl-1 block text-lg my-1 font-extralight"
+          >
+            Blog
+          &lt;/a>
+          &lt;a
+            href="www.google.com"
+            className="block pl-1 text-lg my-1 font-extralight"
+          >
+            BIT Sindri
+          &lt;/a>
+        &lt;/div>
+        &lt;div className="flex-4 md:flex-1 sm:mt-8">
+          &lt;h3 className="text-2xl">Get Help&lt;/h3>
+          &lt;a
+            href="www.google.com"
+            className="block pl-1 text-lg my-1 font-extralight"
+          >
+            Join Us
+          &lt;/a>
+          &lt;Link href="/faqs">
+            &lt;a className="block pl-1 text-lg my-1 font-extralight">FAQs&lt;/a>
+          &lt;/Link>
+          &lt;Link href="/contact">
+            &lt;a className="pl-1 block text-lg my-1 font-extralight">
+              Contact Us
+            &lt;/a>
+          &lt;/Link>
+        &lt;/div>
+      &lt;/div>
+
+      &lt;div className={Styles.copyrightBottom}>
+        &lt;h6>© 2021 Hackathon and Coding Club. All rights reserved.&lt;/h6>
+
+        &lt;h6>
+          Crafted with &lt;span className="text-2xl">♥&lt;/span> by HnCC Team.
+        &lt;/h6>
+      &lt;/div>
+    &lt;/footer>
+  );
+};
+
+export default Footer;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">HnCC Website Developers Docs</a></h2><h3>Global</h3><ul><li><a href="global.html#About">About</a></li><li><a href="global.html#AssociationsData">AssociationsData</a></li><li><a href="global.html#BottomGlitter">BottomGlitter</a></li><li><a href="global.html#Button">Button</a></li><li><a href="global.html#ContactUs">ContactUs</a></li><li><a href="global.html#Footer">Footer</a></li><li><a href="global.html#GalleryImages">GalleryImages</a></li><li><a href="global.html#GridGallery">GridGallery</a></li><li><a href="global.html#GridImage">GridImage</a></li><li><a href="global.html#ICON_SIZE">ICON_SIZE</a></li><li><a href="global.html#Navbar">Navbar</a></li><li><a href="global.html#Screen">Screen</a></li><li><a href="global.html#SocialsBar">SocialsBar</a></li><li><a href="global.html#SpanStyle">SpanStyle</a></li><li><a href="global.html#Sponsors">Sponsors</a></li><li><a href="global.html#SponsorsData">SponsorsData</a></li><li><a href="global.html#StyledInput">StyledInput</a></li><li><a href="global.html#TeamCard">TeamCard</a></li><li><a href="global.html#TeamData2k19">TeamData2k19</a></li><li><a href="global.html#Teams">Teams</a></li><li><a href="global.html#TechStack">TechStack</a></li><li><a href="global.html#Video">Video</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Wed Nov 17 2021 17:20:41 GMT+0530 (India Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

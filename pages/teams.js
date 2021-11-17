@@ -4,6 +4,13 @@ import Styles from '../components/teams/Team.module.css';
 import TeamData2k19 from '../lib/data/TeamData';
 import BottomGlitter from '../components/StyledText/BottomGlitter';
 
+/**
+ * Teams
+ * It is the team page of the website
+ * @description Contains the information about the club members.
+ * @returns {JSX.Element}
+ * It contains a grid of cards.
+ */
 const Teams = () => {
   return (
     <Screen>

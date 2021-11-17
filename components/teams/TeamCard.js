@@ -1,6 +1,19 @@
 import Image from 'next/image';
 import Style from './Team.module.css';
 
+/**
+ *
+ * @param {Object} Props pass an object with contains
+ * - Name
+ * - Title
+ * - Socials
+ * - Image Source
+ * @returns {JSX.Element}
+ * Return the card element which contains the name, club title, image and social links.
+ *
+ * Properties
+ * - Card have shining rotating border.
+ */
 const TeamCard = ({ name, title, socials, imageSrc }) => {
   return (
     <div className={Style.card}>

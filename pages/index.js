@@ -6,6 +6,15 @@ import Sponsors from '../components/sponsors/Sponsors';
 import TechStack from '../components/techStack/TechStack';
 import Video from '../components/video/Video';
 
+/**
+ * Home
+ * Home page of the website
+ * @returns {JSX.Element}
+ * It contains Video Header Section
+ * Tech Stack Section
+ * Gallery Section
+ * Sponsors Section
+ */
 export default function Home() {
   return (
     <Screen>

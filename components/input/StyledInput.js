@@ -1,6 +1,15 @@
 import { useRef, useState } from 'react';
 import Styles from './styled-input.module.css';
 
+/**
+ * Styled Input
+ * @param {Object}
+ * It contains Input Label, Name, Classname for Input Styling and Properties of Input.
+ * @returns {JSX.Element}
+ * Return Customized Input element
+ * - Label translates upwards on focus.
+ */
+
 const StyledInput = ({ label, name = '', className = '', ...otherProps }) => {
   const ref = useRef();
   const [transform, setTransform] = useState(false);

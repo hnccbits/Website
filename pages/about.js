@@ -1,6 +1,17 @@
 import Screen from '../components/screen/Screen';
 import BottomGlitter from '../components/StyledText/BottomGlitter';
 
+/**
+ * About
+ * About page of the website
+ * @description It contains the details of the club and club' events.
+ * @returns {JSX.Element}
+ * Its has the following sections:
+ * - About HnCC
+ * - Our activities
+ * - Our Vision
+ * - Our Events
+ */
 const About = () => {
   return (
     <Screen>
