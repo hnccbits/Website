@@ -39,6 +39,16 @@
   background-color: #000;
 }
 
+.socials {
+  @apply flex flex-row justify-around items-center w-full;
+  z-index: 101;
+}
+
+.socials:hover:focus > a > svg {
+  @apply text-blue;
+  fill: #00ccff;
+}
+
 .postHead {
   @apply text-5xl mb-14 mt-16 font-extrabold md:text-center md:pl-0 sm:mt-12;
 }
