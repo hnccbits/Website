@@ -72,3 +72,8 @@ a {
   opacity: 0;
   visibility: hidden;
 }
+.navbarClicked{
+  transform: translateX(100%);
+  display: block;
+  transition-timing-function: ease-in-out;
+}
