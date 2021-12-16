@@ -73,7 +73,14 @@ a {
   visibility: hidden;
 }
 .navbarClicked{
+  width: 0%;
   transform: translateX(100%);
+  transition: all 400ms ease-in-out;
   display: block;
   transition-timing-function: ease-in-out;
+}
+.hide{
+  width:100%;
+  transform: translateX(-400%);
+    transition: all 400ms ease-in-out;
 }

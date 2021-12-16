@@ -11,9 +11,9 @@
     overflow: hidden;
 }
 .navbar{
-    /* transform: translateX(-80%);
-    display: none; */
-    width: 100%;
+    
+    /* display: none; */
+    /* width: 0%; */
     z-index: 200;
     background-color: rgb(10, 10, 10);
     top: 0%;
@@ -23,11 +23,12 @@
     padding-left: 1.5rem;
     padding-right: 1.5rem;
 }
-/* .navbarClicked{
+.navbarClicked{
+    width:100%;
     transform: translateX(100%);
     display: block;
-    transition-timing-function: ease-in-out;
-} */
+    /* transition: all 400ms ease-in-out; */
+}
 .navLink{
 
     margin-left: 0;
