@@ -21,32 +21,32 @@ const Navbar = (props) => {
   }
 
   useEffect(() => {
-    let prevScroll = window.pageYOffset;
-    document.addEventListener('scroll', () => {
-      const navList = document.getElementById('navList');
-      const navbar = document.getElementById('navbar');
-      const title = document.getElementById('hnccTitle');
-      const height = navbar.offsetHeight;
+      let prevScroll = window.pageYOffset;
+      document.addEventListener('scroll', () => {
+        const navList = document.getElementById('navList');
+        const navbar = document.getElementById('navbar');
+        const title = document.getElementById('hnccTitle');
+        const height = navbar.offsetHeight;
 
-      const currentScrollPos = window.pageYOffset;
-      if (currentScrollPos > height + 60) {
-        navbar.style.borderBottom = '1px solid rgba(255, 255, 255, 0.2)';
-      } else {
-        navbar.style.border = 'none';
-      }
+        const currentScrollPos = window.pageYOffset;
+        if (currentScrollPos > height + 60) {
+          navbar.style.borderBottom = '1px solid rgba(255, 255, 255, 0.2)';
+        } else {
+          navbar.style.border = 'none';
+        }
 
-      if (prevScroll < currentScrollPos) {
-        navList.classList.add('fade-up');
-        title.classList.add('fade-up');
-        navbar.style.borderBottom = '1px solid rgba(255, 255, 255, 0.2)';
-      } else {
-        navList.classList.remove('fade-up');
-        title.classList.remove('fade-up');
-      }
+        if (prevScroll < currentScrollPos) {
+          navList.classList.add('fade-up');
+          title.classList.add('fade-up');
+          navbar.style.borderBottom = '1px solid rgba(255, 255, 255, 0.2)';
+        } else {
+          navList.classList.remove('fade-up');
+          title.classList.remove('fade-up');
+        }
 
-      prevScroll = currentScrollPos;
-    });
-
+        prevScroll = currentScrollPos;
+      });
+    
     return () => document.removeEventListener('scroll', null);
   }, []);
 
