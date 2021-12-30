@@ -73,8 +73,8 @@ a {
   visibility: hidden;
 }
 .navbarClicked{
-  width: 0%;
-  transform: translateX(100%);
+  width: 100%;
+  transform: translateX(0%);
   transition: all 400ms ease-in-out;
   display: block;
   transition-timing-function: ease-in-out;

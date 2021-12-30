@@ -16,7 +16,7 @@ const SpanStyle = {
 const Navbar = (props) => {
   console.log(props.sidebar);
   function sidebarclicked() {
-    props.setSidebar('true');
+    props.setSidebar(true);
   console.log(props.sidebar);
   }
 

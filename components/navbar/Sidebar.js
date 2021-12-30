@@ -16,19 +16,9 @@ const SpanStyle = {
 const Sidebar = (props) => {
   console.log(props.sidebar);
   function sidebarclosed() {
-    props.setSidebar('false');
+    props.setSidebar(false);
   console.log(props.sidebar);
-  }
-  useEffect(() => {
-  console.log(props.sidebar);
-    const navbar = document.getElementById('navbar');
-    if (props.sidebar === true) {
-      console.log(props.sidebar);
-      navbar.classList.add('navbarClicked');
-    }
-    if (props.sidebar === false) navbar.classList.remove('navbarClicked'); 
-  }, []);
-  
+  } 
     return (
       <section id='sidebarSection' className={`${Hamstyles.hamburger}`}>
         <section id="navbar" className={`${props.sidebar?'navbarClicked':'hide'} ${Hamstyles.navbar}`}>
@@ -50,7 +40,7 @@ const Sidebar = (props) => {
           </div>
           <div id="navList" className={`${Hamstyles.hamburgerActive}`}>
             <Link href="/about">
-              <a className={`${Styles.navLink} ${Hamstyles.navLink}`}>
+              <a className={`${Hamstyles.navLink}`}>
                 About Us
               </a>
             </Link>
@@ -58,10 +48,10 @@ const Sidebar = (props) => {
             <a className={Styles.navLink}>Events</a>
           </Link> */}
             <Link href="/teams">
-              <a className={`${Styles.navLink} ${Hamstyles.navLink}`}>Team</a>
+              <a className={`${Hamstyles.navLink}`}>Team</a>
             </Link>
             <Link href="/contact">
-              <a className={`${Styles.navLink} ${Hamstyles.navLink}`}>
+              <a className={`${Hamstyles.navLink}`}>
                 Contact Us
               </a>
             </Link>
