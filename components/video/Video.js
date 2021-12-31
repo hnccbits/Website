@@ -11,7 +11,7 @@ const Video = () => {
   const VideoPause = () => {
     document.getElementById('videoContainer').style.opacity = 0;
     document.getElementById('video').pause();
-    setVideo('');
+    // setVideo('');
   };
 
   const Heading = ({ src, text }) => {

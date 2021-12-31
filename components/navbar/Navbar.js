@@ -1,11 +1,12 @@
 /* eslint-disable no-alert */
-import { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { HiMenuAlt4 } from 'react-icons/hi';
 import Image from 'next/image';
 import Link from 'next/link';
-import Styles from './Navbar.module.css';
+import styles from './Navbar.module.css';
 import Logo from '../../assets/hncc-logo.png';
 import Button from '../button/Button';
+import Sidebar from './Sidebar';
 
 const SpanStyle = {
   zIndex: 1,
@@ -14,6 +15,16 @@ const SpanStyle = {
 };
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    // Creating a dynamic parent div for the sidebar to act as portal's root
+    const div = document.createElement('div');
+    div.setAttribute('id', 'overlay');
+    document.querySelector('body').appendChild(div);
+    return () => div.remove();
+  }, []);
+
   useEffect(() => {
     let prevScroll = window.pageYOffset;
     document.addEventListener('scroll', () => {
@@ -23,7 +34,6 @@ const Navbar = () => {
       const height = navbar.offsetHeight;
 
       const currentScrollPos = window.pageYOffset;
-
       if (currentScrollPos > height + 60) {
         navbar.style.borderBottom = '1px solid rgba(255, 255, 255, 0.2)';
       } else {
@@ -44,30 +54,31 @@ const Navbar = () => {
 
     return () => document.removeEventListener('scroll', null);
   }, []);
+
   return (
-    <section id="navbar" className={`${Styles.navbar}`}>
-      <div className={`${Styles.navBrand}`}>
+    <section id="navbar" className={`${styles.navbar}`}>
+      <div className={`${styles.navBrand}`}>
         <Link href="/">
           <a className="flex items-center">
             <Image src={Logo} alt="HnCC" height="60px" width="60px" />
-            <h2 id="hnccTitle" className={Styles.navTitle}>
+            <h2 id="hnccTitle" className={styles.navTitle}>
               Hackathon and Coding Club
             </h2>
           </a>
         </Link>
       </div>
-      <div id="navList" className={`${Styles.navbarList}`}>
+      <div id="navList" className={`${styles.navbarList}`}>
         <Link href="/about">
-          <a className={Styles.navLink}>About Us</a>
+          <a className={styles.navLink}>About Us</a>
         </Link>
         {/* <Link href="/event">
-          <a className={Styles.navLink}>Events</a>
-        </Link> */}
+            <a className={styles.navLink}>Events</a>
+          </Link> */}
         <Link href="/teams">
-          <a className={Styles.navLink}>Team</a>
+          <a className={styles.navLink}>Team</a>
         </Link>
         <Link href="/contact">
-          <a className={Styles.navLink}>Contact Us</a>
+          <a className={styles.navLink}>Contact Us</a>
         </Link>
         <Button
           style={{ border: 'none' }}
@@ -77,9 +88,15 @@ const Navbar = () => {
           <span style={SpanStyle}>Join Us</span>
         </Button>
       </div>
-      <HiMenuAlt4 size={32} className={Styles.humburgerMenu} />
+      <div
+        id="hamburger"
+        onClick={() => setIsOpen(true)}
+        className="cursor-pointer"
+      >
+        <HiMenuAlt4 size={32} className={styles.humburgerMenu} />
+      </div>
+      <Sidebar isMounted={isOpen} unmount={() => setIsOpen(false)} />
     </section>
   );
 };
-
 export default Navbar;

@@ -1,6 +1,7 @@
 .rippleButton {
-  @apply text-lg inline-block overflow-hidden relative rounded-full px-10 py-[13px];
-  border: 1px solid hsla(0, 0%, 100%, 0.4);
+  @apply text-lg inline-block overflow-hidden relative rounded-full px-10 py-[13px] cursor-pointer;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: border-color 0.4s;
 }
 
 .rippleButton::before {
@@ -19,6 +20,10 @@
     rgba(36, 172, 255, 1) 100%
   );
   transition: width 0.5s, height 0.5s;
+}
+
+.rippleButton:hover {
+  border-color: transparent;
 }
 
 .rippleButton:hover::before {
