@@ -29,18 +29,22 @@ const Footer = () => {
         </div>
         <div className="flex-4 md:flex-1 md:mx-4 sm:mx-0 sm:mt-8">
           <h3 className="text-2xl">Other Pages</h3>
-          <Link href="/event">
+          <Link href="/events">
             <a className="pl-1 block text-lg my-1 font-extralight">Events</a>
           </Link>
           <a
-            href="www.google.com"
+            href="https://blog.hnccbits.com"
             className="pl-1 block text-lg my-1 font-extralight"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Blog
           </a>
           <a
-            href="www.google.com"
+            href="https://bitsindri.ac.in"
             className="block pl-1 text-lg my-1 font-extralight"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             BIT Sindri
           </a>
@@ -48,8 +52,12 @@ const Footer = () => {
         <div className="flex-4 md:flex-1 sm:mt-8">
           <h3 className="text-2xl">Get Help</h3>
           <a
-            href="www.google.com"
+            href="/contact"
             className="block pl-1 text-lg my-1 font-extralight"
+            onClick={(e) => {
+              e.preventDefault();
+              alert('We are currently not induction new members.');
+            }}
           >
             Join Us
           </a>

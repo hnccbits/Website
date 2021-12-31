@@ -34,7 +34,7 @@ const Teams = () => {
 
         <h2 className={Styles.postHead}>Technical Head</h2>
         <div className={`${Styles.cardContainer}`}>
-          {TeamData2k19.slice(8, 14).map((item, index) => {
+          {TeamData2k19.slice(8, 15).map((item, index) => {
             return (
               <TeamCard
                 key={`${String(index)}-team`}
@@ -49,7 +49,7 @@ const Teams = () => {
 
         <h2 className={Styles.postHead}>Event Manager</h2>
         <div className={`${Styles.cardContainer}`}>
-          {TeamData2k19.slice(14, 19).map((item, index) => {
+          {TeamData2k19.slice(15, 20).map((item, index) => {
             return (
               <TeamCard
                 key={`${String(index)}-team`}
