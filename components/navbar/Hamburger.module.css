@@ -1,63 +1,56 @@
- 
-.hamburgerActive{
-    flex-direction: row; 
-    @apply md:block;
-    height: 100vh;
-    opacity: 1;
-    visibility: unset;
-  }
-.hamburger{
-    background-color: rgb(0, 0, 0);
-    overflow: hidden;
+.navbarWrapper {
+  @apply h-screen w-screen;
+  z-index: 200;
+  background-color: rgb(10, 10, 10);
+  top: 0%;
+  left: 0%;
+  position: fixed;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-out;
 }
-.navbar{
-    
-    /* display: none; */
-    /* width: 0%; */
-    z-index: 200;
-    background-color: rgb(10, 10, 10);
-    top: 0%;
-    left: 0%;
-    position: fixed;
-    padding-top: 0.5em;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-}
-/* .navbarClicked{
-    width:100%;
-    transform: translateX(100%);
-    display: block;
-    /* transition: all 400ms ease-in-out; */
- 
-  
-.navLink{
 
-    margin-left: 0;
-    font-size: large;
-    display: block;
-    padding: 5%;
-    padding-left: 0.7em;
+.navbar {
+  @apply flex justify-between items-center relative py-2 px-8;
+  @apply sm:px-6;
+  @apply xs:px-3;
 }
-.joinButton{
-    
-    background-color: white;
-    color: black ;
+
+.navbar::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
-.closeIconDiv{
-    margin-left: auto;
-    padding-top:1.2em;
-    padding-right: 0.4em;
+
+.active {
+  transform: translateX(0);
 }
-.closeIconDiv:hover{
-    cursor: pointer;
+
+.navItems {
+  @apply grid gap-6 p-8 justify-center justify-items-center;
+  @apply sm:px-6;
+  @apply xs:px-3 xs:gap-4;
 }
-.closeIcon{
-    display: inline-block;
-    margin-left: auto;
+
+.navLink {
+  @apply text-2xl;
+  transition: all 300ms ease-in-out;
+  @apply xs:text-xl;
 }
-.closeIcon:hover{
-    color:blue;
+
+.navLink:hover {
+  @apply text-blue;
 }
-.navBrand{
-    display: flex;
+
+.navLink:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.closeIcon {
+  display: inline-block;
+  margin-left: auto;
 }

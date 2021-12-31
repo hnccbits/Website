@@ -40,13 +40,11 @@
 }
 
 .socials {
-  @apply flex flex-row justify-around items-center w-full;
-  z-index: 101;
+  @apply flex justify-around items-center w-full z-10 mb-2;
 }
 
-.socials:hover:focus > a > svg {
-  @apply text-blue;
-  fill: #00ccff;
+.socials > a:hover > svg {
+  fill: #51bcff;
 }
 
 .postHead {
