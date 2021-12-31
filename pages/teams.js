@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Screen from '../components/screen/Screen';
 import TeamCard from '../components/teams/TeamCard';
 import Styles from '../components/teams/Team.module.css';
@@ -7,6 +8,9 @@ import BottomGlitter from '../components/StyledText/BottomGlitter';
 const Teams = () => {
   return (
     <Screen>
+      <Head>
+        <title>Our Amazing Team ✨</title>
+      </Head>
       <section className="mt-16 mb-12 container-70">
         <div className="my-16 w-full text-center">
           <BottomGlitter text="Our Team" />

@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Events from '../components/event/Events';
 import Screen from '../components/screen/Screen';
 import BottomGlitter from '../components/StyledText/BottomGlitter';
@@ -5,6 +6,9 @@ import BottomGlitter from '../components/StyledText/BottomGlitter';
 const About = () => {
   return (
     <Screen>
+      <Head>
+        <title>About Us</title>
+      </Head>
       <section className="container-70 pt-28 md:pt-16 sm:pt-12">
         <div className="hidden">
           <p className="px-6">

@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { useRef, useState } from 'react';
 import { useRouter } from 'next/router';
 import emailjs from 'emailjs-com';
@@ -33,6 +34,10 @@ const ContactUs = () => {
 
   return (
     <Screen>
+      {' '}
+      <Head>
+        <title>Contact Us</title>
+      </Head>
       <section className="container-70 overflow-hidden">
         <ThankYou show={show} />
         <div className={`${show ? 'invisible hidden' : 'visible'} z-10`}>

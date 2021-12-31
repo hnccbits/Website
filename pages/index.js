@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/media-has-caption */
-// import Head from 'next/head';
+import Head from 'next/head';
 import Associations from '../components/associations/Associations';
 import GridGallery from '../components/gridGallery/GridGallery';
 import HomeAbout from '../components/homeAbout/HomeAbout';
@@ -11,6 +11,9 @@ import Video from '../components/video/Video';
 export default function Home() {
   return (
     <Screen>
+      <Head>
+        <title>HnCC - Hackathon & Coding Club, BIT Sindri</title>
+      </Head>
       <Video />
       <HomeAbout />
       <TechStack />
