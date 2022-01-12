@@ -23,12 +23,16 @@ const HomeAbout = () => {
       <BottomGlitter text="About HnCC" />
       <div className="my-6 py-2">
         <p className="text-xl w-10/12 md:w-full md:text-lg sm:text-base">
-          Irure ullamco in dolor ea cillum dolor ex. Ut aute enim adipisicing
-          officia Lorem ipsum ipsum officia. Anim reprehenderit laboris quis ut
-          aliquip pariatur dolor consectetur deserunt labore do proident tempor.
-          In mollit voluptate ad reprehenderit voluptate dolore officia. Eu
-          eiusmod aliquip deserunt cupidatat aliqua ea amet Lorem ad sunt ipsum
-          officia labore.
+          HnCC or Hackathon and Coding Club is the official club of BIT Sindri
+          that has the motto to instill a coding culture, collaborate, and
+          arrange events relevant to Open Source, Graphics and Game Development,
+          Web Development, App Development, and many other topics. Many students
+          at the institute are doing well, but they can do even more if they get
+          proper guidance. These students invariably maintain contact with a
+          select lot of elite, wise seniors who act as mentors or friends. The
+          purpose of HnCC is to provide an official platform for these efforts
+          to encourage them by officially endorsing them and helping them
+          surmount the hostel boundaries for a healthier and fruitful network.
         </p>
       </div>
       <a href="/about">
