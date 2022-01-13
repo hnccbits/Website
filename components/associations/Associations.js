@@ -48,28 +48,31 @@ const Associations = () => {
           <Content id="gdsc">
             <h2>Google Developer Student Club, BIT Sindri</h2>
             <p>
-              Commodo mollit laborum do aute deserunt in culpa sit. Lorem
-              excepteur enim culpa aliqua consequat. Enim aliqua excepteur sint
-              aliquip voluptate exercitation ullamco ea aliqua esse sit
-              deserunt. Proident sit fugiat minim cupidatat ad do id Lorem.
+              Developer Student Club BITS is inspired by the Google Developers'
+              Family. The motive is to create a local ecosystem of Developers in
+              and around the Campus. And having fun doing it.
             </p>
           </Content>
           <Content id="gfg">
-            <h2>Google Developer Student Club, BIT Sindri</h2>
+            <h2>GeeksforGeeks Student Chapter, BIT Sindri</h2>
             <p>
-              Commodo mollit laborum do aute deserunt in culpa sit. Lorem
-              excepteur enim culpa aliqua consequat. Enim aliqua excepteur sint
-              aliquip voluptate exercitation ullamco ea aliqua esse sit
-              deserunt. Proident sit fugiat minim cupidatat ad do id Lorem.
+              GeeksforGeeks Student Chapters are university based community
+              chapters for students interested in Computer Science and other
+              core technical competencies. By joining a GeeksforGeeks Student
+              Chapter, students grow their knowledge in a peer-to-peer learning
+              environment and build effective and optimized solutions for local
+              businesses and their community.
             </p>
           </Content>
           <Content id="codechef">
-            <h2>Google Developer Student Club, BIT Sindri</h2>
+            <h2>Codechef Chapter, BIT Sindri</h2>
             <p>
-              Commodo mollit laborum do aute deserunt in culpa sit. Lorem
-              excepteur enim culpa aliqua consequat. Enim aliqua excepteur sint
-              aliquip voluptate exercitation ullamco ea aliqua esse sit
-              deserunt. Proident sit fugiat minim cupidatat ad do id Lorem.
+              CodeChef BIT Sindri Chapter, want to enhance the coding culture in
+              our college and promote competitive programming. We want to
+              encourage more and more students to deep dive into the field of
+              competitive programming not just for the sake of getting placed in
+              a product based company but to take up competitive programming for
+              the fun of it.
             </p>
           </Content>
         </div>
