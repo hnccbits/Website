@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import GalleryImages from '../../lib/data/GalleryData';
 import BottomGlitter from '../StyledText/BottomGlitter';
 import Styles from './grid-gallery.module.css';
