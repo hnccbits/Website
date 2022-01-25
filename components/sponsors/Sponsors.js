@@ -3,7 +3,7 @@ import SponsorsData from '../../lib/data/SponsorsData';
 import BottomGlitter from '../StyledText/BottomGlitter';
 import Styles from './sponsors.module.css';
 
-const Sponsors = () => {
+function Sponsors() {
   const ref = useRef();
 
   useEffect(() => {
@@ -35,6 +35,6 @@ const Sponsors = () => {
       </div>
     </section>
   );
-};
+}
 
 export default Sponsors;

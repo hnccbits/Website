@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { AiOutlineClose } from 'react-icons/ai';
+import { CgClose } from 'react-icons/cg';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Hamburger.module.css';
@@ -13,7 +13,7 @@ const SpanStyle = {
   transition: 'all 300ms ease-in-out',
 };
 
-const Sidebar = ({ isMounted, unmount }) => {
+function Sidebar({ isMounted, unmount }) {
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   useEffect(() => {
@@ -45,7 +45,7 @@ const Sidebar = ({ isMounted, unmount }) => {
           </Link>
         </div>
         <div onClick={unmount} className="cursor-pointer">
-          <AiOutlineClose size={32} className={styles.closeIcon} />
+          <CgClose size={32} className={styles.closeIcon} />
         </div>
       </div>
 
@@ -73,7 +73,7 @@ const Sidebar = ({ isMounted, unmount }) => {
         <Button
           style={{ border: 'none' }}
           className="bg-primary-light text-primary hover:text-primary-light xs:!py-3"
-          onClick={() => alert('We are currently not inducting')}
+          onClick={() => alert('We are currently not inducting')} // eslint-disable-line no-alert
         >
           <span style={SpanStyle}>Join Us</span>
         </Button>
@@ -81,5 +81,5 @@ const Sidebar = ({ isMounted, unmount }) => {
     </section>,
     document.getElementById('overlay')
   );
-};
+}
 export default Sidebar;

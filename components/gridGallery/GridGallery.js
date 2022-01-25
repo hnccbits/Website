@@ -3,7 +3,7 @@ import GalleryImages from '../../lib/data/GalleryData';
 import BottomGlitter from '../StyledText/BottomGlitter';
 import Styles from './grid-gallery.module.css';
 
-const GridGallery = () => {
+function GridGallery() {
   return (
     <section className={Styles.gallerySection}>
       <div className="mt-2 mb-16">
@@ -18,19 +18,19 @@ const GridGallery = () => {
       </div>
     </section>
   );
-};
+}
 
 export default GridGallery;
 
-const GridImage = ({ src, title }) => {
+function GridImage({ src, title }) {
   return (
     <div className={`${Styles.w3} ${Styles.h2}`}>
       <div className={`${Styles.galleryItem}`}>
         <div className={Styles.image}>
-          <Image layout="fill" src={src} alt="nature" />
+          <img src={src} alt="nature" />
         </div>
         <div className={Styles.text}>{title}</div>
       </div>
     </div>
   );
-};
+}

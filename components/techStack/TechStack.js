@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import Styles from './tech-stack.module.css';
 
-const TechStack = () => {
+function TechStack() {
   return (
     <section className={`${Styles.techStack}`}>
       <div className="container-70">
@@ -11,11 +11,11 @@ const TechStack = () => {
       </div>
     </section>
   );
-};
+}
 
 export default TechStack;
 
-const Design = () => {
+function Design() {
   const ref = useRef();
 
   useEffect(() => {
@@ -80,9 +80,9 @@ const Design = () => {
       </div>
     </div>
   );
-};
+}
 
-const Development = () => {
+function Development() {
   const ref = useRef();
 
   useEffect(() => {
@@ -147,9 +147,9 @@ const Development = () => {
       </div>
     </div>
   );
-};
+}
 
-const Code = () => {
+function Code() {
   const ref = useRef();
 
   useEffect(() => {
@@ -200,4 +200,4 @@ const Code = () => {
       </div>
     </div>
   );
-};
+}

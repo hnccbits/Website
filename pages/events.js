@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Screen from '../components/screen/Screen';
 
-const Events = () => {
+function Events() {
   return (
     <Screen>
       {' '}
@@ -13,6 +13,6 @@ const Events = () => {
       </h1>
     </Screen>
   );
-};
+}
 
 export default Events;

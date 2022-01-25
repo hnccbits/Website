@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import Styles from './Button.module.css';
 
-const Button = ({ className, color, children, ...otherProps }) => {
+function Button({ className, color, children, ...otherProps }) {
   const ref = useRef();
   useEffect(() => {
     ref.current.style.setProperty('--x', `50%`);
@@ -24,6 +24,6 @@ const Button = ({ className, color, children, ...otherProps }) => {
       {children}
     </div>
   );
-};
+}
 
 export default Button;

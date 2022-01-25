@@ -1,6 +1,6 @@
 import Styles from './event.module.css';
 
-const EventCard = ({ title, description, link, bgImage = '' }) => {
+function EventCard({ title, description, link, bgImage = '' }) {
   return (
     <div style={{ backgroundImage: `url(${bgImage})` }} className={Styles.card}>
       <div className={Styles.cardBody}>
@@ -12,6 +12,6 @@ const EventCard = ({ title, description, link, bgImage = '' }) => {
       </div>
     </div>
   );
-};
+}
 
 export default EventCard;

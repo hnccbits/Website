@@ -3,7 +3,7 @@ import Events from '../components/event/Events';
 import Screen from '../components/screen/Screen';
 import BottomGlitter from '../components/StyledText/BottomGlitter';
 
-const About = () => {
+function About() {
   return (
     <Screen>
       <Head>
@@ -80,6 +80,6 @@ const About = () => {
       </section>
     </Screen>
   );
-};
+}
 
 export default About;

@@ -1,6 +1,6 @@
 import Styles from './Glitter.module.css';
 
-const BottomGlitter = ({ text }) => {
+function BottomGlitter({ text }) {
   return (
     <div className={Styles.heading}>
       <h1 className={Styles.headingText}>{text}</h1>
@@ -8,6 +8,6 @@ const BottomGlitter = ({ text }) => {
       <span />
     </div>
   );
-};
+}
 
 export default BottomGlitter;

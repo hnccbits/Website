@@ -4,7 +4,7 @@ import EventCard from './EventCard';
 import Styles from './event.module.css';
 import BottomGlitter from '../StyledText/BottomGlitter';
 
-const Events = () => {
+function Events() {
   return (
     <section className={Styles.event}>
       <BottomGlitter text="Our Events" />
@@ -23,6 +23,6 @@ const Events = () => {
       </div>
     </section>
   );
-};
+}
 
 export default Events;

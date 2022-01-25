@@ -6,7 +6,7 @@ import Button from '../components/button/Button';
 import StyledInput from '../components/input/StyledInput';
 import Screen from '../components/screen/Screen';
 
-const ContactUs = () => {
+function ContactUs() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -109,11 +109,11 @@ const ContactUs = () => {
       </section>
     </Screen>
   );
-};
+}
 
 export default ContactUs;
 
-const ThankYou = ({ show }) => {
+function ThankYou({ show }) {
   const router = useRouter();
 
   return (
@@ -161,4 +161,4 @@ const ThankYou = ({ show }) => {
       </div>
     </div>
   );
-};
+}

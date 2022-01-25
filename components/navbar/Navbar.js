@@ -14,7 +14,7 @@ const SpanStyle = {
   transition: 'all 300ms ease-in-out',
 };
 
-const Navbar = () => {
+function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -98,5 +98,5 @@ const Navbar = () => {
       <Sidebar isMounted={isOpen} unmount={() => setIsOpen(false)} />
     </section>
   );
-};
+}
 export default Navbar;

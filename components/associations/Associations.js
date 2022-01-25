@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Styles from './association.module.css';
 import BottomGlitter from '../StyledText/BottomGlitter';
 
-const Associations = () => {
+function Associations() {
   return (
     <section className="container-70">
       <div className="my-12 mb-16 sm:my-6 sm:mb-10">
@@ -48,9 +48,9 @@ const Associations = () => {
           <Content id="gdsc">
             <h2>Google Developer Student Club, BIT Sindri</h2>
             <p>
-              Developer Student Club BITS is inspired by the Google Developers'
-              Family. The motive is to create a local ecosystem of Developers in
-              and around the Campus. And having fun doing it.
+              Developer Student Club BITS is inspired by the Google
+              Developers&apos; Family. The motive is to create a local ecosystem
+              of Developers in and around the Campus. And having fun doing it.
             </p>
           </Content>
           <Content id="gfg">
@@ -79,11 +79,11 @@ const Associations = () => {
       </div>
     </section>
   );
-};
+}
 
 export default Associations;
 
-const Content = ({ id = '', className = '', children }) => {
+function Content({ id = '', className = '', children }) {
   const ref = useRef();
 
   useEffect(() => {
@@ -108,4 +108,4 @@ const Content = ({ id = '', className = '', children }) => {
       {children}
     </div>
   );
-};
+}

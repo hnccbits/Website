@@ -2,7 +2,7 @@ import Link from 'next/link';
 import BottomGlitter from '../StyledText/BottomGlitter';
 import Styles from './Footer.module.css';
 
-const Footer = () => {
+function Footer() {
   return (
     <footer className={`${Styles.footer} container-70`}>
       <div className="py-12 mt-20 sm:mt-4 md:mt-12">
@@ -52,11 +52,11 @@ const Footer = () => {
         <div className="flex-4 md:flex-1 sm:mt-8">
           <h3 className="text-2xl">Get Help</h3>
           <a
-            href="/contact"
+            href="/join-us"
             className="block pl-1 text-lg my-1 font-extralight"
             onClick={(e) => {
               e.preventDefault();
-              alert('We are currently not induction new members.');
+              alert('We are currently not induction new members.'); // eslint-disable-line no-alert
             }}
           >
             Join Us
@@ -81,6 +81,6 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
+}
 
 export default Footer;

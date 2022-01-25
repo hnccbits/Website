@@ -1,30 +1,47 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import Styles from './Video.module.css';
 
-const Video = () => {
+function Video() {
   const [video, setVideo] = useState('design');
-  const VideoPlay = (src) => {
+
+  const VideoPlay = useCallback((src) => {
     setVideo(src);
     document.getElementById('videoContainer').style.opacity = 1;
     document.getElementById('video').play();
-  };
-  const VideoPause = () => {
+  }, []);
+
+  const VideoPause = useCallback(() => {
     document.getElementById('videoContainer').style.opacity = 0;
     document.getElementById('video').pause();
     // setVideo('');
-  };
+  }, []);
 
-  const Heading = ({ src, text }) => {
-    return (
-      <h1
-        onMouseEnter={() => VideoPlay(src)}
-        onMouseLeave={VideoPause}
-        onTouchStart={() => VideoPlay(src)}
-      >
-        {text}
-      </h1>
-    );
-  };
+  const Heading = useCallback(
+    ({ src, text }) => {
+      return (
+        <h1
+          onMouseEnter={() => VideoPlay(src)}
+          onMouseLeave={VideoPause}
+          onTouchStart={() => VideoPlay(src)}
+        >
+          {text}
+        </h1>
+      );
+    },
+    [VideoPause, VideoPlay]
+  );
+
+  // function Heading({ src, text }) {
+  //   return (
+  //     <h1
+  //       onMouseEnter={() => VideoPlay(src)}
+  //       onMouseLeave={VideoPause}
+  //       onTouchStart={() => VideoPlay(src)}
+  //     >
+  //       {text}
+  //     </h1>
+  //   );
+  // }
 
   return (
     <section className={Styles.video}>
@@ -87,6 +104,6 @@ const Video = () => {
       </div>
     </section>
   );
-};
+}
 
 export default Video;

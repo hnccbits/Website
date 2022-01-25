@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import Styles from './styled-input.module.css';
 
-const StyledInput = ({ label, name = '', className = '', ...otherProps }) => {
+function StyledInput({ label, name = '', className = '', ...otherProps }) {
   const ref = useRef();
   const [transform, setTransform] = useState(false);
   return (
@@ -23,6 +23,6 @@ const StyledInput = ({ label, name = '', className = '', ...otherProps }) => {
       />
     </div>
   );
-};
+}
 
 export default StyledInput;

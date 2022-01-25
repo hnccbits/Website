@@ -5,7 +5,7 @@ import Styles from '../components/teams/Team.module.css';
 import TeamData2k19 from '../lib/data/TeamData';
 import BottomGlitter from '../components/StyledText/BottomGlitter';
 
-const Teams = () => {
+function Teams() {
   return (
     <Screen>
       <Head>
@@ -68,6 +68,6 @@ const Teams = () => {
       </section>
     </Screen>
   );
-};
+}
 
 export default Teams;

@@ -4,7 +4,7 @@ import Style from './Team.module.css';
 
 const ICON_SIZE = 28;
 
-const TeamCard = ({ name, title, socials, imageSrc }) => {
+function TeamCard({ name, title, socials, imageSrc }) {
   return (
     <div className={Style.card}>
       <div className="z-10 w-full text-center h-2/3 mb-18 mt-4 overflow-hidden rounded-lg">
@@ -61,6 +61,6 @@ const TeamCard = ({ name, title, socials, imageSrc }) => {
       </div>
     </div>
   );
-};
+}
 
 export default TeamCard;

@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import Button from '../button/Button';
 import BottomGlitter from '../StyledText/BottomGlitter';
 
-const HomeAbout = () => {
+function HomeAbout() {
   const ref = useRef();
 
   useEffect(() => {
@@ -42,6 +42,6 @@ const HomeAbout = () => {
       </a>
     </section>
   );
-};
+}
 
 export default HomeAbout;

@@ -2,7 +2,7 @@ import { FaFacebook, FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa';
 import Styles from './SocialsBar.module.css';
 
 const ICON_SIZE = 36;
-const SocialsBar = () => {
+function SocialsBar() {
   return (
     <section className={Styles.socialsBar}>
       <a href="www.google.com">
@@ -19,6 +19,6 @@ const SocialsBar = () => {
       </a>
     </section>
   );
-};
+}
 
 export default SocialsBar;
