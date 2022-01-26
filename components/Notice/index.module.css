@@ -43,11 +43,11 @@
 .content {
   height: 100%;
   width: 100%;
-  max-height: calc(100vh - 4rem);
-  max-width: calc(100vw - 4rem);
-  @apply fixed left-8 top-8 scale-0 overflow-y-scroll bg-[#fff] p-16 rounded-lg;
+  max-height: calc(100vh - 8rem);
+  max-width: calc(100vw - 20rem);
+  @apply fixed top-16 left-40 scale-0 overflow-y-scroll bg-[#fff] p-16 rounded-lg;
   @apply lg:p-12 lg:rounded-md;
-  @apply sm:p-8 sm:pt-16;
+  @apply sm:p-8 sm:pt-12;
   transition: all 0.3s ease-out;
 }
 
@@ -60,8 +60,12 @@
 }
 
 .closeIcon {
-  @apply fixed top-8 right-10 bg-[#fd4f4f] p-2 rounded-bl-md w-max h-max cursor-pointer;
-  @apply md:right-8;
+  @apply fixed top-16 right-[10.5rem] bg-[#fd4f4f] p-2 rounded-bl-lg w-max h-max cursor-pointer;
+  @apply xl:right-[7.5rem];
+  @apply lg:right-[6.5rem] lg:rounded-bl-md;
+  @apply md:top-12 md:right-24;
+  @apply sm:right-12;
+  @apply xs:top-6 xs:right-4 sm:p-1;
   transition: background-color 0.2s;
 }
 
@@ -71,4 +75,40 @@
 
 .closeIcon:hover {
   @apply bg-[red];
+}
+
+@media screen(xl) {
+  .content {
+    max-width: calc(100vw - 14rem);
+    @apply left-28;
+  }
+}
+
+@media screen(lg) {
+  .content {
+    max-width: calc(100vw - 12rem);
+    @apply left-24;
+  }
+}
+
+@media screen(md) {
+  .content {
+    max-height: calc(100vh - 6rem);
+    @apply top-12;
+  }
+}
+
+@media screen(sm) {
+  .content {
+    max-width: calc(100vw - 6rem);
+    @apply left-12;
+  }
+}
+
+@media screen(xs) {
+  .content {
+    max-height: calc(100vh - 3rem);
+    max-width: calc(100vw - 2rem);
+    @apply top-6 left-4;
+  }
 }
