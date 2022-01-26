@@ -13,8 +13,13 @@
   font-family: 'Overpass', sans-serif;
   scroll-behavior: smooth;
 }
+
 body {
   background-color: #000;
+}
+
+.scroll-lock {
+  @apply relative h-full overflow-hidden;
 }
 
 a {
@@ -75,13 +80,12 @@ a {
 
 .accordion-title {
   border-bottom: 1px solid #bababa3d;
-} 
+}
 
 /* .accordion-title > * {
   transition: color 0.2s;
 } */
 
-.accordion-title:focus,
 .accordion-title:hover {
   outline: none;
   transition: border 0.28s;
@@ -100,6 +104,23 @@ a {
   border-bottom-color: #ffff;
 }
 
-.active > .accordion-body {
+.accordion-body {
   border: none;
+}
+
+.accordion-body * {
+  color: rgb(175, 175, 175);
+}
+
+.accordion-body ul {
+  @apply list-disc pl-6;
+}
+
+.accordion-body a {
+  @apply text-blue;
+}
+
+.accordion-body a:hover {
+  border-bottom: 1px solid;
+  @apply border-b-blue;
 }

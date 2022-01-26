@@ -63,7 +63,7 @@ function About() {
         <div className="accordion grid gap-4 sm:gap-2">
           {options.map(({ title, body }) => {
             return (
-              <div className="accordion-item" key={title}>
+              <div className="accordion-item" key={title.props.children}>
                 <button
                   type="button"
                   className="accordion-title flex w-full justify-between items-center py-3 pr-1 pl-0 cursor-pointer sm:py-2 sm:px-0"
@@ -72,7 +72,7 @@ function About() {
                   <BsChevronRight className="ml-4 w-8" />
                 </button>
                 <div className="accordion-body py-3 pr-1 pl-0 hidden sm:py-2">
-                  <p className="text-left text-lg">{body}</p>
+                  <div className="text-left text-lg">{body}</div>
                 </div>
               </div>
             );

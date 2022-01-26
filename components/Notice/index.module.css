@@ -1,0 +1,74 @@
+.root {
+  @apply z-[101];
+}
+
+.root ::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+@media screen(md) {
+  .root ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Track */
+.root ::-webkit-scrollbar-track {
+  background: rgb(214, 214, 214);
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Handle */
+.root ::-webkit-scrollbar-thumb {
+  background-color: rgb(74, 184, 253);
+  border-radius: 0.3rem;
+}
+
+/* Handle on hover */
+.root ::-webkit-scrollbar-thumb:hover {
+  background: rgb(2, 158, 255);
+  cursor: pointer;
+}
+
+.backdrop,
+.root {
+  @apply fixed top-0 left-0 w-screen h-screen;
+}
+
+.backdrop {
+  @apply bg-[rgba(0,0,0,.3)];
+  transition: opacity 0.3s ease-out;
+}
+
+.content {
+  height: 100%;
+  width: 100%;
+  max-height: calc(100vh - 4rem);
+  max-width: calc(100vw - 4rem);
+  @apply fixed left-8 top-8 scale-0 overflow-y-scroll bg-[#fff] p-16 rounded-lg;
+  @apply lg:p-12 lg:rounded-md;
+  @apply sm:p-8 sm:pt-16;
+  transition: all 0.3s ease-out;
+}
+
+.content * {
+  @apply text-primary;
+}
+
+.active {
+  @apply scale-100;
+}
+
+.closeIcon {
+  @apply fixed top-8 right-10 bg-[#fd4f4f] p-2 rounded-bl-md w-max h-max cursor-pointer;
+  @apply md:right-8;
+  transition: background-color 0.2s;
+}
+
+.closeIcon * {
+  @apply text-primary-light;
+}
+
+.closeIcon:hover {
+  @apply bg-[red];
+}
