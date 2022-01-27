@@ -68,7 +68,7 @@ function FAQs() {
               <div className={styles.item} key={title.props.children}>
                 <button type="button" className={styles.title}>
                   <h2 className="text-2xl text-left sm:text-xl">{title}</h2>
-                  <BsChevronRight className="ml-4 w-8" />
+                  <BsChevronRight className="ml-4 w-8 shrink-0" />
                 </button>
                 <div className={styles.body}>
                   <div className="text-left text-lg">{body}</div>
