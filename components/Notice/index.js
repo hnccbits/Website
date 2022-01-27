@@ -9,7 +9,7 @@ function Notice() {
 
   useEffect(() => {
     // Mount this notice only in the client side, not while generating pages on server
-    setIsMounted(true);
+    // setIsMounted(true);
   }, []);
 
   useEffect(() => {

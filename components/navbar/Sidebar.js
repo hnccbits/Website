@@ -20,10 +20,12 @@ function Sidebar({ isMounted, unmount }) {
     let timeoutId;
     if (isMounted && !isTransitioning) {
       setIsTransitioning(true);
+      document.documentElement.classList.add('scroll-lock');
     } else if (!isMounted && isTransitioning) {
       timeoutId = setTimeout(() => {
         setIsTransitioning(false);
-      }, 5300);
+        document.documentElement.classList.remove('scroll-lock');
+      }, 300);
     }
     return () => clearTimeout(timeoutId);
   }, [isMounted, isTransitioning]);
