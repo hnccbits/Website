@@ -1,0 +1,40 @@
+.active.item > .title {
+  border-bottom-color: #ffff;
+}
+
+.title {
+  @apply flex w-full justify-between items-center py-3 pr-1 pl-0 cursor-pointer;
+  border-bottom: 1px solid #bababa3d;
+  @apply sm:py-2 sm:px-0;
+}
+
+.title:hover {
+  outline: none;
+  transition: border 0.28s;
+}
+
+.title > svg {
+  transition: all 0.28s;
+}
+
+.body {
+  @apply py-3 pr-1 pl-0 hidden border-none;
+  @apply sm:py-2;
+}
+
+.body * {
+  color: rgb(196, 196, 196);
+}
+
+.body ul {
+  @apply list-disc pl-6;
+}
+
+.body a {
+  @apply text-blue;
+}
+
+.body a:hover {
+  border-bottom: 1px solid;
+  @apply border-b-blue;
+}

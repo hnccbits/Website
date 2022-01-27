@@ -23,7 +23,7 @@ function Sidebar({ isMounted, unmount }) {
     } else if (!isMounted && isTransitioning) {
       timeoutId = setTimeout(() => {
         setIsTransitioning(false);
-      }, 300);
+      }, 5300);
     }
     return () => clearTimeout(timeoutId);
   }, [isMounted, isTransitioning]);
@@ -34,7 +34,7 @@ function Sidebar({ isMounted, unmount }) {
     <section
       className={`${isTransitioning && isMounted ? styles.active : ''} ${
         styles.navbarWrapper
-      }`}
+      }`.trim()}
     >
       <div className={styles.navbar}>
         <div className={styles.navBrand}>
@@ -68,6 +68,11 @@ function Sidebar({ isMounted, unmount }) {
         <Link href="/events">
           <a className={styles.navLink} onClick={unmount}>
             Events
+          </a>
+        </Link>
+        <Link href="/faqs">
+          <a className={styles.navLink} onClick={unmount}>
+            FAQs
           </a>
         </Link>
         <Button
