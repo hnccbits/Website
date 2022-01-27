@@ -5,11 +5,13 @@ import Head from 'next/head';
 import { BsChevronRight } from 'react-icons/bs';
 import Screen from '../components/screen/Screen';
 import options from '../lib/data/FaqData';
+import styles from '../styles/faq.module.css';
 
-function About() {
+function FAQs() {
   useEffect(() => {
-    jQuery('.accordion-title').on('click', function titleClicked() {
+    jQuery(`.${styles.title}`).on('click', function titleClicked() {
       const clickedElement = jQuery(this);
+      // console.log(clickedElement);
       /* 
 	    	Initially removing rotate-clockwise class from all dropdown icons
 			  inside the accordion, it is to make sure that if the user clicks
@@ -22,28 +24,28 @@ function About() {
         .find('.rotate-90')
         .removeClass('rotate-90');
 
-      if (clickedElement.parent().hasClass('active')) {
+      if (clickedElement.parent().hasClass(styles.active)) {
         /*
 			      If one accordion is already open and the same ACCORDION HEADER is clicked,
 			      then remove the active class from the ACCORDION ITEM and also remove the
 			      rotate-90 class from it's icon and slide the ACCORDION CONTENT upwards.
 		    */
         clickedElement.children().last().removeClass('rotate-90');
-        clickedElement.parent().removeClass('active');
+        clickedElement.parent().removeClass(styles.active);
         clickedElement.next().slideUp(280);
       } else {
         // Closing all opened accordion
         clickedElement
           .parent()
           .parent()
-          .find('.accordion-item')
-          .removeClass('active');
+          .find(`.${styles.item}`)
+          .removeClass(styles.active);
 
-        clickedElement.parent().parent().find('.accordion-body').slideUp(280);
+        clickedElement.parent().parent().find(`.${styles.body}`).slideUp(280);
 
         // Opening the clicked accordion item
         clickedElement.children().last().addClass('rotate-90');
-        clickedElement.parent().addClass('active');
+        clickedElement.parent().addClass(styles.active);
         clickedElement.next().slideDown(280);
       }
     });
@@ -60,18 +62,15 @@ function About() {
             Frequently Asked Question (FAQs) 🤔
           </h1>
         </div>
-        <div className="accordion grid gap-4 sm:gap-2">
+        <div className="grid gap-4 sm:gap-2">
           {options.map(({ title, body }) => {
             return (
-              <div className="accordion-item" key={title.props.children}>
-                <button
-                  type="button"
-                  className="accordion-title flex w-full justify-between items-center py-3 pr-1 pl-0 cursor-pointer sm:py-2 sm:px-0"
-                >
+              <div className={styles.item} key={title.props.children}>
+                <button type="button" className={styles.title}>
                   <h2 className="text-2xl text-left sm:text-xl">{title}</h2>
                   <BsChevronRight className="ml-4 w-8" />
                 </button>
-                <div className="accordion-body py-3 pr-1 pl-0 hidden sm:py-2">
+                <div className={styles.body}>
                   <div className="text-left text-lg">{body}</div>
                 </div>
               </div>
@@ -83,4 +82,4 @@ function About() {
   );
 }
 
-export default About;
+export default FAQs;

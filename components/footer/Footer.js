@@ -22,7 +22,7 @@ function Footer() {
             <h3 className="text-2xl">Meet</h3>
             <h4 className="text-lg font-extralight">
               BIT, Sindri <br />
-              Dhanbad-823123 <br />
+              Dhanbad-828123 <br />
               Jharkhand, India
             </h4>
           </div>
