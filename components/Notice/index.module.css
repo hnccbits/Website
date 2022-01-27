@@ -3,31 +3,7 @@
 }
 
 .root ::-webkit-scrollbar {
-  width: 0.5rem;
-}
-
-@media screen(md) {
-  .root ::-webkit-scrollbar {
-    display: none;
-  }
-}
-
-/* Track */
-.root ::-webkit-scrollbar-track {
-  background: rgb(214, 214, 214);
-  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
-}
-
-/* Handle */
-.root ::-webkit-scrollbar-thumb {
-  background-color: rgb(74, 184, 253);
-  border-radius: 0.3rem;
-}
-
-/* Handle on hover */
-.root ::-webkit-scrollbar-thumb:hover {
-  background: rgb(2, 158, 255);
-  cursor: pointer;
+  display: none;
 }
 
 .backdrop,
@@ -36,23 +12,33 @@
 }
 
 .backdrop {
-  @apply bg-[rgba(0,0,0,.3)];
+  @apply bg-[rgba(0,0,0,.5)];
   transition: opacity 0.3s ease-out;
 }
 
-.content {
+.contentWrapper {
+  background: linear-gradient(to right bottom, #01091a, #021032);
   height: 100%;
   width: 100%;
   max-height: calc(100vh - 8rem);
   max-width: calc(100vw - 20rem);
-  @apply fixed top-16 left-40 scale-0 overflow-y-scroll bg-[#fff] p-16 rounded-lg;
-  @apply lg:p-12 lg:rounded-md;
-  @apply sm:p-8 sm:pt-12;
+  @apply fixed flex top-16 left-40 scale-0 overflow-y-scroll bg-[#fff] p-8  bg-auto;
+  @apply lg:p-8;
+  @apply sm:px-6 sm:pt-12 sm:pb-8;
   transition: all 0.3s ease-out;
 }
 
+.content {
+  @apply p-8 rounded-lg grid gap-4;
+  overflow: scroll;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));
+  border: 1px solid rgb(0, 85, 255);
+  @apply lg:rounded-md;
+  @apply sm:p-6;
+}
+
 .content * {
-  @apply text-primary;
+  @apply text-primary-light;
 }
 
 .active {
@@ -60,13 +46,13 @@
 }
 
 .closeIcon {
-  @apply fixed top-16 right-[10.5rem] bg-[#fd4f4f] p-2 rounded-bl-lg w-max h-max cursor-pointer;
-  @apply xl:right-[7.5rem];
-  @apply lg:right-[6.5rem] lg:rounded-bl-md;
-  @apply md:top-12 md:right-24;
-  @apply sm:right-12;
-  @apply xs:top-6 xs:right-4 sm:p-1;
-  transition: background-color 0.2s;
+  @apply fixed top-16 right-40 bg-[#fd4f4f] p-2 rounded-bl-lg w-max h-max cursor-pointer;
+  @apply xl:right-28;
+  @apply lg:right-24 lg:rounded-bl-md;
+  @apply md:top-12;
+  @apply sm:right-8;
+  @apply xs:top-0 xs:right-0 sm:p-1;
+  transition: background-color 0.2s, opacity 0.3s ease-out;
 }
 
 .closeIcon * {
@@ -78,37 +64,37 @@
 }
 
 @media screen(xl) {
-  .content {
+  .contentWrapper {
     max-width: calc(100vw - 14rem);
     @apply left-28;
   }
 }
 
 @media screen(lg) {
-  .content {
+  .contentWrapper {
     max-width: calc(100vw - 12rem);
     @apply left-24;
   }
 }
 
 @media screen(md) {
-  .content {
+  .contentWrapper {
     max-height: calc(100vh - 6rem);
     @apply top-12;
   }
 }
 
 @media screen(sm) {
-  .content {
-    max-width: calc(100vw - 6rem);
-    @apply left-12;
+  .contentWrapper {
+    max-width: calc(100vw - 4rem);
+    @apply left-8;
   }
 }
 
 @media screen(xs) {
-  .content {
-    max-height: calc(100vh - 3rem);
-    max-width: calc(100vw - 2rem);
-    @apply top-6 left-4;
+  .contentWrapper {
+    max-height: 100vh;
+    max-width: 100vw;
+    @apply top-0 left-0;
   }
 }

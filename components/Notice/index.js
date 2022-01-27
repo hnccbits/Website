@@ -41,83 +41,86 @@ function Notice() {
         onClick={unmount}
       />
       <div
-        className={`${styles.content} ${
+        className={`${styles.contentWrapper} ${
           isTransitioning && isMounted ? styles.active : ''
         }`}
       >
-        <div className="grid gap-4">
-          <h3 className="text-xl">
+        <div className={styles.content}>
+          <h2 className="text-center text-3xl -mt-2 mb-2 border-dashed border-b-[1px] border-blue w-max mx-auto sm:text-2xl">
+            NOTICE
+          </h2>
+          <p className="text-lg sm:text-base">
             Hell lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             Inventore recusandae corrupti hic deserunt dicta voluptas sit odit
             totam quisquam minima, iusto voluptate praesentium, omnis, magni
             accusantium asperiores at rerum quaerat? o World
-          </h3>
-          <h3 className="text-xl">
+          </p>
+          <p className="text-lg sm:text-base">
             Hell lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             Inventore recusandae corrupti hic deserunt dicta voluptas sit odit
             totam quisquam minima, iusto voluptate praesentium, omnis, magni
             accusantium asperiores at rerum quaerat? o World
-          </h3>
-          <h3 className="text-xl">
+          </p>
+          <p className="text-lg sm:text-base">
             Hell lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             Inventore recusandae corrupti hic deserunt dicta voluptas sit odit
             totam quisquam minima, iusto voluptate praesentium, omnis, magni
             accusantium asperiores at rerum quaerat? o World
-          </h3>
-          <h3 className="text-xl">
+          </p>
+          <p className="text-lg sm:text-base">
             Hell lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             Inventore recusandae corrupti hic deserunt dicta voluptas sit odit
             totam quisquam minima, iusto voluptate praesentium, omnis, magni
             accusantium asperiores at rerum quaerat? o World
-          </h3>
-          <h3 className="text-xl">
+          </p>
+          <p className="text-lg sm:text-base">
             Hell lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             Inventore recusandae corrupti hic deserunt dicta voluptas sit odit
             totam quisquam minima, iusto voluptate praesentium, omnis, magni
             accusantium asperiores at rerum quaerat? o World
-          </h3>
-          <h3 className="text-xl">
+          </p>
+          <p className="text-lg sm:text-base">
             Hell lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             Inventore recusandae corrupti hic deserunt dicta voluptas sit odit
             totam quisquam minima, iusto voluptate praesentium, omnis, magni
             accusantium asperiores at rerum quaerat? o World
-          </h3>
-          <h3 className="text-xl">
+          </p>
+          <p className="text-lg sm:text-base">
             Hell lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             Inventore recusandae corrupti hic deserunt dicta voluptas sit odit
             totam quisquam minima, iusto voluptate praesentium, omnis, magni
             accusantium asperiores at rerum quaerat? o World
-          </h3>
-          <h3 className="text-xl">
+          </p>
+          <p className="text-lg sm:text-base">
             Hell lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             Inventore recusandae corrupti hic deserunt dicta voluptas sit odit
             totam quisquam minima, iusto voluptate praesentium, omnis, magni
             accusantium asperiores at rerum quaerat? o World
-          </h3>
-          <h3 className="text-xl">
+          </p>
+          <p className="text-lg sm:text-base">
             Hell lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             Inventore recusandae corrupti hic deserunt dicta voluptas sit odit
             totam quisquam minima, iusto voluptate praesentium, omnis, magni
             accusantium asperiores at rerum quaerat? o World
-          </h3>
-          <h3 className="text-xl">
+          </p>
+          <p className="text-lg sm:text-base">
             Hell lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             Inventore recusandae corrupti hic deserunt dicta voluptas sit odit
             totam quisquam minima, iusto voluptate praesentium, omnis, magni
             accusantium asperiores at rerum quaerat? o World
-          </h3>
-          <h3 className="text-xl">
+          </p>
+          <p className="text-lg sm:text-base">
             Hell lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             Inventore recusandae corrupti hic deserunt dicta voluptas sit odit
             totam quisquam minima, iusto voluptate praesentium, omnis, magni
             accusantium asperiores at rerum quaerat? o World
-          </h3>
-          <h3 className="text-xl">
+          </p>
+          <p className="text-lg sm:text-base">
             Hell lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             Inventore recusandae corrupti hic deserunt dicta voluptas sit odit
             totam quisquam minima, iusto voluptate praesentium, omnis, magni
             accusantium asperiores at rerum quaerat? o World
-          </h3>
+          </p>
         </div>
       </div>
       <div

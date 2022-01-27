@@ -70,6 +70,11 @@ function Sidebar({ isMounted, unmount }) {
             Events
           </a>
         </Link>
+        <Link href="/faqs">
+          <a className={styles.navLink} onClick={unmount}>
+            FAQs
+          </a>
+        </Link>
         <Button
           style={{ border: 'none' }}
           className="bg-primary-light text-primary hover:text-primary-light xs:!py-3"
