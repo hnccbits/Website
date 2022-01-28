@@ -9,7 +9,7 @@ function TeamCard({ name, title, socials, imageSrc }) {
     <div className={Style.card}>
       <div className="z-10 w-full text-center h-2/3 mb-18 mt-4 overflow-hidden rounded-lg">
         <Image
-          className="z-10 rounded-lg object-cover"
+          className="z-10 rounded-lg object-cover object-top"
           height="100%"
           width="100%"
           layout="responsive"

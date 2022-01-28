@@ -27,7 +27,7 @@ function Teams() {
               <TeamCard
                 key={`${String(index)}-team`}
                 name={item.name}
-                // title={item.title}
+                title={item.title}
                 imageSrc={item.imageSrc}
                 socials={item.socials}
               />
