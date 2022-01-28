@@ -20,9 +20,11 @@ function Sidebar({ isMounted, unmount }) {
     let timeoutId;
     if (isMounted && !isTransitioning) {
       setIsTransitioning(true);
+      document.documentElement.classList.add('scroll-lock');
     } else if (!isMounted && isTransitioning) {
       timeoutId = setTimeout(() => {
         setIsTransitioning(false);
+        document.documentElement.classList.remove('scroll-lock');
       }, 300);
     }
     return () => clearTimeout(timeoutId);
@@ -34,7 +36,7 @@ function Sidebar({ isMounted, unmount }) {
     <section
       className={`${isTransitioning && isMounted ? styles.active : ''} ${
         styles.navbarWrapper
-      }`}
+      }`.trim()}
     >
       <div className={styles.navbar}>
         <div className={styles.navBrand}>
@@ -68,6 +70,11 @@ function Sidebar({ isMounted, unmount }) {
         <Link href="/events">
           <a className={styles.navLink} onClick={unmount}>
             Events
+          </a>
+        </Link>
+        <Link href="/faqs">
+          <a className={styles.navLink} onClick={unmount}>
+            FAQs
           </a>
         </Link>
         <Button

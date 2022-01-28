@@ -22,7 +22,7 @@ function Footer() {
             <h3 className="text-2xl">Meet</h3>
             <h4 className="text-lg font-extralight">
               BIT, Sindri <br />
-              Dhanbad-823123 <br />
+              Dhanbad-828123 <br />
               Jharkhand, India
             </h4>
           </div>
@@ -75,8 +75,9 @@ function Footer() {
       <div className={Styles.copyrightBottom}>
         <h6>© 2021 Hackathon and Coding Club. All rights reserved.</h6>
 
-        <h6>
-          Crafted with <span className="text-2xl">♥</span> by HnCC Team.
+        <h6 className="flex items-center">
+          Crafted with&nbsp;<span className="text-2xl">♥</span>&nbsp;by HnCC
+          Team.
         </h6>
       </div>
     </footer>
