@@ -77,13 +77,19 @@ function Sidebar({ isMounted, unmount }) {
             FAQs
           </a>
         </Link>
-        <Button
-          style={{ border: 'none' }}
-          className="bg-primary-light text-primary hover:text-primary-light xs:!py-3"
-          onClick={() => alert('We are currently not inducting')} // eslint-disable-line no-alert
+        <a
+          href="https://forms.gle/bGAauorD4Vj752z68"
+          target="_blank"
+          className="flex"
+          rel="noreferrer"
         >
-          <span style={SpanStyle}>Join Us</span>
-        </Button>
+          <Button
+            style={{ border: 'none' }}
+            className="bg-primary-light text-primary hover:text-primary-light xs:!py-3"
+          >
+            <span style={SpanStyle}>Join Us</span>
+          </Button>
+        </a>
       </div>
     </section>,
     document.getElementById('overlay')

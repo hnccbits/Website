@@ -18,9 +18,8 @@
 }
 
 .navbarList {
-  display: flex;
+  @apply flex justify-evenly items-center text-primary-light md:hidden;
   flex: 0.5;
-  @apply justify-evenly items-center text-primary-light md:hidden;
   transition: all 300ms ease-in-out;
 }
 

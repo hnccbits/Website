@@ -67,26 +67,29 @@ function Navbar() {
           </a>
         </Link>
       </div>
-      <div id="navList" className={`${styles.navbarList}`}>
+      <div id="navList" className={styles.navbarList}>
         <Link href="/about">
           <a className={styles.navLink}>About Us</a>
         </Link>
-        {/* <Link href="/event">
-            <a className={styles.navLink}>Events</a>
-          </Link> */}
         <Link href="/teams">
           <a className={styles.navLink}>Team</a>
         </Link>
         <Link href="/contact">
           <a className={styles.navLink}>Contact Us</a>
         </Link>
-        <Button
-          style={{ border: 'none' }}
-          className="bg-primary-light text-primary hover:text-primary-light"
-          onClick={() => alert('We are currently not inducting')}
+        <a
+          href="https://forms.gle/bGAauorD4Vj752z68"
+          target="_blank"
+          className="flex"
+          rel="noreferrer"
         >
-          <span style={SpanStyle}>Join Us</span>
-        </Button>
+          <Button
+            style={{ border: 'none' }}
+            className="bg-primary-light text-primary hover:text-primary-light"
+          >
+            <span style={SpanStyle}>Join Us</span>
+          </Button>
+        </a>
       </div>
       <div
         id="hamburger"

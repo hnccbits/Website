@@ -52,12 +52,10 @@ function Footer() {
         <div className="flex-4 md:flex-1 sm:mt-8">
           <h3 className="text-2xl">Get Help</h3>
           <a
-            href="/join-us"
+            href="https://forms.gle/bGAauorD4Vj752z68"
             className="block pl-1 text-lg my-1 font-extralight"
-            onClick={(e) => {
-              e.preventDefault();
-              alert('We are currently not induction new members.'); // eslint-disable-line no-alert
-            }}
+            target="_blank"
+            rel="noreferrer"
           >
             Join Us
           </a>
