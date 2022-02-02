@@ -1,6 +1,6 @@
 .rippleButton {
   @apply text-lg inline-block overflow-hidden relative rounded-full px-10 py-[13px] cursor-pointer;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   transition: border-color 0.4s;
 }
 

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { useEffect, useRef } from 'react';
 import Button from '../button/Button';
 import BottomGlitter from '../StyledText/BottomGlitter';
@@ -35,11 +36,13 @@ function HomeAbout() {
           surmount the hostel boundaries for a healthier and fruitful network.
         </p>
       </div>
-      <a href="/about">
-        <Button>
-          <span className="z-50 block">View More</span>
-        </Button>
-      </a>
+      <Link href="/about">
+        <a className="flex w-[fit-content] rounded-full">
+          <Button>
+            <span className="z-50 block">View More</span>
+          </Button>
+        </a>
+      </Link>
     </section>
   );
 }

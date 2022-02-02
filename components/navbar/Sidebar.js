@@ -27,7 +27,15 @@ function Sidebar({ isMounted, unmount }) {
         document.documentElement.classList.remove('scroll-lock');
       }, 300);
     }
-    return () => clearTimeout(timeoutId);
+
+    return () => {
+      clearTimeout(timeoutId);
+      if (
+        document.documentElement.classList.contains('scroll-lock') &&
+        isTransitioning
+      )
+        document.documentElement.classList.remove('scroll-lock');
+    };
   }, [isMounted, isTransitioning]);
 
   if (!isMounted && !isTransitioning) return null;
@@ -41,7 +49,7 @@ function Sidebar({ isMounted, unmount }) {
       <div className={styles.navbar}>
         <div className={styles.navBrand}>
           <Link href="/">
-            <a className="flex items-center">
+            <a className="flex items-center" onClick={unmount}>
               <Image src={Logo} alt="HnCC" height="60px" width="60px" />
             </a>
           </Link>
@@ -80,7 +88,7 @@ function Sidebar({ isMounted, unmount }) {
         <a
           href="https://forms.gle/bGAauorD4Vj752z68"
           target="_blank"
-          className="flex"
+          className="flex rounded-full"
           rel="noreferrer"
         >
           <Button

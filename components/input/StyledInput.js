@@ -14,7 +14,7 @@ function StyledInput({ label, name = '', className = '', ...otherProps }) {
         {label}
       </label>
       <input
-        autoComplete="new-password"
+        autoComplete="off"
         onFocus={() => setTransform(true)}
         onBlur={(e) => e.target.value === '' && setTransform(false)}
         className={`${Styles.input} ${className}`}

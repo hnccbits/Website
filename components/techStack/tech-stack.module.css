@@ -68,6 +68,7 @@
 .scrollContent {
   height: 100%;
 }
+
 .scrollContent:nth-child(1) {
   background-color: aqua;
 }
@@ -86,22 +87,27 @@
 
 @media screen and (max-width: 768px) {
   .techStack {
-    overflow-x: hidden;
-    padding-bottom: 1rem;
+    overflow: hidden;
+    padding: 4rem 0 1rem;
   }
+
   .col {
     padding: 0;
   }
+
   .col40 {
     --col-size: 100%;
   }
+
   .col60 {
     --col-size: 100%;
   }
+
   .content {
     width: 100%;
     min-width: 100%;
   }
+
   .row {
     min-height: 70vh;
     margin: 0;

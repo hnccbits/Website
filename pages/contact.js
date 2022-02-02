@@ -87,7 +87,7 @@ function ContactUs() {
                 required
                 className="w-4/5"
               />
-              <button type="submit" className="mt-16">
+              <button type="submit" className="mt-16 flex rounded-full">
                 <Button
                   style={{ border: 'none' }}
                   className="bg-primary-light text-primary hover:text-primary-light"

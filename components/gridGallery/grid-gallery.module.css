@@ -1,12 +1,14 @@
 .gallerySection {
-  /* height: 100vh;
-  overflow: scroll; */
   @apply my-16 py-16 w-3/4 mx-auto;
-  @apply lg:w-4/5;
+  @apply lg:w-4/5 lg:my-12 lg:py-8;
+  @apply md:my-8 md:mt-4 md:py-6;
+  @apply sm:pt-0;
 }
+
 .gallerySection::-webkit-scrollbar {
   display: none;
 }
+
 .container {
   @apply grid grid-cols-2 auto-rows-[320px] gap-3;
   @apply xl:auto-rows-[250px];
@@ -24,6 +26,7 @@
   @apply w-full object-cover object-center cursor-pointer;
   transition: 0.5s ease-in-out;
 }
+
 .galleryItem:hover .image img {
   @apply scale-125;
 }

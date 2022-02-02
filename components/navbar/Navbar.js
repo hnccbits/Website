@@ -80,7 +80,7 @@ function Navbar() {
         <a
           href="https://forms.gle/bGAauorD4Vj752z68"
           target="_blank"
-          className="flex"
+          className="flex rounded-full"
           rel="noreferrer"
         >
           <Button

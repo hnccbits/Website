@@ -71,7 +71,10 @@ function Footer() {
       </div>
 
       <div className={Styles.copyrightBottom}>
-        <h6>© 2021 Hackathon and Coding Club. All rights reserved.</h6>
+        <h6>
+          © {new Date().getFullYear()} Hackathon and Coding Club. All rights
+          reserved.
+        </h6>
 
         <h6 className="flex items-center">
           Crafted with&nbsp;<span className="text-2xl">♥</span>&nbsp;by HnCC

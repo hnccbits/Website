@@ -23,7 +23,15 @@ function Notice() {
         document.documentElement.classList.remove('scroll-lock');
       }, 300);
     }
-    return () => clearTimeout(timeoutId);
+
+    return () => {
+      clearTimeout(timeoutId);
+      if (
+        document.documentElement.classList.contains('scroll-lock') &&
+        isTransitioning
+      )
+        document.documentElement.classList.remove('scroll-lock');
+    };
   }, [isMounted, isTransitioning]);
 
   const unmount = useCallback(() => {
