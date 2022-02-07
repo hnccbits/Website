@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import { VscClose } from 'react-icons/vsc';
 import styles from './index.module.css';
@@ -6,6 +6,7 @@ import styles from './index.module.css';
 function Notice() {
   const [isMounted, setIsMounted] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const documentWidthRef = useRef(null);
 
   useEffect(() => {
     // Mount this notice only in the client side, not while generating pages on server
@@ -16,11 +17,23 @@ function Notice() {
     let timeoutId;
     if (isMounted && !isTransitioning) {
       setIsTransitioning(true);
+      documentWidthRef.current = document.documentElement.clientWidth;
       document.documentElement.classList.add('scroll-lock');
+
+      /*
+        After locking the body scroll, the scrollbar is hidden, so we have to compensate for the extra space
+        created due to no scrollbar by giving the document an extra right padding according to the extra created space
+      */
+      if (documentWidthRef.current !== document.documentElement.clientWidth) {
+        document.documentElement.style.paddingRight = `${
+          document.documentElement.clientWidth - documentWidthRef.current
+        }px`;
+      }
     } else if (!isMounted && isTransitioning) {
       timeoutId = setTimeout(() => {
         setIsTransitioning(false);
         document.documentElement.classList.remove('scroll-lock');
+        document.documentElement.style.paddingRight = 0;
       }, 300);
     }
 
@@ -29,8 +42,10 @@ function Notice() {
       if (
         document.documentElement.classList.contains('scroll-lock') &&
         isTransitioning
-      )
+      ) {
         document.documentElement.classList.remove('scroll-lock');
+        document.documentElement.style.paddingRight = 0;
+      }
     };
   }, [isMounted, isTransitioning]);
 

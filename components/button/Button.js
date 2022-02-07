@@ -10,6 +10,8 @@ function Button({ className, color, children, ...otherProps }) {
   const handleRipple = (e) => {
     const x = e.clientX - ref.current.getBoundingClientRect().left;
     const y = e.clientY - ref.current.getBoundingClientRect().top;
+    // const x = e.nativeEvent.offsetX;
+    // const y = e.nativeEvent.offsetY;
 
     ref.current.style.setProperty('--x', `${x}px`);
     ref.current.style.setProperty('--y', `${y}px`);
