@@ -1,5 +1,5 @@
 import { useCallback, useState } from 'react';
-import Styles from './Video.module.css';
+import styles from './Video.module.css';
 
 function Video() {
   const [video, setVideo] = useState('design');
@@ -44,8 +44,8 @@ function Video() {
   // }
 
   return (
-    <section className={Styles.video}>
-      <div id="videoContainer" className={Styles.designVideoContainer}>
+    <section className={styles.video}>
+      <div id="videoContainer" className={styles.designVideoContainer}>
         <video
           src="/video/design.mp4"
           autoPlay
@@ -53,11 +53,7 @@ function Video() {
           loop
           controls={false}
           id="video"
-          className={
-            video === 'design'
-              ? 'top-0 left-0 z-40 w-screen'
-              : 'z-0 -top-full w-0'
-          }
+          className={video === 'design' ? 'w-screen' : 'w-0'}
         >
           <track kind="captions" />
         </video>
@@ -68,11 +64,7 @@ function Video() {
           loop
           controls={false}
           id="video"
-          className={
-            video === 'develop'
-              ? 'top-0 left-0 z-40 w-screen'
-              : 'z-0 -top-full w-0'
-          }
+          className={video === 'develop' ? 'w-screen' : 'w-0'}
         >
           <track kind="captions" />
         </video>
@@ -83,25 +75,21 @@ function Video() {
           loop
           controls={false}
           id="video"
-          className={
-            video === 'code'
-              ? 'top-0 left-0 z-40 w-screen'
-              : 'z-0 -top-full w-0'
-          }
+          className={video === 'code' ? 'w-screen' : 'w-0'}
         >
           <track kind="captions" />
         </video>
       </div>
-      <div className={Styles.content}>
+      <div className={styles.content}>
         <Heading src="design" text="Design." />
         <Heading src="develop" text="Develop." />
         <Heading src="code" text="Code." />
       </div>
-      <div className={Styles.mobileVideo}>
+      {/* <div className={styles.mobileVideo}>
         <video muted controls={false} autoPlay loop src="/video/develop.mp4">
           <track kind="captions" />
         </video>
-      </div>
+      </div> */}
     </section>
   );
 }

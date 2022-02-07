@@ -20,7 +20,10 @@ function HomeAbout() {
     return () => window.removeEventListener('scroll', null);
   }, []);
   return (
-    <section ref={ref} className="container-70 my-16 py-16 fadeonscroll">
+    <section
+      ref={ref}
+      className="container-70 my-16 py-16 fadeonscroll sm:transform-none sm:opacity-100"
+    >
       <BottomGlitter text="About HnCC" />
       <div className="my-6 py-2">
         <p className="text-xl w-10/12 md:w-full md:text-lg sm:text-base">

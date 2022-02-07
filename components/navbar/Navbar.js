@@ -69,13 +69,16 @@ function Navbar() {
       </div>
       <div id="navList" className={styles.navbarList}>
         <Link href="/about">
-          <a className={styles.navLink}>About Us</a>
+          <a className={styles.navLink}>ABOUT US</a>
         </Link>
         <Link href="/teams">
-          <a className={styles.navLink}>Team</a>
+          <a className={styles.navLink}>TEAM</a>
+        </Link>
+        <Link href="/faqs">
+          <a className={styles.navLink}>FAQs</a>
         </Link>
         <Link href="/contact">
-          <a className={styles.navLink}>Contact Us</a>
+          <a className={styles.navLink}>CONTACT US</a>
         </Link>
         <a
           href="https://forms.gle/bGAauorD4Vj752z68"
