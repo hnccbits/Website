@@ -11,7 +11,12 @@ function GridGallery() {
       <div className={styles.container}>
         {GalleryImages.map((item, index) => {
           return (
-            <GridImage key={String(index)} src={item.src} title={item.title} />
+            <GridImage
+              key={String(index)}
+              src={item.src}
+              mobileSrc={item.mobileSrc}
+              title={item.title}
+            />
           );
         })}
       </div>
@@ -21,11 +26,14 @@ function GridGallery() {
 
 export default GridGallery;
 
-function GridImage({ src, title }) {
+function GridImage({ src, mobileSrc, title }) {
   return (
     <div className={`${styles.wrapper}`}>
       <div className={styles.image}>
-        <img src={src} alt={title} />
+        <picture>
+          <source media="(max-width: 600px)" srcSet={mobileSrc} alt={title} />
+          <img src={src} alt={title} />
+        </picture>
       </div>
       <div className={styles.text}>{title}</div>
     </div>

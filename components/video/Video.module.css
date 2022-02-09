@@ -69,20 +69,20 @@
 
 .content > h1:nth-of-type(1)::before,
 .content > h1:nth-of-type(1)::after {
-  -webkit-mask: url('../../public/underline1.svg');
-  mask: url('../../public/underline1.svg');
+  -webkit-mask: url('/underline1.svg');
+  mask: url('/underline1.svg');
 }
 
 .content > h1:nth-of-type(2)::before,
 .content > h1:nth-of-type(2)::after {
-  -webkit-mask: url('../../public/underline2.svg');
-  mask: url('../../public/underline2.svg');
+  -webkit-mask: url('/underline2.svg');
+  mask: url('/underline2.svg');
 }
 
 .content > h1:nth-of-type(3)::before,
 .content > h1:nth-of-type(3)::after {
-  -webkit-mask: url('../../public/underline3.svg');
-  mask: url('../../public/underline3.svg');
+  -webkit-mask: url('/underline3.svg');
+  mask: url('/underline3.svg');
 }
 
 .content > h1::after {

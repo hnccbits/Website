@@ -19,6 +19,7 @@ function Associations() {
                   height="100%"
                   width="100%"
                   src="/sponsors/gdsc.png"
+                  alt="Google Developers Student Clubs, BIT Sindri"
                 />
               </a>
             </div>
@@ -29,6 +30,7 @@ function Associations() {
                   height="100%"
                   width="100%"
                   src="/sponsors/gfg.png"
+                  alt="GeeksForGeeks Student Chapter, BIT Sindri"
                 />
               </a>
             </div>
@@ -39,6 +41,7 @@ function Associations() {
                   height="100%"
                   width="100%"
                   src="/sponsors/codechef.jpg"
+                  alt="Codechef Student Chapter, BIT Sindri"
                 />
               </a>
             </div>
