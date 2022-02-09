@@ -34,9 +34,16 @@ function ContactUs() {
 
   return (
     <Screen>
-      {' '}
       <Head>
         <title>Contact Us</title>
+        <meta
+          name="description"
+          content="Contact Information of HnCC (Hackathon & Coding Club), BIT Sindri, Dhanbad"
+        />
+        <meta
+          name="keywords"
+          content="HTML, CSS, JavaScript, ReactJS, NextJS, TailwindCSS, HnCC, Contact HnCC, Hackathon & Coding Club, BIT Sindri, Dhanbad"
+        />
       </Head>
       <section className="container-70 overflow-hidden">
         <ThankYou show={show} />

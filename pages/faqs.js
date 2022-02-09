@@ -55,6 +55,14 @@ function FAQs() {
     <Screen>
       <Head>
         <title>Frequently Asked Question (FAQs) 🤔</title>
+        <meta
+          name="description"
+          content="Frequently asked questions about HnCC by a student/professional"
+        />
+        <meta
+          name="keywords"
+          content="HTML, CSS, JavaScript, ReactJS, NextJS, TailwindCSS, HnCC, Frequently Asked Question, FAQs, Hackathon & Coding Club, BIT Sindri, Dhanbad"
+        />
       </Head>
       <section className="container-70 pt-16 sm:pt-8 sm:w-4/5 xs:w-[85%]">
         <div className="mt-6 mb-20 sm:mt-8 sm:mb-20 xs:mt-4 xs:mb-16">

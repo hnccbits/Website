@@ -20,6 +20,10 @@
   width: 120px;
 }
 
+.associationMenuItem > a {
+  @apply flex;
+}
+
 .associationMenuItem::before {
   content: '';
   @apply absolute;
