@@ -89,6 +89,7 @@
   width: 0;
   opacity: 1;
   transition: all 0.6s;
+  /* background: linear-gradient(190.05deg,#98e8fc -16.32%,#1fa9ff 56.32%,#8980f6 115.25%); */
   transition-timing-function: cubic-bezier(0.2, 0, 0, 1);
 }
 

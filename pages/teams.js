@@ -1,9 +1,9 @@
 import Head from 'next/head';
+import BottomGlitter from '@/components/StyledText/BottomGlitter';
 import Screen from '../components/screen/Screen';
 import TeamCard from '../components/teams/TeamCard';
 import Styles from '../components/teams/Team.module.css';
 import { TeamData2k18, TeamData2k19, TeamData2k20 } from '../lib/data/TeamData';
-import BottomGlitter from '../components/StyledText/BottomGlitter';
 
 function Teams() {
   return (
