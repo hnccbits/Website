@@ -1,0 +1,59 @@
+.wrapper {
+  padding: 6rem 0;
+  min-height: 100vh;
+  position: relative;
+  @apply lg:min-h-fit lg:grid lg:gap-16;
+}
+
+.banner {
+  position: sticky;
+  top: 180px;
+  bottom: 80px;
+  left: calc(50% + 150px);
+  width: 100%;
+  max-width: calc(50% - 300px);
+  height: calc(100vh - 260px);
+  overflow: hidden;
+}
+
+@media screen(2xl) {
+  .banner {
+    left: calc(50% + 80px);
+    width: 100%;
+    max-width: calc(50% - 160px);
+  }
+}
+
+@media screen(xl) {
+  .banner {
+    left: calc(50% + 50px);
+    width: 100%;
+    max-width: calc(50% - 100px);
+  }
+}
+
+@media screen(lg) {
+  .banner > div {
+    clip-path: none !important;
+  }
+}
+
+@media screen(lg) {
+  .banner {
+    @apply static max-w-fit h-auto;
+  }
+}
+
+.contentWrapper {
+  @apply w-full min-h-[80vh] py-12 flex flex-col justify-center;
+  @apply lg:min-h-fit lg:items-center lg:py-0 lg:w-4/5;
+  @apply sm:w-full;
+}
+
+.content {
+  @apply px-24 pl-32 w-1/2 grid gap-8;
+  @apply xl:pl-28 xl:pr-20 xl:w-[55%];
+  @apply lg:px-8 lg:w-full lg:place-items-center lg:text-center;
+  @apply sm:gap-6;
+  @apply xs:px-4;
+}

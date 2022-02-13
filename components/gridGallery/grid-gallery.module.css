@@ -17,23 +17,35 @@
 }
 
 .wrapper {
-  @apply w-full h-full relative;
+  /* position: sticky; */
+  /* top: calc(300px); */
 }
 
-.wrapper .image {
+.wrapper .imgBoxWrapper {
+  @apply w-full h-full relative opacity-0;
+  @apply sm:!opacity-100;
+}
+
+@media screen(sm) {
+  .wrapper .imgBoxWrapper {
+    clip-path: none !important;
+  }
+}
+
+.imgBoxWrapper .image {
   @apply w-full h-full overflow-hidden relative;
 }
 
-.wrapper .image img {
+.imgBoxWrapper .image img {
   @apply w-full h-full object-cover object-center cursor-pointer;
   transition: 0.5s ease-in-out;
 }
 
-.wrapper:hover .image img {
+.imgBoxWrapper:hover .image img {
   @apply scale-125;
 }
 
-.wrapper .text {
+.imgBoxWrapper .text {
   transform: translate(-50%, -50%) scale(0);
   transition: all 0.3s ease-in-out;
   background-color: rgba(0, 0, 0, 0.45);
@@ -43,7 +55,7 @@
   @apply sm:py-3 sm:px-4 sm:text-base;
 }
 
-.wrapper:hover .text {
+.imgBoxWrapper:hover .text {
   transform: translate(-50%, -50%) scale(1);
   @apply opacity-100;
 }
