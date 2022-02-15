@@ -19,7 +19,7 @@ function Design() {
   const ref = useRef();
 
   useEffect(() => {
-    window.addEventListener('scroll', () => {
+    const handleScroll = () => {
       if (ref.current) {
         if (window.innerHeight + 100 > ref.current.getBoundingClientRect().y) {
           ref.current.classList.add('active');
@@ -27,9 +27,11 @@ function Design() {
           ref.current.classList.remove('active');
         }
       }
-    });
+    };
 
-    return () => window.removeEventListener('scroll', null);
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
@@ -86,7 +88,7 @@ function Development() {
   const ref = useRef();
 
   useEffect(() => {
-    window.addEventListener('scroll', () => {
+    const handleScroll = () => {
       if (ref.current) {
         if (window.innerHeight + 100 > ref.current.getBoundingClientRect().y) {
           ref.current.classList.add('active');
@@ -94,9 +96,11 @@ function Development() {
           ref.current.classList.remove('active');
         }
       }
-    });
+    };
 
-    return () => window.removeEventListener('scroll', null);
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
@@ -153,7 +157,7 @@ function Code() {
   const ref = useRef();
 
   useEffect(() => {
-    window.addEventListener('scroll', () => {
+    const handleScroll = () => {
       if (ref.current) {
         if (window.innerHeight + 100 > ref.current.getBoundingClientRect().y) {
           ref.current.classList.add('active');
@@ -161,9 +165,11 @@ function Code() {
           ref.current.classList.remove('active');
         }
       }
-    });
+    };
 
-    return () => window.removeEventListener('scroll', null);
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   return (
     <div ref={ref} className={`${Styles.row} mt-40 fadeonscroll sm:mt-4`}>

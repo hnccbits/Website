@@ -18,9 +18,11 @@
 }
 
 .navbarList {
-  @apply flex justify-evenly items-center text-primary-light md:hidden;
+  @apply flex gap-8 justify-evenly items-center text-primary-light;
   flex: 0.5;
   transition: all 300ms ease-in-out;
+  @apply lg:gap-0;
+  @apply md:hidden;
 }
 
 .navbarList > .navLink {

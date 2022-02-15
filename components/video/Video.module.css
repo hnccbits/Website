@@ -1,23 +1,27 @@
 .video {
   @apply relative;
+  height: 90vh;
+  @apply sm:h-auto;
 }
 
 .designVideoContainer {
   position: relative;
   opacity: 0;
   transition: all 400ms ease-in-out;
-  max-height: 90vh;
+  height: 100%;
   overflow: hidden;
-  @apply xs:hidden;
 }
 
 .designVideoContainer > video {
   height: 100%;
+  object-fit: cover;
+  object-position: top;
+  @apply absolute top-0 left-0 right-0 bottom-0;
 }
 
 .designVideoContainer::before {
   content: '';
-  z-index: 50;
+  z-index: 2;
   opacity: 0.45;
   width: 100%;
   position: absolute;
@@ -45,8 +49,7 @@
   left: 50%;
   z-index: 55;
   @apply md:justify-center md:w-full;
-  @apply sm:top-1/2;
-  @apply xs:static xs:transform-none xs:my-10 xs:px-3 xs:justify-start;
+  @apply sm:static sm:transform-none sm:my-10 sm:px-3 sm:justify-start;
 }
 
 .content > h1 {
@@ -59,7 +62,7 @@
 .content > h1::after {
   content: '';
   position: absolute;
-  bottom: -10px;
+  bottom: -11px;
   left: 0%;
   width: 100%;
   background: #fff;
@@ -89,7 +92,6 @@
   width: 0;
   opacity: 1;
   transition: all 0.6s;
-  /* background: linear-gradient(190.05deg,#98e8fc -16.32%,#1fa9ff 56.32%,#8980f6 115.25%); */
   transition-timing-function: cubic-bezier(0.2, 0, 0, 1);
 }
 
@@ -101,18 +103,3 @@
 .content > h1:hover::after {
   width: 100%;
 }
-
-/* .mobileVideo {
-  display: none;
-  overflow: hidden;
-  position: relative;
-}
-
-.mobileVideo::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(#00ccff, #d400d4);
-  opacity: 0.65;
-} */
