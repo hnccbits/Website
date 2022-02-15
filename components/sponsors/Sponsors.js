@@ -7,7 +7,7 @@ function Sponsors() {
   const ref = useRef();
 
   useEffect(() => {
-    window.addEventListener('scroll', () => {
+    const handleScroll = () => {
       if (ref.current) {
         if (window.innerHeight + 100 > ref.current.getBoundingClientRect().y) {
           ref.current.classList.add('active');
@@ -15,9 +15,11 @@ function Sponsors() {
           ref.current.classList.remove('active');
         }
       }
-    });
+    };
 
-    return () => window.removeEventListener('scroll', null);
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   return (
     <section ref={ref} className="container-70 my-16 py-16 fadeonscroll">

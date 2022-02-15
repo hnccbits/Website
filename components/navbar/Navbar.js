@@ -27,7 +27,7 @@ function Navbar() {
 
   useEffect(() => {
     let prevScroll = window.pageYOffset;
-    document.addEventListener('scroll', () => {
+    const handleScroll = () => {
       const navList = document.getElementById('navList');
       const navbar = document.getElementById('navbar');
       const title = document.getElementById('hnccTitle');
@@ -50,9 +50,10 @@ function Navbar() {
       }
 
       prevScroll = currentScrollPos;
-    });
+    };
+    document.addEventListener('scroll', handleScroll);
 
-    return () => document.removeEventListener('scroll', null);
+    return () => document.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
@@ -73,6 +74,9 @@ function Navbar() {
         </Link>
         <Link href="/teams">
           <a className={styles.navLink}>TEAM</a>
+        </Link>
+        <Link href="/events">
+          <a className={styles.navLink}>EVENTS</a>
         </Link>
         <Link href="/faqs">
           <a className={styles.navLink}>FAQs</a>
