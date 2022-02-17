@@ -1,0 +1,36 @@
+.navbar {
+  @apply sticky top-0 left-0 right-0 w-full py-2 px-20 flex justify-between items-center overflow-hidden z-[100];
+  @apply 2xl:px-10;
+  @apply xl:px-8;
+  @apply sm:px-6;
+  @apply xs:px-3;
+  background-color: rgba(24, 30, 35, 0.45);
+  backdrop-filter: blur(8px);
+  overflow-x: hidden;
+}
+
+.navTitle {
+  transition: all 400ms ease-in-out;
+  @apply ml-6 text-xl xl:hidden;
+}
+
+.navbarList {
+  @apply flex gap-12 justify-evenly items-center text-primary-light;
+  transition: all 300ms ease-in-out;
+  @apply 2xl:gap-10;
+  @apply xl:gap-4;
+  @apply lg:hidden;
+}
+
+.navbarList > .navLink {
+  @apply font-semibold text-base xl:mx-5;
+  transition: all 300ms ease-in-out;
+  width: fit-content;
+}
+.navbarList > .navLink:hover {
+  @apply text-blue font-medium;
+}
+
+.humburgerMenu {
+  @apply cursor-pointer hidden lg:block;
+}

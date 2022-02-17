@@ -1,0 +1,61 @@
+.section {
+  @apply my-16 py-16 w-3/4 mx-auto;
+  @apply lg:w-4/5 lg:my-12 lg:py-8;
+  @apply md:my-8 md:mt-4 md:py-6;
+  @apply sm:pt-0 sm:w-[85%] sm:mb-0 sm:h-full;
+}
+
+.section::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  @apply grid grid-cols-2 auto-rows-[320px] gap-3;
+  @apply xl:auto-rows-[250px];
+  @apply sm:grid-cols-1;
+  @apply xs:auto-rows-[180px];
+}
+
+.wrapper {
+  /* position: sticky; */
+  /* top: calc(300px); */
+}
+
+.wrapper .imgBoxWrapper {
+  @apply w-full h-full relative opacity-0;
+  @apply sm:!opacity-100;
+}
+
+@media screen(sm) {
+  .wrapper .imgBoxWrapper {
+    clip-path: none !important;
+  }
+}
+
+.imgBoxWrapper .image {
+  @apply w-full h-full overflow-hidden relative;
+}
+
+.imgBoxWrapper .image img {
+  @apply w-full h-full object-cover object-center cursor-pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.imgBoxWrapper:hover .image img {
+  @apply scale-125;
+}
+
+.imgBoxWrapper .text {
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 0.3s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.45);
+  -webkit-backdrop-filter: blur(5px) saturate(1.8);
+  backdrop-filter: blur(5px) saturate(1.8);
+  @apply opacity-0 absolute top-1/2 left-1/2 text-[#fff] z-[4] w-full p-5 text-center text-2xl pointer-events-none;
+  @apply sm:py-3 sm:px-4 sm:text-base;
+}
+
+.imgBoxWrapper:hover .text {
+  transform: translate(-50%, -50%) scale(1);
+  @apply opacity-100;
+}

@@ -1,0 +1,115 @@
+.techStack {
+  padding: 6rem 0;
+  position: relative;
+}
+
+.techStack::-webkit-scrollbar {
+  display: none;
+}
+
+.row {
+  margin-left: -45px;
+  margin-right: -45px;
+  display: flex;
+  flex-wrap: wrap;
+  flex: auto;
+  min-height: 90vh;
+}
+
+.row:nth-last-child(1) {
+  min-height: 40vh;
+}
+
+.col {
+  padding: 0 45px;
+  box-sizing: border-box;
+  --col-size: 100%;
+  width: var(--col-size);
+  flex: 0 0 var(--col-size);
+}
+
+.col40 {
+  --col-size: 40%;
+}
+
+.col60 {
+  --col-size: 60%;
+}
+
+.col > .header {
+  position: sticky;
+  top: calc(150px);
+  @apply text-6xl sm:text-5xl;
+}
+
+.headDescription {
+  @apply text-2xl mb-10 sm:mb-7 md:mt-16 sm:text-lg;
+}
+
+.contentContainer {
+  @apply flex flex-wrap justify-between items-stretch my-6 mt-36 md:mt-24;
+}
+
+.content {
+  flex: 1;
+  min-width: 50%;
+  @apply pr-4 py-4 mb-20 sm:mb-12;
+}
+
+.content > h2 {
+  @apply text-4xl font-bold mb-6 sm:text-2xl;
+  word-break: normal;
+}
+
+.content > p {
+  @apply text-lg pr-4 font-extralight sm:text-base;
+}
+
+.scrollContent {
+  height: 100%;
+}
+
+.scrollContent:nth-child(1) {
+  background-color: aqua;
+}
+
+.scrollContent:nth-child(2) {
+  background-color: red;
+}
+
+.scrollContent:nth-child(3) {
+  background-color: yellow;
+}
+
+.fixed {
+  flex: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .techStack {
+    overflow: hidden;
+    padding: 4rem 0 1rem;
+  }
+
+  .col {
+    padding: 0;
+  }
+
+  .col40 {
+    --col-size: 100%;
+  }
+
+  .col60 {
+    --col-size: 100%;
+  }
+
+  .content {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .row {
+    min-height: 70vh;
+    margin: 0;
+  }
+}

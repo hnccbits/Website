@@ -1,7 +1,18 @@
-import 'tailwindcss/tailwind.css';
+import Head from 'next/head';
+import '../styles/global.css';
 
-function MyApp() {
-  return <h1>Hello World</h1>;
+export default function MyApp({ Component, pageProps }) {
+  return (
+    <>
+      <Head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="true"
+        />
+      </Head>
+      <Component {...pageProps} />
+    </>
+  );
 }
-
-export default MyApp;

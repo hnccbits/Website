@@ -1,0 +1,102 @@
+.event {
+  @apply my-24 mb-8 sm:my-12;
+}
+.cardContainer {
+  @apply grid gap-16 my-12 sm:my-6;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+  max-width: 35ch;
+  padding: clamp(1.5rem, 20vh, 10rem) 0 0;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  box-shadow: 0 1em 2em rgb(0 0 0 / 0.2);
+  transition: transform ease 250ms;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 0 5px 1px hsl(203, 100%, 57%);
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.cardBody {
+  padding: 1.5rem;
+  background: linear-gradient(
+    rgb(0 0 0 / 0),
+    rgb(0 0 0 / 0.65) 15%,
+    rgb(0 0 0 / 1)
+  );
+}
+
+.cardBody p {
+  color: hsl(0deg 50% 100% / 0.8);
+  margin-bottom: 1.25em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@media (hover: hover), (prefers-reduced-motion: no-preference) {
+  .cardBody {
+    transform: translateY(60%);
+    transition: transform 500ms ease;
+  }
+
+  .card:hover .cardBody {
+    transform: translateY(0);
+    transition-delay: 500ms;
+  }
+
+  .cardBody > *:not(.cardTitle) {
+    opacity: 0;
+    transition: opacity 1200ms linear, background 0.2s ease;
+  }
+
+  .card:hover .cardBody > *:not(.cardTitle) {
+    opacity: 1;
+  }
+
+  .cardTitle::after {
+    content: '';
+    position: absolute;
+    left: -1.5rem;
+    top: 100%;
+    height: 3px;
+    width: calc(100% + 2.5rem);
+    background: hsl(203, 100%, 57%);
+    transform: scaleX(0);
+    transition: transform 200ms ease;
+    transform-origin: left;
+  }
+
+  .card:hover .cardTitle::after {
+    transition: transform 500ms ease;
+    transform: scaleX(1);
+  }
+}
+
+.button {
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  background: hsl(203, 100%, 57%);
+  padding: 0.5em 1.25em;
+  border-radius: 0.25rem;
+}
+
+.button:hover {
+  background: white;
+}
+.cardTitle {
+  position: relative;
+  width: max-content;
+  @apply mb-8;
+}

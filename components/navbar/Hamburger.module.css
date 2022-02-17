@@ -1,0 +1,56 @@
+.navbarWrapper {
+  @apply h-screen w-screen;
+  z-index: 200;
+  background-color: rgb(10, 10, 10);
+  top: 0%;
+  left: 0%;
+  position: fixed;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-out;
+}
+
+.navbar {
+  @apply flex justify-between items-center relative py-2 px-8;
+  @apply sm:px-6;
+  @apply xs:px-3;
+}
+
+.navbar::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.active {
+  transform: translateX(0);
+}
+
+.navItems {
+  @apply grid gap-6 p-8 justify-center justify-items-center;
+  @apply sm:px-6;
+  @apply xs:px-3 xs:gap-4;
+}
+
+.navLink {
+  @apply text-2xl;
+  transition: all 300ms ease-in-out;
+  @apply xs:text-xl;
+}
+
+.navLink:hover {
+  @apply text-blue;
+}
+
+.navLink:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.closeIcon {
+  display: inline-block;
+  margin-left: auto;
+}

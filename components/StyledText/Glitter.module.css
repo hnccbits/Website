@@ -1,0 +1,45 @@
+.heading {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  padding: 0 0.5rem 0 0.5rem;
+  border-radius: 1px;
+  @apply sm:p-0;
+}
+
+.headingText {
+  @apply text-7xl text-primary-light font-semibold leading-none sm:text-6xl xs:text-5xl;
+}
+
+.heading > span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to right, transparent, #24acff);
+  height: 3px;
+  width: 100%;
+  animation: animate 2s linear infinite;
+  opacity: 0.2;
+  border-top-right-radius: 1px;
+  border-bottom-right-radius: 1px;
+  transition: all 400ms ease-in-out;
+}
+
+.heading > span:nth-child(2) {
+  left: -100%;
+  transition: all 400ms ease-in-out;
+  animation: animate 2s linear infinite;
+  animation-delay: 2s;
+}
+
+.heading:hover > span {
+  opacity: 1;
+}
+@keyframes animate {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}

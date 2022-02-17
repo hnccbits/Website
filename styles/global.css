@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* ./styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: 'Overpass', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #000;
+}
+
+.scroll-lock {
+  @apply relative h-full overflow-hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container-70 {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.flex-2 {
+  flex: 0.5;
+}
+.flex-4 {
+  flex: 0.25;
+}
+
+.fadeonscroll {
+  transform: translateY(200px);
+  transform-origin: 50% 100%;
+  opacity: 0;
+  transition: all 1s;
+}
+
+.fadeonscroll-h {
+  transform: translateX(-100%);
+  transform-origin: 50% 100%;
+  opacity: 0;
+  transition: all 1s;
+}
+
+.fadeonscroll-h.active {
+  transform: none;
+  opacity: 1;
+}
+
+.fadeonscroll.active {
+  transform: none;
+  opacity: 1;
+}
+
+@media screen(md) {
+  .fadeonscroll {
+    transform: translateY(100px);
+    transition: all 0.8s;
+  }
+
+  .fadeonscroll-h {
+    transition: all 0.8s;
+  }
+}
+
+@media screen(xs) {
+  .container-70 {
+    width: 85%;
+    margin: 0 auto;
+  }
+}
+
+.no-shadow {
+  box-shadow: none;
+}
+
+/* for navbar transition */
+
+.fade-up {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.cursor {
+  background: rgb(51, 121, 238);
+  transform: translate(-50%, -50%);
+  @apply h-[10px] w-[10px] fixed top-0 left-0 z-[9999999] pointer-events-none rounded-2xl;
+  transition: all 0.15s ease;
+  @apply md:hidden;
+}

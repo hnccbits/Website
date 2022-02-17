@@ -1,0 +1,32 @@
+.inputContainer {
+  @apply relative flex-1 my-8;
+}
+
+.label {
+  @apply absolute text-2xl font-extralight;
+  top: 0;
+  left: 1%;
+  transition: all 300ms ease-in-out;
+  z-index: -1;
+}
+
+.input {
+  @apply text-xl p-2 outline-none border-none;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.transform {
+  @apply text-sm;
+  top: -45%;
+  left: 0.5rem;
+}
+
+@media (max-width: 1200px) {
+  .inputContainer {
+    @apply w-full;
+  }
+  .input {
+    @apply w-full;
+  }
+}

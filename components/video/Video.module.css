@@ -1,0 +1,105 @@
+.video {
+  @apply relative;
+  height: 90vh;
+  @apply sm:h-auto;
+}
+
+.designVideoContainer {
+  position: relative;
+  opacity: 0;
+  transition: all 400ms ease-in-out;
+  height: 100%;
+  overflow: hidden;
+}
+
+.designVideoContainer > video {
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  @apply absolute top-0 left-0 right-0 bottom-0;
+}
+
+.designVideoContainer::before {
+  content: '';
+  z-index: 2;
+  opacity: 0.45;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: linear-gradient(#00ccff, #d400d4);
+}
+
+@keyframes moveMask {
+  0% {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  100% {
+    -webkit-mask-position: 114px 0;
+    mask-position: 114px 0;
+  }
+}
+
+.content {
+  @apply absolute w-full left-1/2 flex justify-center items-center flex-wrap;
+  transform: translate(-50%, -50%);
+  top: 40%;
+  left: 50%;
+  z-index: 55;
+  @apply md:justify-center md:w-full;
+  @apply sm:static sm:transform-none sm:my-10 sm:px-3 sm:justify-start;
+}
+
+.content > h1 {
+  @apply my-8 mx-4 text-7xl z-30 font-extrabold relative;
+  @apply md:text-5xl;
+  @apply sm:my-4;
+}
+
+.content > h1::before,
+.content > h1::after {
+  content: '';
+  position: absolute;
+  bottom: -11px;
+  left: 0%;
+  width: 100%;
+  background: #fff;
+  height: 11px;
+  opacity: 0.2;
+}
+
+.content > h1:nth-of-type(1)::before,
+.content > h1:nth-of-type(1)::after {
+  -webkit-mask: url('/underline1.svg');
+  mask: url('/underline1.svg');
+}
+
+.content > h1:nth-of-type(2)::before,
+.content > h1:nth-of-type(2)::after {
+  -webkit-mask: url('/underline2.svg');
+  mask: url('/underline2.svg');
+}
+
+.content > h1:nth-of-type(3)::before,
+.content > h1:nth-of-type(3)::after {
+  -webkit-mask: url('/underline3.svg');
+  mask: url('/underline3.svg');
+}
+
+.content > h1::after {
+  width: 0;
+  opacity: 1;
+  transition: all 0.6s;
+  transition-timing-function: cubic-bezier(0.2, 0, 0, 1);
+}
+
+.content > h1:hover::before,
+.content > h1:hover::after {
+  animation: moveMask 2s linear infinite;
+}
+
+.content > h1:hover::after {
+  width: 100%;
+}

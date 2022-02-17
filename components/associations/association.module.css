@@ -1,0 +1,106 @@
+.associationContainer {
+  @apply flex flex-wrap justify-between items-stretch;
+}
+
+.associationMenuContainer {
+  @apply relative min-h-screen;
+  flex: 0 0 10%;
+  width: 10%;
+  backdrop-filter: blur(5px);
+}
+
+.associationMenu {
+  @apply sticky inline-flex flex-col justify-start items-center w-full;
+  top: calc(150px + 4.5rem);
+}
+
+.associationMenuItem {
+  @apply my-8 w-full flex justify-center items-center relative;
+  height: 120px;
+  width: 120px;
+}
+
+.associationMenuItem > a {
+  @apply flex;
+}
+
+.associationMenuItem::before {
+  content: '';
+  @apply absolute;
+  height: 130%;
+  width: 130%;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #00ccff, #98e8fc);
+  opacity: 0.25;
+}
+
+.associationMenuItem:hover::before {
+  opacity: 1;
+}
+
+.associationMenuItem::after {
+  content: '';
+  @apply absolute z-30;
+  background-color: black;
+  width: 120%;
+  height: 120%;
+  border-radius: 50%;
+}
+
+.associationMenuItem > a > div {
+  display: block !important;
+}
+
+.associationImage {
+  display: block;
+  border-radius: 50%;
+  z-index: 100;
+}
+
+.associationContentContainer {
+  @apply px-8 py-6 flex flex-col justify-between items-center;
+  flex: 0 0 90%;
+  width: 90%;
+}
+
+.associationContent {
+  width: 100%;
+  padding: 2rem 4rem;
+}
+
+.associationContent > h2 {
+  @apply text-4xl mb-6;
+}
+
+.associationContent > p {
+  @apply text-xl;
+}
+
+@media screen and (max-width: 800px) {
+  .associationMenuItem {
+    height: 90px;
+    width: 90px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .associationMenuItem {
+    height: 60px;
+    width: 60px;
+  }
+
+  .associationContentContainer {
+    @apply px-3 py-4 pt-0;
+  }
+  .associationContent {
+    padding: 2rem;
+    padding-right: 0.45rem;
+  }
+  .associationContent > h2 {
+    @apply text-2xl mb-3;
+  }
+
+  .associationContent > p {
+    @apply text-base;
+  }
+}

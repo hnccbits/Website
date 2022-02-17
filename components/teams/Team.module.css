@@ -1,0 +1,61 @@
+.card {
+  @apply p-4 relative flex flex-col justify-center items-center overflow-hidden rounded-2xl;
+  min-height: 350px;
+  background: rgb(0, 204, 255);
+  background: linear-gradient(
+    45deg,
+    rgba(0, 204, 255, 0.44861694677871145) 0%,
+    rgba(152, 232, 252, 0.4) 100%
+  );
+  transition: all 300ms ease-in-out;
+}
+
+.cardContainer {
+  @apply grid gap-16;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.cardContainer .card:hover {
+  @apply scale-[1.06] opacity-100;
+}
+
+.card::before {
+  @apply absolute w-32;
+  content: '';
+  background: linear-gradient(#00ccff, #98e8fc);
+  animation: animate 4s linear infinite;
+  height: 140%;
+  opacity: 0;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card::after {
+  @apply absolute rounded-2xl;
+  content: '';
+  inset: 4px;
+  background-color: #000;
+}
+
+.socials {
+  @apply flex justify-around items-center w-full z-10 mb-2;
+}
+
+.socials > a:hover > svg {
+  fill: #51bcff;
+}
+
+.postHead {
+  @apply text-5xl mb-14 mt-16 font-extrabold md:text-center md:pl-0 sm:mt-12;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

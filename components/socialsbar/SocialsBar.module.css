@@ -1,0 +1,16 @@
+.socialsBar {
+  @apply z-[60] flex flex-col justify-between items-center fixed bottom-0 left-0 px-4 py-5 sm:hidden;
+  min-height: 15%;
+}
+
+.socialsBar > a {
+  @apply my-4 text-blue-light;
+}
+
+.socialsBarIcons {
+  transition: all 300ms ease-in-out;
+}
+.socialsBarIcons:hover {
+  @apply text-blue-light;
+  fill: rgb(56, 200, 236) !important;
+}

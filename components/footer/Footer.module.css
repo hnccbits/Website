@@ -1,0 +1,18 @@
+.footer {
+  @apply relative h-screen pt-24 pb-8;
+  @apply sm:h-auto sm:pt-16;
+}
+
+.linksContainer {
+  @apply mt-32 flex justify-between items-stretch flex-wrap;
+  @apply sm:flex-col sm:mt-8;
+}
+
+.linksContainer a {
+  width: fit-content;
+}
+
+.copyrightBottom {
+  @apply flex flex-wrap justify-between items-center w-full pt-20 pb-8;
+  @apply sm:pt-12 sm:pb-0;
+}

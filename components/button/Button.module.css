@@ -1,0 +1,37 @@
+.rippleButton {
+  @apply text-lg inline-block overflow-hidden relative rounded-full px-10 py-[13px] cursor-pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: border-color 0.4s;
+}
+
+.rippleButton::before {
+  content: '';
+  position: absolute;
+  top: var(--y);
+  left: var(--x);
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgb(51, 121, 238);
+  background: radial-gradient(
+    circle,
+    rgba(51, 121, 238, 1) 0%,
+    rgba(36, 172, 255, 1) 100%
+  );
+  transition: width 0.5s, height 0.5s;
+}
+
+.rippleButton:hover {
+  border-color: transparent;
+}
+
+.rippleButton:hover::before {
+  height: 400px;
+  width: 400px;
+}
+
+.rippleButton > span {
+  z-index: 1;
+  position: relative;
+}
