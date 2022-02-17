@@ -84,6 +84,9 @@ function Navbar() {
         <Link href="/contact">
           <a className={styles.navLink}>CONTACT US</a>
         </Link>
+        <Link href="/events">
+          <a className={styles.navLink}>EVENTS</a>
+        </Link>
         <a
           href="https://forms.gle/bGAauorD4Vj752z68"
           target="_blank"
