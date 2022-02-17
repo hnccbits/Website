@@ -58,7 +58,7 @@ function Navbar() {
 
   return (
     <section id="navbar" className={`${styles.navbar}`}>
-      <div className={`${styles.navBrand}`}>
+      <div>
         <Link href="/">
           <a className="flex items-center">
             <Image src={Logo} alt="HnCC" height="60px" width="60px" />
@@ -84,9 +84,6 @@ function Navbar() {
         <Link href="/contact">
           <a className={styles.navLink}>CONTACT US</a>
         </Link>
-        <Link href="/events">
-          <a className={styles.navLink}>EVENTS</a>
-        </Link>
         <a
           href="https://forms.gle/bGAauorD4Vj752z68"
           target="_blank"
@@ -104,9 +101,9 @@ function Navbar() {
       <div
         id="hamburger"
         onClick={() => setIsOpen(true)}
-        className="cursor-pointer"
+        className={styles.humburgerMenu}
       >
-        <HiMenuAlt4 size={32} className={styles.humburgerMenu} />
+        <HiMenuAlt4 size={32} className="block" />
       </div>
       <Sidebar isMounted={isOpen} unmount={() => setIsOpen(false)} />
     </section>

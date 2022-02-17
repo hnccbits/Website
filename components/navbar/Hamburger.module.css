@@ -10,7 +10,7 @@
 }
 
 .navbar {
-  @apply flex justify-between items-center relative py-2 px-10;
+  @apply flex justify-between items-center relative py-2 px-8;
   @apply sm:px-6;
   @apply xs:px-3;
 }

@@ -62,7 +62,7 @@ function Sidebar({ isMounted, unmount }) {
       }`.trim()}
     >
       <div className={styles.navbar}>
-        <div className={styles.navBrand}>
+        <div>
           <Link href="/">
             <a className="flex items-center" onClick={unmount}>
               <Image src={Logo} alt="HnCC" height="60px" width="60px" />
