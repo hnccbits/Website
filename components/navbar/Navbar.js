@@ -27,7 +27,7 @@ function Navbar() {
 
   useEffect(() => {
     let prevScroll = window.pageYOffset;
-    document.addEventListener('scroll', () => {
+    const handleScroll = () => {
       const navList = document.getElementById('navList');
       const navbar = document.getElementById('navbar');
       const title = document.getElementById('hnccTitle');
@@ -50,14 +50,15 @@ function Navbar() {
       }
 
       prevScroll = currentScrollPos;
-    });
+    };
+    document.addEventListener('scroll', handleScroll);
 
-    return () => document.removeEventListener('scroll', null);
+    return () => document.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <section id="navbar" className={`${styles.navbar}`}>
-      <div className={`${styles.navBrand}`}>
+      <div>
         <Link href="/">
           <a className="flex items-center">
             <Image src={Logo} alt="HnCC" height="60px" width="60px" />
@@ -74,14 +75,14 @@ function Navbar() {
         <Link href="/teams">
           <a className={styles.navLink}>TEAM</a>
         </Link>
+        <Link href="/events">
+          <a className={styles.navLink}>EVENTS</a>
+        </Link>
         <Link href="/faqs">
           <a className={styles.navLink}>FAQs</a>
         </Link>
         <Link href="/contact">
           <a className={styles.navLink}>CONTACT US</a>
-        </Link>
-        <Link href="/events">
-          <a className={styles.navLink}>EVENTS</a>
         </Link>
         <a
           href="https://docs.google.com/forms/d/1eOZsO1X6qmqyS48nEw43RJnOhwEBuAvXpXZXMtOOLaY/viewform?edit_requested=true"
@@ -100,9 +101,9 @@ function Navbar() {
       <div
         id="hamburger"
         onClick={() => setIsOpen(true)}
-        className="cursor-pointer"
+        className={styles.humburgerMenu}
       >
-        <HiMenuAlt4 size={32} className={styles.humburgerMenu} />
+        <HiMenuAlt4 size={32} className="block" />
       </div>
       <Sidebar isMounted={isOpen} unmount={() => setIsOpen(false)} />
     </section>

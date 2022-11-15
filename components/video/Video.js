@@ -18,7 +18,7 @@ function Video() {
   const VideoPause = useCallback(() => {
     document.getElementById('videoContainer').style.opacity = 0;
     document.getElementById('video').pause();
-    // setVideo('');
+    setVideo('');
   }, []);
 
   const Heading = useCallback(
@@ -42,7 +42,7 @@ function Video() {
 
   return (
     <section className={styles.video}>
-      {documentWidth >= 450 && (
+      {documentWidth >= 600 && (
         <div id="videoContainer" className={styles.designVideoContainer}>
           <video
             src="/video/design.mp4"
@@ -51,7 +51,9 @@ function Video() {
             loop
             controls={false}
             id="video"
-            className={video === 'design' ? 'w-screen' : 'w-0'}
+            className={
+              video === 'design' ? 'w-screen opacity-100' : 'w-0 opacity-0'
+            }
           >
             <track kind="captions" />
           </video>
@@ -62,7 +64,9 @@ function Video() {
             loop
             controls={false}
             id="video"
-            className={video === 'develop' ? 'w-screen' : 'w-0'}
+            className={
+              video === 'develop' ? 'w-screen opacity-100' : 'w-0 opacity-0'
+            }
           >
             <track kind="captions" />
           </video>
@@ -73,14 +77,16 @@ function Video() {
             loop
             controls={false}
             id="video"
-            className={video === 'code' ? 'w-screen' : 'w-0'}
+            className={
+              video === 'code' ? 'w-screen opacity-100' : 'w-0 opacity-0'
+            }
           >
             <track kind="captions" />
           </video>
         </div>
       )}
       <div className={styles.content}>
-        {documentWidth >= 450 ? (
+        {documentWidth >= 600 ? (
           <>
             <Heading src="design" text="Design." />
             <Heading src="develop" text="Develop." />
