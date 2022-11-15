@@ -84,7 +84,7 @@ function Navbar() {
           <a className={styles.navLink}>EVENTS</a>
         </Link>
         <a
-          href="https://forms.gle/bGAauorD4Vj752z68"
+          href="https://docs.google.com/forms/d/1eOZsO1X6qmqyS48nEw43RJnOhwEBuAvXpXZXMtOOLaY/viewform?edit_requested=true"
           target="_blank"
           className="flex rounded-full"
           rel="noreferrer"
