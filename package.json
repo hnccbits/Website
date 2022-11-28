@@ -5,9 +5,9 @@
     "build": "next build",
     "start": "next start",
     "style:all": "yarn run style:lint && npm run style:prettier",
-    "style:lint": "eslint '**/*.{js,jsx,ts,tsx}'",
-    "style:prettier": "prettier --check '**/*.{js,jsx,ts,tsx}'",
-    "make-pretty": "prettier --write '**/*.{js,jsx,ts,tsx}'",
+    "style:lint": "eslint \"**/*.{js,jsx,ts,tsx}\"",
+    "style:prettier": "prettier --check \"**/*.{js,jsx,ts,tsx}\"",
+    "make-pretty": "prettier --write \"**/*.{js,jsx,ts,tsx}\"",
     "prepare": "husky install"
   },
   "dependencies": {
