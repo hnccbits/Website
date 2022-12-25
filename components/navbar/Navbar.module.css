@@ -5,8 +5,8 @@
   @apply sm:px-6;
   @apply xs:px-3;
   background-color: rgba(24, 30, 35, 0.45);
+  /* background-color: transparent; */
   backdrop-filter: blur(8px);
-  overflow-x: hidden;
 }
 
 .navTitle {
@@ -28,7 +28,7 @@
   width: fit-content;
 }
 .navbarList > .navLink:hover {
-  @apply text-blue font-medium;
+  @apply text-golden font-medium;
 }
 
 .humburgerMenu {
