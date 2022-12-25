@@ -12,6 +12,10 @@ module.exports = {
         DEFAULT: "#24ACFF",
         light: "#98e8fc",
       },
+      golden: {
+        DEFAULT: "#FFED79",
+        light: "#FFA776",
+      },
     },
 		screens: {
       'm2xl': { min: '1500px' },
