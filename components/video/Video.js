@@ -85,6 +85,7 @@ function Video() {
           </video>
         </div>
       )}
+
       <div className={styles.content}>
         {documentWidth >= 600 ? (
           <>

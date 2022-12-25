@@ -2,6 +2,16 @@
   @apply relative;
   height: 90vh;
   @apply sm:h-auto;
+  background: url(../../assets/christmas_theme/background3.png);
+  background-size: cover;
+}
+
+.GRADIENT {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 1) 90%
+  );
 }
 
 .designVideoContainer {
@@ -56,6 +66,9 @@
   @apply my-8 mx-4 text-7xl z-30 font-extrabold relative;
   @apply md:text-5xl;
   @apply sm:my-4;
+  background: linear-gradient(90.28deg, #ffed79 1.18%, #ffa776 98.69%);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .content > h1::before,
