@@ -43,8 +43,8 @@ function Navbar() {
       }
 
       if (prevScroll < currentScrollPos) {
-        navList.classList.add('fade-up');
-        title.classList.add('fade-up');
+        // navList.classList.add('fade-up');
+        // title.classList.add('fade-up');
         navbar.style.borderBottom = '1px solid rgba(255, 255, 255, 0.2)';
       } else {
         navList.classList.remove('fade-up');
