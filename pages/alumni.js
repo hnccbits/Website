@@ -21,7 +21,7 @@ function Alumni() {
       </Head>
       <section className="mt-16 mb-12 container-70">
         <div className="my-16 w-full text-center">
-          <BottomGlitter text="Our Notable Alumni" />
+          <BottomGlitter text="Our Notable Alumni ✨" />
           <h3 className="text-lg mt-8">
             Nobody is bothered about an institution more than its alumni.
             <br />- N.R. Narayan Murthy
@@ -36,7 +36,7 @@ function Alumni() {
                 name={item.name}
                 title={item.title}
                 imageSrc={`/teams/2k16/${item.imageSrc}.jpg`}
-                lazyImageSrc={`/teams/2k16/lazy/${item.imageSrc}-min.png`}
+                lazyImageSrc={`/teams/2k16/lazy/${item.imageSrc}-min.jpg`}
                 socials={item.socials}
               />
             );
