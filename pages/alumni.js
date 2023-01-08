@@ -27,7 +27,7 @@ function Alumni() {
             <br />- N.R. Narayan Murthy
           </h3>
         </div>
-        <h2 className={Styles.postHead}>Batch 2k16</h2>
+        <h2 className={Styles.postHead}>Batch 2K16</h2>
         <div className={Styles.cardContainer}>
           {TeamData2k16.map((item, index) => {
             return (
@@ -43,7 +43,7 @@ function Alumni() {
           })}
         </div>
 
-        <h2 className={Styles.postHead}>Batch 2k17</h2>
+        <h2 className={Styles.postHead}>Batch 2K17</h2>
         <div className={Styles.cardContainer}>
           {TeamData2k17.map((item, index) => {
             return (
@@ -59,7 +59,7 @@ function Alumni() {
           })}
         </div>
 
-        <h2 className={Styles.postHead}>Batch 2k18</h2>
+        <h2 className={Styles.postHead}>Batch 2K18</h2>
         <div className={`${Styles.cardContainer}`}>
           {TeamData2k18.slice(0, 24).map((item, index) => {
             return (

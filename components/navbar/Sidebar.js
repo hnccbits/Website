@@ -4,7 +4,7 @@ import { CgClose } from 'react-icons/cg';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Hamburger.module.css';
-import Logo from '../../assets/hncc-logo.png';
+import Logo from '../../assets/christmas_theme/christmas-theme-logo.png';
 import Button from '../button/Button';
 
 const SpanStyle = {
@@ -83,6 +83,11 @@ function Sidebar({ isMounted, unmount }) {
         <Link href="/teams">
           <a className={styles.navLink} onClick={unmount}>
             Team
+          </a>
+        </Link>
+        <Link href="/alumni">
+          <a className={styles.navLink} onClick={unmount}>
+            Alumni
           </a>
         </Link>
         <Link href="/contact">
