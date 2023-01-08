@@ -3,7 +3,11 @@ import BottomGlitter from '@/components/StyledText/BottomGlitter';
 import Screen from '../components/screen/Screen';
 import TeamCard from '../components/teams/TeamCard';
 import Styles from '../components/teams/Team.module.css';
-import { TeamData2k16, TeamData2k17, TeamData2k18 } from '../lib/data/AlumniData';
+import {
+  TeamData2k16,
+  TeamData2k17,
+  TeamData2k18,
+} from '../lib/data/AlumniData';
 
 function Alumni() {
   return (
