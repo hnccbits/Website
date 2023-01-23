@@ -39,6 +39,7 @@ function Alumni() {
                 key={`${String(index)}-team`}
                 name={item.name}
                 title={item.title}
+                company={item.company}
                 imageSrc={`/teams/2k16/${item.imageSrc}.jpg`}
                 lazyImageSrc={`/teams/2k16/lazy/${item.imageSrc}-min.jpg`}
                 socials={item.socials}
@@ -55,6 +56,7 @@ function Alumni() {
                 key={`${String(index)}-team`}
                 name={item.name}
                 title={item.title}
+                company={item.company}
                 imageSrc={`/teams/2k17/${item.imageSrc}.jpg`}
                 lazyImageSrc={`/teams/2k17/lazy/${item.imageSrc}-min.jpg`}
                 socials={item.socials}
@@ -71,6 +73,7 @@ function Alumni() {
                 key={`${String(index)}-team`}
                 name={item.name}
                 title={item.title}
+                company={item.company}
                 imageSrc={`/teams/2k18/${item.imageSrc}.jpg`}
                 lazyImageSrc={`/teams/2k18/lazy/${item.imageSrc}-min.jpg`}
                 socials={item.socials}
