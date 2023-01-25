@@ -97,7 +97,7 @@ function Navbar() {
         >
           <Button
             style={{ border: 'none' }}
-            className="bg-primary-light text-primary hover:text-primary-light"
+            className="bg-primary-light text-primary hover:text-primary"
           >
             <span style={SpanStyle}>Join Us</span>
           </Button>

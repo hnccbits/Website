@@ -113,7 +113,7 @@ function Sidebar({ isMounted, unmount }) {
         >
           <Button
             style={{ border: 'none' }}
-            className="bg-primary-light text-primary hover:text-primary-light xs:!py-3"
+            className="bg-primary-light text-primary hover:text-primary xs:!py-3"
           >
             <span style={SpanStyle}>Join Us</span>
           </Button>
