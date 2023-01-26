@@ -23,8 +23,6 @@ export default function Home() {
           name="keywords"
           content="HTML, CSS, JavaScript, ReactJS, NextJS, TailwindCSS, HnCC, Hackathon & Coding Club, BIT Sindri, Dhanbad"
         />
-
-       
       </Head>
       <Video />
       <HomeAbout />
