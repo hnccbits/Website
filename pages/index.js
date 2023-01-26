@@ -24,7 +24,7 @@ export default function Home() {
           content="HTML, CSS, JavaScript, ReactJS, NextJS, TailwindCSS, HnCC, Hackathon & Coding Club, BIT Sindri, Dhanbad"
         />
 
-        <script src="https://app.embed.im/snow.js" defer />
+       
       </Head>
       <Video />
       <HomeAbout />
