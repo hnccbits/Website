@@ -85,6 +85,11 @@ function Sidebar({ isMounted, unmount }) {
             Team
           </a>
         </Link>
+        <Link href="/alumni">
+          <a className={styles.navLink} onClick={unmount}>
+            Alumni
+          </a>
+        </Link>
         <Link href="/contact">
           <a className={styles.navLink} onClick={unmount}>
             Contact Us

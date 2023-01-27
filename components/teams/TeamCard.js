@@ -4,7 +4,7 @@ import Style from './Team.module.css';
 
 const ICON_SIZE = 28;
 
-function TeamCard({ name, title, socials, imageSrc, lazyImageSrc }) {
+function TeamCard({ name, title, company, socials, imageSrc, lazyImageSrc }) {
   return (
     <div className={Style.card}>
       <div className="z-10 w-full text-center h-2/3 mb-18 mt-4 overflow-hidden rounded-lg">
@@ -23,6 +23,7 @@ function TeamCard({ name, title, socials, imageSrc, lazyImageSrc }) {
       <div className="z-10 text-center my-5">
         <h3 className="text-xl">{name}</h3>
         <h4>{title}</h4>
+        <h2>{company}</h2>
       </div>
       <div className={Style.socials}>
         {socials.gb || socials.email || socials.linkedin ? (

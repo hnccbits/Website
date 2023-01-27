@@ -4,9 +4,7 @@ import { HiMenuAlt4 } from 'react-icons/hi';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Navbar.module.css';
-// import Logo from '../../assets/hncc-logo.png';
-// this is the logo for the current theme
-import Logo from '../../assets/christmas_theme/christmas-theme-logo.png';
+import Logo from '../../assets/hncc-logo.png';
 import Button from '../button/Button';
 import Sidebar from './Sidebar';
 
@@ -43,8 +41,8 @@ function Navbar() {
       }
 
       if (prevScroll < currentScrollPos) {
-        navList.classList.add('fade-up');
-        title.classList.add('fade-up');
+        // navList.classList.add('fade-up');
+        // title.classList.add('fade-up');
         navbar.style.borderBottom = '1px solid rgba(255, 255, 255, 0.2)';
       } else {
         navList.classList.remove('fade-up');
@@ -76,6 +74,9 @@ function Navbar() {
         </Link>
         <Link href="/teams">
           <a className={styles.navLink}>TEAM</a>
+        </Link>
+        <Link href="/alumni">
+          <a className={styles.navLink}>ALUMNI</a>
         </Link>
         <Link href="/events">
           <a className={styles.navLink}>EVENTS</a>

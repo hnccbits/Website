@@ -52,7 +52,7 @@ function Footer() {
         <div className="flex-4 md:flex-1 sm:mt-8">
           <h3 className="text-2xl">Get Help</h3>
           <a
-            href="https://forms.gle/bGAauorD4Vj752z68"
+            href="https://docs.google.com/forms/d/1eOZsO1X6qmqyS48nEw43RJnOhwEBuAvXpXZXMtOOLaY/closedform"
             className="block pl-1 text-lg my-1 font-extralight"
             target="_blank"
             rel="noreferrer"
