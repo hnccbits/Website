@@ -56,7 +56,7 @@ function About() {
           </div>
         </div>
         <div className="mt-20 mb-6 sm:mt-8 sm:mb-4">
-          <BottomGlitter text="Our Activites" />
+          <BottomGlitter text="Our Activities" />
           <div className="mt-6">
             <p className="text-lg">
               We organize a national level hackathon, Hackatron every year. The

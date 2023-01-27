@@ -12,8 +12,5 @@
 }
 .socialsBarIcons:hover {
   @apply text-blue-light;
-  fill: rgb(255, 237, 121) !important;
-
-  /* background: radial-gradient(circle, #ffed79 1.18%, #ffa776 98.69%);
-  overflow: hidden; */
+  fill: rgb(56, 200, 236) !important;
 }
