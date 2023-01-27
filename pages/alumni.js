@@ -31,7 +31,7 @@ function Alumni() {
             <br />- N.R. Narayan Murthy
           </h3>
         </div>
-        <h2 className={Styles.postHead}>Batch 2K16</h2>
+        <h2 className={Styles.postHead}>Batch 2K16 (Founding Members)</h2>
         <div className={Styles.cardContainer}>
           {TeamData2k16.map((item, index) => {
             return (
