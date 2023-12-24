@@ -7,6 +7,7 @@ import BottomGlitter from '@/components/StyledText/BottomGlitter';
 import styles from '@/styles/events.module.css';
 import AnimatedScrollButton from '@/components/AnimatedScrollButton';
 import EventsData from '../lib/data/EventsData';
+import ParticleBackground from '../assets/christmas_theme/ParticlesBg';
 
 function Events() {
   useEffect(() => {
@@ -76,6 +77,7 @@ function Events() {
         />
       </Head>
       <div>
+        <ParticleBackground />
         <div className="text-center mt-10 mb-8 sm:my-8">
           <div className="flex flex-col justify-between h-[calc(100vh-100px-3rem)] items-center sm:h-[calc(90vh-100px-1rem)]">
             <BottomGlitter text="Our Events" />

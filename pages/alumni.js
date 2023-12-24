@@ -9,6 +9,7 @@ import {
   TeamData2k18,
   TeamData2k19,
 } from '../lib/data/AlumniData';
+import ParticleBackground from '../assets/christmas_theme/ParticlesBg';
 
 function Alumni() {
   return (
@@ -25,6 +26,7 @@ function Alumni() {
         />
       </Head>
       <section className="mt-16 mb-12 container-70">
+        <ParticleBackground />
         <div className="my-16 w-full text-center">
           <BottomGlitter text="Our Notable Alumni ✨" />
           <h3 className="text-lg mt-8">

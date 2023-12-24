@@ -5,6 +5,7 @@ import emailjs from 'emailjs-com';
 import Button from '../components/button/Button';
 import StyledInput from '../components/input/StyledInput';
 import Screen from '../components/screen/Screen';
+import ParticleBackground from '../assets/christmas_theme/ParticlesBg';
 
 function ContactUs() {
   const [name, setName] = useState('');
@@ -46,6 +47,7 @@ function ContactUs() {
         />
       </Head>
       <section className="container-70 overflow-hidden">
+        <ParticleBackground />
         <ThankYou show={show} />
         <div className={`${show ? 'invisible hidden' : 'visible'} z-10`}>
           <div className="mt-28 mb-12 pt-10 pb-8 sm:mt-20 sm:mb-10">
