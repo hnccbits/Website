@@ -103,5 +103,5 @@ function Alumni() {
     </Screen>
   );
 }
-
+// npm run style: all
 export default Alumni;
