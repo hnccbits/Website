@@ -97,7 +97,9 @@ function ContactUs() {
               <button type="submit" className="mt-16 flex rounded-full">
                 <Button
                   style={{ border: 'none' }}
-                  className="bg-primary-light text-primary hover:text-primary-light"
+                  /* For Christmas Theme */
+                  className="bg-primary-light text-primary"
+                  // className="bg-primary-light text-primary hover:text-primary-light"
                 >
                   <span
                     style={{

@@ -4,7 +4,7 @@ import { CgClose } from 'react-icons/cg';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Hamburger.module.css';
-import Logo from '../../assets/hncc-logo.png';
+import Logo from '../../assets/christmas_theme/christmas-theme-logo.png';
 import Button from '../button/Button';
 
 const SpanStyle = {
@@ -113,7 +113,8 @@ function Sidebar({ isMounted, unmount }) {
         >
           <Button
             style={{ border: 'none' }}
-            className="bg-primary-light text-primary hover:text-primary-light xs:!py-3"
+            /*             className="bg-primary-light text-primary hover:text-primary-light xs:!py-3" */
+            className="bg-primary-light text-primary xs:!py-3"
           >
             <span style={SpanStyle}>Join Us</span>
           </Button>
