@@ -8,6 +8,7 @@ import Screen from '../components/screen/Screen';
 import Sponsors from '../components/sponsors/Sponsors';
 import TechStack from '../components/techStack/TechStack';
 import Video from '../components/video/Video';
+import ParticleBackground from '../assets/christmas_theme/ParticlesBg';
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
           content="HTML, CSS, JavaScript, ReactJS, NextJS, TailwindCSS, HnCC, Hackathon & Coding Club, BIT Sindri, Dhanbad"
         />
       </Head>
+      <ParticleBackground />
       <Video />
       <HomeAbout />
       <TechStack />

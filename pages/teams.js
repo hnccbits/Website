@@ -4,6 +4,7 @@ import Screen from '../components/screen/Screen';
 import TeamCard from '../components/teams/TeamCard';
 import Styles from '../components/teams/Team.module.css';
 import { TeamData2k19, TeamData2k20, TeamData2k21 } from '../lib/data/TeamData';
+import ParticleBackground from '../assets/christmas_theme/ParticlesBg';
 
 function Teams() {
   return (
@@ -19,6 +20,7 @@ function Teams() {
           content="HTML, CSS, JavaScript, ReactJS, NextJS, TailwindCSS, HnCC, Team of HnCC, Hackathon & Coding Club, BIT Sindri, Dhanbad"
         />
       </Head>
+      <ParticleBackground />
       <section className="mt-16 mb-12 container-70">
         <div className="my-16 w-full text-center">
           <BottomGlitter text="Our Team" />
