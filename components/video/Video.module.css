@@ -2,6 +2,17 @@
   @apply relative;
   height: 90vh;
   @apply sm:h-auto;
+  /* Below styling is for christmas theme */
+  background: url('../../assets/christmas_theme/background3.png');
+  background-size: cover;
+}
+
+.GRADIENT {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0) 90%
+  );
 }
 
 .designVideoContainer {
@@ -10,6 +21,10 @@
   transition: all 400ms ease-in-out;
   height: 100%;
   overflow: hidden;
+  /* Below styling is for christmas theme */
+  background: linear-gradient(90.28deg, #ffed79 1.18%, #ffa776 98.69%);
+  background-clip: text;
+  color: transparent;
 }
 
 .designVideoContainer > video {

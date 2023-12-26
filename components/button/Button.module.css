@@ -13,13 +13,21 @@
   width: 0;
   height: 0;
   border-radius: 50%;
-  background: rgb(51, 121, 238);
-  background: radial-gradient(circle, rgba(51, 121, 238, 1) 0%, rgba(36, 172, 255, 1) 100%);
+  /* For Christmas Theme */
+  background: #ffed79;
+  background: radial-gradient(circle, #ffa776 0%, #ffed79, 100%);
+  /* background: rgb(51, 121, 238);
+  background: radial-gradient(circle, rgba(51, 121, 238, 1) 0%, rgba(36, 172, 255, 1) 100%); */
   transition: width 0.5s, height 0.5s;
 }
 
 .rippleButton:hover {
   border-color: transparent;
+}
+/* Below span tag styling is For christmas Theme */
+.rippleButton:hover > span {
+  transition: 150ms;
+  @apply text-primary;
 }
 
 .rippleButton:hover::before {
