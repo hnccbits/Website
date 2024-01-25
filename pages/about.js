@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Events from '../components/event/Events';
 import Screen from '../components/screen/Screen';
 import BottomGlitter from '../components/StyledText/BottomGlitter';
+import ParticleBackground from '../assets/christmas_theme/ParticlesBg';
 
 function About() {
   return (
@@ -17,6 +18,7 @@ function About() {
           content="HTML, CSS, JavaScript, ReactJS, NextJS, TailwindCSS, HnCC, About HnCC, Hackathon & Coding Club, BIT Sindri, Dhanbad"
         />
       </Head>
+      <ParticleBackground />
       <section className="container-70 pt-28 md:pt-16 sm:pt-12">
         <div className="hidden">
           <p className="px-6">

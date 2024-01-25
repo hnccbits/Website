@@ -7,7 +7,9 @@ import {
   TeamData2k16,
   TeamData2k17,
   TeamData2k18,
+  TeamData2k19,
 } from '../lib/data/AlumniData';
+import ParticleBackground from '../assets/christmas_theme/ParticlesBg';
 
 function Alumni() {
   return (
@@ -23,6 +25,7 @@ function Alumni() {
           content="HTML, CSS, JavaScript, ReactJS, NextJS, TailwindCSS, HnCC, Team of HnCC, Hackathon & Coding Club, BIT Sindri, Dhanbad"
         />
       </Head>
+      <ParticleBackground />
       <section className="mt-16 mb-12 container-70">
         <div className="my-16 w-full text-center">
           <BottomGlitter text="Our Notable Alumni ✨" />
@@ -81,9 +84,26 @@ function Alumni() {
             );
           })}
         </div>
+
+        <h2 className={Styles.postHead}>Batch 2K19</h2>
+        <div className={`${Styles.cardContainer}`}>
+          {TeamData2k19.slice(0, 24).map((item, index) => {
+            return (
+              <TeamCard
+                key={`${String(index)}-team`}
+                name={item.name}
+                title={item.title}
+                company={item.company}
+                imageSrc={`/teams/2k19/${item.imageSrc}.jpg`}
+                lazyImageSrc={`/teams/2k19/lazy/${item.imageSrc}-min.jpg`}
+                socials={item.socials}
+              />
+            );
+          })}
+        </div>
       </section>
     </Screen>
   );
 }
-
+// npm run style: all
 export default Alumni;

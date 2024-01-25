@@ -26,6 +26,7 @@ const particleConfig = {
     fullScreen: {
       enable: true,
       zIndex: 1,
+
     },
     detectRetina: false,
     duration: 0,
