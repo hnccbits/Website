@@ -3,8 +3,7 @@ import BottomGlitter from '@/components/StyledText/BottomGlitter';
 import Screen from '../components/screen/Screen';
 import TeamCard from '../components/teams/TeamCard';
 import Styles from '../components/teams/Team.module.css';
-import { TeamData2k19, TeamData2k20, TeamData2k21 } from '../lib/data/TeamData';
-import ParticleBackground from '../assets/christmas_theme/ParticlesBg';
+import { TeamData2k19, TeamData2k20, TeamData2k22 } from '../lib/data/TeamData';
 
 function Teams() {
   return (
@@ -21,7 +20,6 @@ function Teams() {
         />
       </Head>
       <section className="mt-16 mb-12 container-70">
-        <ParticleBackground />
         <div className="my-16 w-full text-center">
           <BottomGlitter text="Our Team" />
           <h3 className="text-lg mt-8">
@@ -94,7 +92,7 @@ function Teams() {
           })}
         </div>
 
-        <h2 className={Styles.postHead}>Our 2k21 Members</h2>
+        {/* <h2 className={Styles.postHead}>Our 2k21 Members</h2>
         <div className={`${Styles.cardContainer}`}>
           {TeamData2k21.slice(0, 24).map((item, index) => {
             return (
@@ -104,6 +102,21 @@ function Teams() {
                 title={item.title}
                 imageSrc={`/teams/2k21/${item.imageSrc}.jpg`}
                 lazyImageSrc={`/teams/2k21/lazy/${item.imageSrc}-min.jpg`}
+                socials={item.socials}
+              />
+            );l
+          })}
+        </div> */}
+        <h2 className={Styles.postHead}>Our 2k22 Members</h2>
+        <div className={`${Styles.cardContainer}`}>
+          {TeamData2k22.slice(0, 24).map((item, index) => {
+            return (
+              <TeamCard
+                key={`${String(index)}-team`}
+                name={item.name}
+                title={item.title}
+                imageSrc={`/teams/2k22/${item.imageSrc}.jpg`}
+                lazyImageSrc={`/teams/2k22/lazy/${item.imageSrc}-min.jpg`}
                 socials={item.socials}
               />
             );
