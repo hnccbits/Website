@@ -1,12 +1,20 @@
 .card {
   @apply p-4 relative flex flex-col justify-center items-center overflow-hidden rounded-2xl;
   min-height: 350px;
-  background: rgb(0, 204, 255);
+  /* background: rgb(0, 204, 255); */
+  /* For christmas theme */
+  background: rgb(255, 237, 121);
+  /* For Christmas theme */
   background: linear-gradient(
+    45deg,
+    rgba(255, 237, 121, 0.44861694677871145) 0%,
+    rgba(253, 244, 186, 0.4) 100%
+  );
+  /* background: linear-gradient(
     45deg,
     rgba(0, 204, 255, 0.44861694677871145) 0%,
     rgba(152, 232, 252, 0.4) 100%
-  );
+  ); */
   transition: all 300ms ease-in-out;
 }
 
@@ -22,7 +30,9 @@
 .card::before {
   @apply absolute w-32;
   content: '';
-  background: linear-gradient(#00ccff, #98e8fc);
+  /* background: linear-gradient(#00ccff, #98e8fc); */
+  /* For christmas theme */
+  background: linear-gradient(#ffed79, #ffa776);
   animation: animate 4s linear infinite;
   height: 140%;
   opacity: 0;
@@ -44,7 +54,9 @@
 }
 
 .socials > a:hover > svg {
-  fill: #51bcff;
+  /* fill: #51bcff; */
+  /* For Christmas theme */
+  fill: rgb(255, 237, 121);
 }
 
 .postHead {
