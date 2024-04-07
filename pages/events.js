@@ -76,7 +76,7 @@ function Events() {
           content="HTML, CSS, JavaScript, ReactJS, NextJS, TailwindCSS, HnCC, Events of HnCC, Hackathon & Coding Club, BIT Sindri, Dhanbad"
         />
       </Head>
-      <ParticleBackground />
+      {/* <ParticleBackground /> */}
       <div>
         <div className="text-center mt-10 mb-8 sm:my-8">
           <div className="flex flex-col justify-between h-[calc(100vh-100px-3rem)] items-center sm:h-[calc(90vh-100px-1rem)]">

@@ -21,7 +21,7 @@ function Teams() {
         />
       </Head>
       <section className="mt-16 mb-12 container-70">
-        <ParticleBackground />
+        {/* <ParticleBackground /> */}
         <div className="my-16 w-full text-center">
           <BottomGlitter text="Our Team" />
           <h3 className="text-lg mt-8">

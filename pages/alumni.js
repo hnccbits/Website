@@ -25,7 +25,7 @@ function Alumni() {
           content="HTML, CSS, JavaScript, ReactJS, NextJS, TailwindCSS, HnCC, Team of HnCC, Hackathon & Coding Club, BIT Sindri, Dhanbad"
         />
       </Head>
-      <ParticleBackground />
+      {/* <ParticleBackground /> */}
       <section className="mt-16 mb-12 container-70">
         <div className="my-16 w-full text-center">
           <BottomGlitter text="Our Notable Alumni ✨" />

@@ -18,7 +18,7 @@ function About() {
           content="HTML, CSS, JavaScript, ReactJS, NextJS, TailwindCSS, HnCC, About HnCC, Hackathon & Coding Club, BIT Sindri, Dhanbad"
         />
       </Head>
-      <ParticleBackground />
+      {/* <ParticleBackground /> */}
       <section className="container-70 pt-28 md:pt-16 sm:pt-12">
         <div className="hidden">
           <p className="px-6">

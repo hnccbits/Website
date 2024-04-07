@@ -46,7 +46,7 @@ function ContactUs() {
           content="HTML, CSS, JavaScript, ReactJS, NextJS, TailwindCSS, HnCC, Contact HnCC, Hackathon & Coding Club, BIT Sindri, Dhanbad"
         />
       </Head>
-      <ParticleBackground />
+      {/* <ParticleBackground /> */}
       <section className="container-70 overflow-hidden">
         <ThankYou show={show} />
         <div className={`${show ? 'invisible hidden' : 'visible'} z-10`}>

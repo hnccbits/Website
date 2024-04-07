@@ -25,7 +25,7 @@ export default function Home() {
           content="HTML, CSS, JavaScript, ReactJS, NextJS, TailwindCSS, HnCC, Hackathon & Coding Club, BIT Sindri, Dhanbad"
         />
       </Head>
-      <ParticleBackground />
+      {/* <ParticleBackground /> */}
       <Video />
       <HomeAbout />
       <TechStack />
