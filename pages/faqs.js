@@ -6,7 +6,6 @@ import { BsChevronRight } from 'react-icons/bs';
 import Screen from '../components/screen/Screen';
 import options from '../lib/data/FaqData';
 import styles from '../styles/faq.module.css';
-import ParticleBackground from '../assets/christmas_theme/ParticlesBg';
 
 function FAQs() {
   useEffect(() => {
@@ -35,7 +34,7 @@ function FAQs() {
         clickedElement.parent().removeClass(styles.active);
         clickedElement.next().slideUp(280);
       } else {
-        // Closing all opened accordion
+        // Closing all opened accordions
         clickedElement
           .parent()
           .parent()
@@ -65,7 +64,6 @@ function FAQs() {
           content="HTML, CSS, JavaScript, ReactJS, NextJS, TailwindCSS, HnCC, Frequently Asked Question, FAQs, Hackathon & Coding Club, BIT Sindri, Dhanbad"
         />
       </Head>
-      {/* <ParticleBackground /> */}
       <section className="container-70 pt-16 sm:pt-8 sm:w-4/5 xs:w-[85%]">
         <div className="mt-6 mb-20 sm:mt-8 sm:mb-20 xs:mt-4 xs:mb-16">
           <h1 className="text-6xl xl:text-5xl xl:leading-snug sm:text-4xl text-center">

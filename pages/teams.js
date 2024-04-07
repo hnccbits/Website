@@ -4,7 +4,6 @@ import Screen from '../components/screen/Screen';
 import TeamCard from '../components/teams/TeamCard';
 import Styles from '../components/teams/Team.module.css';
 import { TeamData2k19, TeamData2k20, TeamData2k21 } from '../lib/data/TeamData';
-import ParticleBackground from '../assets/christmas_theme/ParticlesBg';
 
 function Teams() {
   return (
@@ -21,7 +20,6 @@ function Teams() {
         />
       </Head>
       <section className="mt-16 mb-12 container-70">
-        {/* <ParticleBackground /> */}
         <div className="my-16 w-full text-center">
           <BottomGlitter text="Our Team" />
           <h3 className="text-lg mt-8">
