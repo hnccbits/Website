@@ -27,9 +27,9 @@
   height: 160%;
   min-height: calc(100% + 50px);
   width: 50%;
-  /* background: linear-gradient(#00ccff, #98e8fc); */
-  /* Below is for christmas theme */
-  background: linear-gradient(rgb(255, 237, 121), rgb(253, 244, 186));
+  background: linear-gradient(#00ccff, #98e8fc);
+  /* For christmas theme */
+  /* background: linear-gradient(rgb(255, 237, 121), rgb(253, 244, 186)); */
   animation: animate 4s linear infinite;
   opacity: 0.25;
   transition: all 400ms ease-in-out;
