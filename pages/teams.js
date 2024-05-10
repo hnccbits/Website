@@ -3,8 +3,7 @@ import BottomGlitter from '@/components/StyledText/BottomGlitter';
 import Screen from '../components/screen/Screen';
 import TeamCard from '../components/teams/TeamCard';
 import Styles from '../components/teams/Team.module.css';
-import { TeamData2k19, TeamData2k20, TeamData2k21 } from '../lib/data/TeamData';
-import ParticleBackground from '../assets/christmas_theme/ParticlesBg';
+import { TeamData2k20, TeamData2k21, TeamData2k22 } from '../lib/data/TeamData';
 
 function Teams() {
   return (
@@ -21,7 +20,6 @@ function Teams() {
         />
       </Head>
       <section className="mt-16 mb-12 container-70">
-        <ParticleBackground />
         <div className="my-16 w-full text-center">
           <BottomGlitter text="Our Team" />
           <h3 className="text-lg mt-8">
@@ -32,14 +30,14 @@ function Teams() {
         </div>
         <h2 className={Styles.postHead}>Board Of Directors</h2>
         <div className={Styles.cardContainer}>
-          {TeamData2k19.slice(0, 20).map((item, index) => {
+          {TeamData2k20.map((item, index) => {
             return (
               <TeamCard
                 key={`${String(index)}-team`}
                 name={item.name}
                 title={item.title}
-                imageSrc={`/teams/2k19/${item.imageSrc}.jpg`}
-                lazyImageSrc={`/teams/2k19/lazy/${item.imageSrc}-min.jpg`}
+                imageSrc={`/teams/2k20/${item.imageSrc}.jpg`}
+                lazyImageSrc={`/teams/2k20/lazy/${item.imageSrc}-min.jpg`}
                 socials={item.socials}
               />
             );
@@ -48,14 +46,14 @@ function Teams() {
 
         <h2 className={Styles.postHead}>Post Bearers</h2>
         <div className={Styles.cardContainer}>
-          {TeamData2k20.slice(0, 11).map((item, index) => {
+          {TeamData2k21.slice(0, 11).map((item, index) => {
             return (
               <TeamCard
                 key={`${String(index)}-team`}
                 name={item.name}
                 title={item.title}
-                imageSrc={`/teams/2k20/${item.imageSrc}.jpg`}
-                lazyImageSrc={`/teams/2k20/lazy/${item.imageSrc}-min.jpg`}
+                imageSrc={`/teams/2k21/${item.imageSrc}.jpg`}
+                lazyImageSrc={`/teams/2k21/lazy/${item.imageSrc}-min.jpg`}
                 socials={item.socials}
               />
             );
@@ -64,14 +62,14 @@ function Teams() {
 
         <h2 className={Styles.postHead}>Technical Head</h2>
         <div className={`${Styles.cardContainer}`}>
-          {TeamData2k20.slice(11, 20).map((item, index) => {
+          {TeamData2k21.slice(11, 19).map((item, index) => {
             return (
               <TeamCard
                 key={`${String(index)}-team`}
                 name={item.name}
                 title={item.title}
-                imageSrc={`/teams/2k20/${item.imageSrc}.jpg`}
-                lazyImageSrc={`/teams/2k20/lazy/${item.imageSrc}-min.jpg`}
+                imageSrc={`/teams/2k21/${item.imageSrc}.jpg`}
+                lazyImageSrc={`/teams/2k21/lazy/${item.imageSrc}-min.jpg`}
                 socials={item.socials}
               />
             );
@@ -80,23 +78,7 @@ function Teams() {
 
         <h2 className={Styles.postHead}>Event Manager</h2>
         <div className={`${Styles.cardContainer}`}>
-          {TeamData2k20.slice(20, 27).map((item, index) => {
-            return (
-              <TeamCard
-                key={`${String(index)}-team`}
-                name={item.name}
-                title={item.title}
-                imageSrc={`/teams/2k20/${item.imageSrc}.jpg`}
-                lazyImageSrc={`/teams/2k20/lazy/${item.imageSrc}-min.jpg`}
-                socials={item.socials}
-              />
-            );
-          })}
-        </div>
-
-        <h2 className={Styles.postHead}>Our 2k21 Members</h2>
-        <div className={`${Styles.cardContainer}`}>
-          {TeamData2k21.slice(0, 24).map((item, index) => {
+          {TeamData2k21.slice(19, 26).map((item, index) => {
             return (
               <TeamCard
                 key={`${String(index)}-team`}
@@ -104,6 +86,21 @@ function Teams() {
                 title={item.title}
                 imageSrc={`/teams/2k21/${item.imageSrc}.jpg`}
                 lazyImageSrc={`/teams/2k21/lazy/${item.imageSrc}-min.jpg`}
+                socials={item.socials}
+              />
+            );
+          })}
+        </div>
+        <h2 className={Styles.postHead}>Our 2K22 Members</h2>
+        <div className={`${Styles.cardContainer}`}>
+          {TeamData2k22.map((item, index) => {
+            return (
+              <TeamCard
+                key={`${String(index)}-team`}
+                name={item.name}
+                title={item.title}
+                imageSrc={`/teams/2k22/${item.imageSrc}.jpg`}
+                lazyImageSrc={`/teams/2k22/lazy/${item.imageSrc}-min.jpg`}
                 socials={item.socials}
               />
             );

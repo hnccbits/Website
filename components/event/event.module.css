@@ -16,9 +16,9 @@
   transition: transform ease 250ms;
   border-radius: 0.5rem;
   overflow: hidden;
-  /* box-shadow: 0 0 5px 1px hsl(203, 100%, 57%); */
+  box-shadow: 0 0 5px 1px hsl(203, 100%, 57%);
   /* For Christmas Theme */
-  box-shadow: 0 0 5px 1px #FFED79;
+  /* box-shadow: 0 0 5px 1px #ffed79; */
 }
 
 .card:hover {
@@ -69,9 +69,9 @@
     top: 100%;
     height: 3px;
     width: calc(100% + 2.5rem);
+    background: hsl(203, 100%, 57%);
     /* For Christmas Theme */
-    background: #FFED79;
-    /* background: hsl(203, 100%, 57%); */
+    /* background: #FFED79; */
     transform: scaleX(0);
     transition: transform 200ms ease;
     transform-origin: left;
@@ -92,8 +92,8 @@
   text-decoration: none;
   color: black;
   /* For Christmas Theme */
-  background: #FFED79;
-  /* background: hsl(203, 100%, 57%); */
+  /* background: #ffed79; */
+  background: hsl(203, 100%, 57%);
   padding: 0.5em 1.25em;
   border-radius: 0.25rem;
 }
