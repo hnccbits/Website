@@ -13,8 +13,8 @@
   width: 0;
   height: 0;
   border-radius: 50%;
-  /* background: rgb(51, 121, 238);
-  background: radial-gradient(circle, rgba(51, 121, 238, 1) 0%, rgba(36, 172, 255, 1) 100%); */
+  /* background: rgb(51, 121, 238); */
+  /* background: radial-gradient(circle, rgba(51, 121, 238, 1) 0%, rgba(36, 172, 255, 1) 100%); */
   /* For Christmas Theme */
   background: #ffed79;
   background: radial-gradient(circle, #ffa776 0%, #ffed79, 100%);

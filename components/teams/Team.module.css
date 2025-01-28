@@ -9,13 +9,13 @@
     rgba(255, 237, 121, 0.44861694677871145) 0%,
     rgba(253, 244, 186, 0.4) 100%
   );
-  background: linear-gradient(
+  /* background: linear-gradient(
     45deg,
     rgba(0, 204, 255, 0.44861694677871145) 0%,
     rgba(152, 232, 252, 0.4) 100%
   );
-  transition: all 300ms ease-in-out;
-}
+  transition: all 300ms ease-in-out;*/
+} 
 
 .cardContainer {
   @apply grid gap-16;
