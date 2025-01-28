@@ -12,11 +12,11 @@
 }
 
 .mouse:hover {
-   @apply border-blue;
-   box-shadow: 0px 0px 14px 1px rgb(36 172 255);
+   /* @apply border-blue; */
+   /* box-shadow: 0px 0px 14px 1px rgb(36 172 255); */
   /* For Christmas theme */
-  /* @apply border-golden; */
-  /* box-shadow: 0px 0px 14px 1px #ffed79; */
+  @apply border-golden;
+  box-shadow: 0px 0px 14px 1px #ffed79;
 }
 
 .cursor {
@@ -30,9 +30,9 @@
 }
 
 .mouse:hover .cursor {
-  @apply bg-blue;
+  /* @apply bg-blue; */
   /* For Christmas Theme */
-  /* @apply bg-golden; */
+  @apply bg-golden;
   animation: none;
 }
 

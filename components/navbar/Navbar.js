@@ -4,7 +4,7 @@ import { HiMenuAlt4 } from 'react-icons/hi';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Navbar.module.css';
-import Logo from '../../assets/hncc-logo.png';
+import Logo from '../../assets/christmas_theme/christmas-theme-logo.png';
 import Button from '../button/Button';
 import Sidebar from './Sidebar';
 
@@ -95,9 +95,9 @@ function Navbar() {
         >
           <Button
             style={{ border: 'none' }}
-            className="bg-primary-light text-primary hover:text-primary-light"
+            // className="bg-primary-light text-primary hover:text-primary-light"
             /* For christams Theme */
-            // className="bg-primary-light text-primary"
+            className="bg-primary-light text-primary"
           >
             <span style={SpanStyle}>Join Us</span>
           </Button>
