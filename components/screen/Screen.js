@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import ParticleBackground from '../../assets/christmas_theme/ParticlesBg';
+// import ParticleBackground from '../../assets/christmas_theme/ParticlesBg';
 import Footer from '../footer/Footer';
 import Navbar from '../navbar/Navbar';
 import SocialsBar from '../socialsbar/SocialsBar';
@@ -23,7 +23,7 @@ function Screen({ children }) {
     <main id="overlayScreen" className="h-full relative">
       <div className="cursor" />
       {/* For Christmas Theme */}
-      <ParticleBackground />
+      {/* <ParticleBackground /> */}
       <Navbar />
       <SocialsBar />
       {children}

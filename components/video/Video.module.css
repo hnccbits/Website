@@ -3,8 +3,8 @@
   height: 90vh;
   @apply sm:h-auto;
   /* For christmas theme */
-  background: url('../../assets/christmas_theme/background3.png');
-  background-size: cover;
+  /* background: url('../../assets/christmas_theme/background3.png'); */
+  /* background-size: cover; */
 }
 
 .GRADIENT {
@@ -22,7 +22,7 @@
   height: 100%;
   overflow: hidden;
   /* For christmas theme */
-  background: linear-gradient(90.28deg, #ffed79 1.18%, #ffa776 98.69%);
+  /* background: linear-gradient(90.28deg, #ffed79 1.18%, #ffa776 98.69%); */
   background-clip: text;
   color: transparent;
 }
