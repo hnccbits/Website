@@ -30,10 +30,10 @@
   height: 130%;
   width: 130%;
   border-radius: 50%;
-  /* background: linear-gradient(90deg, #00ccff, #98e8fc); */
+  background: linear-gradient(90deg, #00ccff, #98e8fc);
   /* For Christmas Theme */
-  background: linear-gradient(90deg, #ffa776, #ffed79);
-  opacity: 0.25;
+  /* background: linear-gradient(90deg, #ffa776, #ffed79); */
+  /* opacity: 0.25; */
 }
 
 .associationMenuItem:hover::before {
