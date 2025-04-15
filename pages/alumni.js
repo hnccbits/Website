@@ -8,6 +8,7 @@ import {
   TeamData2k17,
   TeamData2k18,
   TeamData2k19,
+  TeamData2k20,
 } from '../lib/data/AlumniData';
 
 function Alumni() {
@@ -88,12 +89,29 @@ function Alumni() {
           {TeamData2k19.map((item, index) => {
             return (
               <TeamCard
+              key={`${String(index)}-team`}
+              name={item.name}
+              title={item.title}
+              company={item.company}
+              imageSrc={`/teams/2k19/${item.imageSrc}.jpg`}
+              lazyImageSrc={`/teams/2k19/lazy/${item.imageSrc}-min.jpg`}
+              socials={item.socials}
+              />
+            );
+          })}
+        </div>
+
+        <h2 className={Styles.postHead}>Batch 2K20</h2>
+        <div className={`${Styles.cardContainer}`}>
+          {TeamData2k20.map((item, index) => {
+            return (
+              <TeamCard
                 key={`${String(index)}-team`}
                 name={item.name}
                 title={item.title}
                 company={item.company}
-                imageSrc={`/teams/2k19/${item.imageSrc}.jpg`}
-                lazyImageSrc={`/teams/2k19/lazy/${item.imageSrc}-min.jpg`}
+                imageSrc={`/teams/2k20/${item.imageSrc}.jpg`}
+                lazyImageSrc={`/teams/2k20/lazy/${item.imageSrc}-min.jpg`}
                 socials={item.socials}
               />
             );
