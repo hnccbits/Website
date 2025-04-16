@@ -3,7 +3,7 @@ import BottomGlitter from '@/components/StyledText/BottomGlitter';
 import Screen from '../components/screen/Screen';
 import TeamCard from '../components/teams/TeamCard';
 import Styles from '../components/teams/Team.module.css';
-import { TeamData2k20, TeamData2k21, TeamData2k22, TeamData2k23 } from '../lib/data/TeamData';
+import {TeamData2k21, TeamData2k22, TeamData2k23 } from '../lib/data/TeamData';
 
 function Teams() {
   return (
