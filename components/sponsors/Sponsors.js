@@ -21,19 +21,18 @@ function Sponsors() {
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
   return (
     <section ref={ref} className="container-70 my-16 py-16 fadeonscroll">
       <BottomGlitter text="Our Sponsors" />
       <div className={Styles.sponsorsContainer}>
-        {SponsorsData.map((src, index) => {
-          return (
-            <div className={Styles.images} key={String(index)}>
-              <div className="z-20">
-                <img width="100%" height="100%" src={src} alt="Sponsors" />
-              </div>
+        {SponsorsData.map((src) => (
+          <div className={Styles.images} key={src}>
+            <div className="z-20">
+              <img width="100%" height="100%" src={src} alt="Sponsors" />
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
     </section>
   );

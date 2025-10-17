@@ -44,10 +44,10 @@ function GridGallery() {
         <BottomGlitter text="Glimpses" />
       </div>
       <div className={styles.container}>
-        {GalleryImages.map((item, index) => {
+        {GalleryImages.map((item) => {
           return (
             <GridImage
-              key={String(index)}
+              key={String(item.id)}
               src={item.src}
               mobileSrc={item.mobileSrc}
               title={item.title}
