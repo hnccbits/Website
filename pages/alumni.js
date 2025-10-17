@@ -89,13 +89,13 @@ function Alumni() {
           {TeamData2k19.map((item, index) => {
             return (
               <TeamCard
-              key={`${String(index)}-team`}
-              name={item.name}
-              title={item.title}
-              company={item.company}
-              imageSrc={`/teams/2k19/${item.imageSrc}.jpg`}
-              lazyImageSrc={`/teams/2k19/lazy/${item.imageSrc}-min.jpg`}
-              socials={item.socials}
+                key={`${String(index)}-team`}
+                name={item.name}
+                title={item.title}
+                company={item.company}
+                imageSrc={`/teams/2k19/${item.imageSrc}.jpg`}
+                lazyImageSrc={`/teams/2k19/lazy/${item.imageSrc}-min.jpg`}
+                socials={item.socials}
               />
             );
           })}
