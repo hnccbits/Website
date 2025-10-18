@@ -4,8 +4,10 @@ import { CgClose } from 'react-icons/cg';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Hamburger.module.css';
-import Logo from '../../public/hncc-logo.png';
+// ✅ Fixed: use logo from public folder path
 import Button from '../button/Button';
+
+const Logo = '/hncc-logo.png';
 
 const SpanStyle = {
   zIndex: 1,
@@ -65,7 +67,8 @@ function Sidebar({ isMounted, unmount }) {
         <div>
           <Link href="/">
             <a className="flex items-center" onClick={unmount}>
-              <Image src={Logo} alt="HnCC" height="60px" width="60px" />
+              {/* ✅ Fixed: use public path for image */}
+              <Image src={Logo} alt="HnCC" height="60" width="60" />
             </a>
           </Link>
         </div>

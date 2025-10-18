@@ -4,9 +4,11 @@ import { HiMenuAlt4 } from 'react-icons/hi';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Navbar.module.css';
-import Logo from '../../public/hncc-logo.png';
+// ✅ Fixed: use logo from public path instead of importing
 import Button from '../button/Button';
 import Sidebar from './Sidebar';
+
+const Logo = '/hncc-logo.png';
 
 const SpanStyle = {
   zIndex: 1,
@@ -61,7 +63,8 @@ function Navbar() {
       <div>
         <Link href="/">
           <a className="flex items-center">
-            <Image src={Logo} alt="HnCC" height="60px" width="60px" />
+            {/* ✅ Fixed: use public path instead of imported file */}
+            <Image src={Logo} alt="HnCC" height="60" width="60" />
             <h2 id="hnccTitle" className={styles.navTitle}>
               Hackathon and Coding Club
             </h2>

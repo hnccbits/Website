@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import Image from 'next/image';
+// import Image from 'next/image';
 import Styles from './association.module.css';
 import BottomGlitter from '../StyledText/BottomGlitter';
 
@@ -14,10 +14,8 @@ function Associations() {
           <div className={Styles.associationMenu}>
             <div className={Styles.associationMenuItem}>
               <a href="#gdsc">
-                <Image
+                <img
                   className={Styles.associationImage}
-                  height="100%"
-                  width="100%"
                   src="/sponsors/gdsc.png"
                   alt="Google Developers Student Clubs, BIT Sindri"
                 />
@@ -25,10 +23,8 @@ function Associations() {
             </div>
             <div className={Styles.associationMenuItem}>
               <a href="#gfg">
-                <Image
+                <img
                   className={Styles.associationImage}
-                  height="100%"
-                  width="100%"
                   src="/sponsors/gfg.png"
                   alt="GeeksForGeeks Student Chapter, BIT Sindri"
                 />
@@ -36,10 +32,8 @@ function Associations() {
             </div>
             <div className={Styles.associationMenuItem}>
               <a href="#codechef">
-                <Image
+                <img
                   className={Styles.associationImage}
-                  height="100%"
-                  width="100%"
                   src="/sponsors/codechef.jpg"
                   alt="Codechef Student Chapter, BIT Sindri"
                 />
