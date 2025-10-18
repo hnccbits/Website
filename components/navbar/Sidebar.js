@@ -1,10 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { CgClose } from 'react-icons/cg';
-import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Hamburger.module.css';
-// ✅ Fixed: use logo from public folder path
+// ✅ Fixed: use logo directly with <img> instead of next/image for Netlify
 import Button from '../button/Button';
 
 const Logo = '/hncc-logo.png';
@@ -67,8 +66,15 @@ function Sidebar({ isMounted, unmount }) {
         <div>
           <Link href="/">
             <a className="flex items-center" onClick={unmount}>
-              {/* ✅ Fixed: use public path for image */}
-              <Image src={Logo} alt="HnCC" height={60} width={60} unoptimized />
+              {/* ✅ Fixed: use <img> for Netlify compatibility */}
+              <img
+                src={Logo}
+                alt="HnCC"
+                height="60"
+                width="60"
+                className="mr-2"
+                style={{ objectFit: 'contain' }}
+              />
             </a>
           </Link>
         </div>

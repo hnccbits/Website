@@ -1,10 +1,9 @@
 /* eslint-disable no-alert */
 import React, { useEffect, useState } from 'react';
 import { HiMenuAlt4 } from 'react-icons/hi';
-import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Navbar.module.css';
-// ✅ Fixed: use logo from public path instead of importing
+// ✅ Fixed: use logo directly with <img> instead of next/image for Netlify
 import Button from '../button/Button';
 import Sidebar from './Sidebar';
 
@@ -63,8 +62,15 @@ function Navbar() {
       <div>
         <Link href="/">
           <a className="flex items-center">
-            {/* ✅ Fixed: use public path instead of imported file */}
-            <Image src={Logo} alt="HnCC" height={60} width={60} unoptimized />
+            {/* ✅ Fixed: using <img> ensures it loads correctly from public on Netlify */}
+            <img
+              src={Logo}
+              alt="HnCC"
+              height="60"
+              width="60"
+              className="mr-2"
+              style={{ objectFit: 'contain' }}
+            />
             <h2 id="hnccTitle" className={styles.navTitle}>
               Hackathon and Coding Club
             </h2>
