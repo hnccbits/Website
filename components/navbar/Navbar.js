@@ -64,13 +64,7 @@ function Navbar() {
         <Link href="/">
           <a className="flex items-center">
             {/* ✅ Fixed: use public path instead of imported file */}
-            <Image
-              src={Logo}
-              alt="HnCC"
-              height={60}
-              width={60}
-              unoptimized
-            />
+            <Image src={Logo} alt="HnCC" height={60} width={60} unoptimized />
             <h2 id="hnccTitle" className={styles.navTitle}>
               Hackathon and Coding Club
             </h2>
