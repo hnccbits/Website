@@ -68,7 +68,13 @@ function Sidebar({ isMounted, unmount }) {
           <Link href="/">
             <a className="flex items-center" onClick={unmount}>
               {/* ✅ Fixed: use public path for image */}
-              <Image src={Logo} alt="HnCC" height="60" width="60" />
+              <Image
+                src={Logo}
+                alt="HnCC"
+                height={60}
+                width={60}
+                unoptimized
+              />
             </a>
           </Link>
         </div>
