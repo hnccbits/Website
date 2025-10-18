@@ -16,24 +16,25 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node: [14.x, 16.x]
+        node: [22.x]  # Updated Node.js version
 
     steps:
       - name: Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@v4  # Updated from @master to @v4
 
       - name: Setup node env
-        uses: actions/setup-node@v2.1.2
+        uses: actions/setup-node@v4  # Updated from @v2.1.2 to @v4
         with:
           node-version: ${{ matrix.node }}
 
       - name: Cache node_modules
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: ~/.yarn
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}  # Updated to use yarn.lock
           restore-keys: |
             ${{ runner.os }}-node-
+
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
