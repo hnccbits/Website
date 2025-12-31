@@ -98,8 +98,8 @@ function ContactUs() {
                 <Button
                   style={{ border: 'none' }}
                   /* For Christmas Theme */
-                  className="bg-primary-light text-primary"
-                  // className="bg-primary-light text-primary hover:text-primary-light"
+                  // className="bg-primary-light text-primary"
+                  className="bg-primary-light text-primary hover:text-primary-light"
                 >
                   <span
                     style={{
