@@ -15,7 +15,7 @@
     rgba(152, 232, 252, 0.4) 100%
   );*/
   transition: all 300ms ease-in-out;
-} 
+}
 
 .cardContainer {
   @apply grid gap-16;

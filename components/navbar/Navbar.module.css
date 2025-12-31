@@ -28,7 +28,7 @@
 }
 .navbarList > .navLink:hover {
   @apply text-blue font-medium;
-  
+
   /* For christmas theme */
   @apply text-golden font-medium;
 }

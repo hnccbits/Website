@@ -16,14 +16,14 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node: [22.x]  # Updated Node.js version
+        node: [22.x] # Updated Node.js version
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4  # Updated from @master to @v4
+        uses: actions/checkout@v4 # Updated from @master to @v4
 
       - name: Setup node env
-        uses: actions/setup-node@v4  # Updated from @v2.1.2 to @v4
+        uses: actions/setup-node@v4 # Updated from @v2.1.2 to @v4
         with:
           node-version: ${{ matrix.node }}
 
@@ -31,7 +31,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.yarn
-          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}  # Updated to use yarn.lock
+          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }} # Updated to use yarn.lock
           restore-keys: |
             ${{ runner.os }}-node-
 
