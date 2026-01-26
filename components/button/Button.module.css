@@ -16,13 +16,13 @@
   /* background: rgb(51, 121, 238); */
   /* background: radial-gradient(circle, rgba(51, 121, 238, 1) 0%, rgba(36, 172, 255, 1) 100%); */
   /* For Christmas Theme */
-<<<<<<< HEAD
+/* <<<<<<< HEAD */
   /* background: #ffed79; */
   /* background: radial-gradient(circle, #ffa776 0%, #ffed79, 100%); */
-=======
+/* ======= */
   background: #ffed79;
   background: radial-gradient(circle, #ffa776 0%, #ffed79, 100%);
->>>>>>> a2df487 (Updated: Events Poster)
+/* >>>>>>> a2df487 (Updated: Events Poster) */
   transition: width 0.5s, height 0.5s;
 }
 
