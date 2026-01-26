@@ -32,7 +32,7 @@
 .mouse:hover .cursor {
   /* @apply bg-blue; */
   /* For Christmas Theme */
-  /* @apply bg-golden; */
+  @apply bg-golden;
   animation: none;
 }
 
