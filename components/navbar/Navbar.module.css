@@ -27,8 +27,13 @@
   width: fit-content;
 }
 .navbarList > .navLink:hover {
+<<<<<<< HEAD
   @apply text-blue font-medium;
 
+=======
+  /* @apply text-blue font-medium; */
+  
+>>>>>>> a2df487 (Updated: Events Poster)
   /* For christmas theme */
   @apply text-golden font-medium;
 }

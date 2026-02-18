@@ -16,7 +16,7 @@
   transition: transform ease 250ms;
   border-radius: 0.5rem;
   overflow: hidden;
-  box-shadow: 0 0 5px 1px hsl(203, 100%, 57%);
+  /* box-shadow: 0 0 5px 1px hsl(203, 100%, 57%); */
   /* For Christmas Theme */
   box-shadow: 0 0 5px 1px #ffed79;
 }
@@ -69,9 +69,13 @@
     top: 100%;
     height: 3px;
     width: calc(100% + 2.5rem);
-    background: hsl(203, 100%, 57%);
+    /* background: hsl(203, 100%, 57%); */
     /* For Christmas Theme */
+<<<<<<< HEAD
     background: #ffed79;
+=======
+    background: #FFED79;
+>>>>>>> a2df487 (Updated: Events Poster)
     transform: scaleX(0);
     transition: transform 200ms ease;
     transform-origin: left;
@@ -93,7 +97,11 @@
   color: black;
   /* For Christmas Theme */
   background: #ffed79;
+<<<<<<< HEAD
   background: hsl(203, 100%, 57%);
+=======
+  /* background: hsl(203, 100%, 57%); */
+>>>>>>> a2df487 (Updated: Events Poster)
   padding: 0.5em 1.25em;
   border-radius: 0.25rem;
 }

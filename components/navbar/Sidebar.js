@@ -3,7 +3,11 @@ import { createPortal } from 'react-dom';
 import { CgClose } from 'react-icons/cg';
 import Link from 'next/link';
 import styles from './Hamburger.module.css';
+<<<<<<< HEAD
 // ✅ Fixed: use logo directly with <img> instead of next/image for Netlify
+=======
+import Logo from '../../assets/christmas_theme/christmas-theme-logo.png';
+>>>>>>> a2df487 (Updated: Events Poster)
 import Button from '../button/Button';
 
 const Logo = '/hncc-logo.png';

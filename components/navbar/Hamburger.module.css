@@ -42,7 +42,7 @@
 }
 
 .navLink:hover {
-  @apply text-blue;
+  /* @apply text-blue; */
   /* For Christmas Theme */
   @apply text-golden;
 }
