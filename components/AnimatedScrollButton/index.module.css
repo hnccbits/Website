@@ -12,13 +12,8 @@
 }
 
 .mouse:hover {
-<<<<<<< HEAD
   @apply border-blue;
   box-shadow: 0px 0px 14px 1px rgb(36 172 255);
-=======
-   /* @apply border-blue; */
-   /* box-shadow: 0px 0px 14px 1px rgb(36 172 255); */
->>>>>>> a2df487 (Updated: Events Poster)
   /* For Christmas theme */
   @apply border-golden;
   box-shadow: 0px 0px 14px 1px #ffed79;
@@ -35,7 +30,7 @@
 }
 
 .mouse:hover .cursor {
-  /* @apply bg-blue; */
+  @apply bg-blue;
   /* For Christmas Theme */
   @apply bg-golden;
   animation: none;

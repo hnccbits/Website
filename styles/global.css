@@ -108,7 +108,7 @@ a {
 }
 
 .cursor {
-  /* background: rgb(51, 121, 238); */
+  background: rgb(51, 121, 238);
   /* For christmas theme */
   background: rgb(255, 237, 121);
   transform: translate(-50%, -50%);

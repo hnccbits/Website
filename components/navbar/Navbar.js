@@ -3,11 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { HiMenuAlt4 } from 'react-icons/hi';
 import Link from 'next/link';
 import styles from './Navbar.module.css';
-<<<<<<< HEAD
 // ✅ Fixed: use logo directly with <img> instead of next/image for Netlify
-=======
-import Logo from '../../assets/christmas_theme/christmas-theme-logo.png';
->>>>>>> a2df487 (Updated: Events Poster)
 import Button from '../button/Button';
 import Sidebar from './Sidebar';
 

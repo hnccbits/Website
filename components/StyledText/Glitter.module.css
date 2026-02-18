@@ -15,7 +15,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  /* background: linear-gradient(to right, transparent, #24acff); */
+  background: linear-gradient(to right, transparent, #24acff);
   /* For christmas theme */
   background: linear-gradient(to right, transparent, rgb(255, 237, 121));
   height: 3px;
