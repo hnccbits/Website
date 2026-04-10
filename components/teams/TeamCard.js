@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
 import Style from './Team.module.css';
 
@@ -8,16 +7,11 @@ function TeamCard({ name, title, company, socials, imageSrc, lazyImageSrc }) {
   return (
     <div className={Style.card}>
       <div className="z-10 w-full text-center h-2/3 mb-18 mt-4 overflow-hidden rounded-lg">
-        <Image
-          className="z-10 rounded-lg object-cover object-top"
-          height="100%"
-          width="100%"
-          layout="responsive"
+        <img
+          className="z-10 rounded-lg object-cover object-top w-full h-full"
           src={imageSrc}
           alt={name}
-          quality={100}
-          placeholder="blur"
-          blurDataURL={lazyImageSrc}
+          loading="lazy"
         />
       </div>
       <div className="z-10 text-center my-5">
